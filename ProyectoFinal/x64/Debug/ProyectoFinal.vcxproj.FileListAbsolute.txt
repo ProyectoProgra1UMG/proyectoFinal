@@ -1,3 +1,13 @@
 C:\Users\joaqu\OneDrive\Escritorio\ProyectoFinal\ProyectoFinal\x64\Debug\ProyectoFinal.vcxproj.AssemblyReference.cache
 C:\Users\joaqu\OneDrive\Escritorio\ProyectoFinal\ProyectoFinal\x64\Debug\ProyectoFinal.Form1.resources
 C:\Users\joaqu\OneDrive\Escritorio\ProyectoFinal\ProyectoFinal\x64\Debug\ProyectoFinal.vcxproj.GenerateResource.cache
+C:\Users\danyd\OneDrive\Escritorio\Proyecto final progra\proyectoFinal\ProyectoFinal\x64\Debug\ProyectoFinal.vcxproj.AssemblyReference.cache
+C:\Users\danyd\OneDrive\Escritorio\Proyecto final progra\proyectoFinal\ProyectoFinal\x64\Debug\ProyectoFinal.Form1.resources
+C:\Users\danyd\OneDrive\Escritorio\Proyecto final progra\proyectoFinal\ProyectoFinal\x64\Debug\ProyectoFinal.LoginCliente.resources
+C:\Users\danyd\OneDrive\Escritorio\Proyecto final progra\proyectoFinal\ProyectoFinal\x64\Debug\ProyectoFinal.vcxproj.GenerateResource.cache
+C:\Users\danyd\OneDrive\Escritorio\Proyecto final progra\proyectoFinal\ProyectoFinal\x64\Debug\ProyectoFinal.RegistroClientes.resources
+C:\Users\danyd\OneDrive\Escritorio\Proyecto final progra\proyectoFinal\ProyectoFinal\x64\Debug\ProyectoFinal.CompraTicket.resources
+C:\Users\danyd\OneDrive\Escritorio\Proyecto final progra\proyectoFinal\ProyectoFinal\x64\Debug\ProyectoFinal.LoginEmpleados.resources
+C:\Users\danyd\OneDrive\Escritorio\Proyecto final progra\proyectoFinal\ProyectoFinal\x64\Debug\ProyectoFinal.MenuEmpleados.resources
+C:\Users\danyd\OneDrive\Escritorio\Proyecto final progra\proyectoFinal\ProyectoFinal\x64\Debug\ProyectoFinal.RegistroCompras.resources
+C:\Users\danyd\OneDrive\Escritorio\Proyecto final progra\proyectoFinal\ProyectoFinal\x64\Debug\ProyectoFinal.RegistroRutas.resources

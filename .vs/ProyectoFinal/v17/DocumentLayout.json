@@ -1,14 +1,42 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\joaqu\\OneDrive\\Escritorio\\ProyectoFinal\\",
+  "WorkspaceRootPath": "C:\\Users\\danyd\\OneDrive\\Escritorio\\Proyecto final progra\\proyectoFinal\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D6B900EF-9562-48E0-99E7-702050315070}|ProyectoFinal\\ProyectoFinal.vcxproj|C:\\Users\\joaqu\\OneDrive\\Escritorio\\ProyectoFinal\\ProyectoFinal\\Form1.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form",
-      "RelativeMoniker": "D:0:0:{D6B900EF-9562-48E0-99E7-702050315070}|ProyectoFinal\\ProyectoFinal.vcxproj|solutionrelative:ProyectoFinal\\Form1.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form"
+      "AbsoluteMoniker": "D:0:0:{D6B900EF-9562-48E0-99E7-702050315070}|ProyectoFinal\\ProyectoFinal.vcxproj|C:\\Users\\danyd\\OneDrive\\Escritorio\\Proyecto final progra\\proyectoFinal\\ProyectoFinal\\RegistroRutas.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D6B900EF-9562-48E0-99E7-702050315070}|ProyectoFinal\\ProyectoFinal.vcxproj|solutionrelative:ProyectoFinal\\RegistroRutas.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D6B900EF-9562-48E0-99E7-702050315070}|ProyectoFinal\\ProyectoFinal.vcxproj|C:\\Users\\joaqu\\OneDrive\\Escritorio\\ProyectoFinal\\ProyectoFinal\\Form1.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D6B900EF-9562-48E0-99E7-702050315070}|ProyectoFinal\\ProyectoFinal.vcxproj|solutionrelative:ProyectoFinal\\Form1.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{D6B900EF-9562-48E0-99E7-702050315070}|ProyectoFinal\\ProyectoFinal.vcxproj|C:\\Users\\danyd\\OneDrive\\Escritorio\\Proyecto final progra\\proyectoFinal\\ProyectoFinal\\RegistroRutas.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form",
+      "RelativeMoniker": "D:0:0:{D6B900EF-9562-48E0-99E7-702050315070}|ProyectoFinal\\ProyectoFinal.vcxproj|solutionrelative:ProyectoFinal\\RegistroRutas.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6B900EF-9562-48E0-99E7-702050315070}|ProyectoFinal\\ProyectoFinal.vcxproj|C:\\Users\\danyd\\OneDrive\\Escritorio\\Proyecto final progra\\proyectoFinal\\ProyectoFinal\\MenuEmpleados.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D6B900EF-9562-48E0-99E7-702050315070}|ProyectoFinal\\ProyectoFinal.vcxproj|solutionrelative:ProyectoFinal\\MenuEmpleados.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6B900EF-9562-48E0-99E7-702050315070}|ProyectoFinal\\ProyectoFinal.vcxproj|C:\\Users\\danyd\\OneDrive\\Escritorio\\Proyecto final progra\\proyectoFinal\\ProyectoFinal\\MenuEmpleados.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form",
+      "RelativeMoniker": "D:0:0:{D6B900EF-9562-48E0-99E7-702050315070}|ProyectoFinal\\ProyectoFinal.vcxproj|solutionrelative:ProyectoFinal\\MenuEmpleados.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6B900EF-9562-48E0-99E7-702050315070}|ProyectoFinal\\ProyectoFinal.vcxproj|C:\\Users\\danyd\\OneDrive\\Escritorio\\Proyecto final progra\\proyectoFinal\\ProyectoFinal\\RegistroCompras.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form",
+      "RelativeMoniker": "D:0:0:{D6B900EF-9562-48E0-99E7-702050315070}|ProyectoFinal\\ProyectoFinal.vcxproj|solutionrelative:ProyectoFinal\\RegistroCompras.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6B900EF-9562-48E0-99E7-702050315070}|ProyectoFinal\\ProyectoFinal.vcxproj|C:\\Users\\danyd\\OneDrive\\Escritorio\\Proyecto final progra\\proyectoFinal\\ProyectoFinal\\RegistroCompras.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D6B900EF-9562-48E0-99E7-702050315070}|ProyectoFinal\\ProyectoFinal.vcxproj|solutionrelative:ProyectoFinal\\RegistroCompras.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6B900EF-9562-48E0-99E7-702050315070}|ProyectoFinal\\ProyectoFinal.vcxproj|C:\\Users\\danyd\\OneDrive\\Escritorio\\Proyecto final progra\\proyectoFinal\\ProyectoFinal\\LoginCliente.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D6B900EF-9562-48E0-99E7-702050315070}|ProyectoFinal\\ProyectoFinal.vcxproj|solutionrelative:ProyectoFinal\\LoginCliente.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6B900EF-9562-48E0-99E7-702050315070}|ProyectoFinal\\ProyectoFinal.vcxproj|C:\\Users\\danyd\\OneDrive\\Escritorio\\Proyecto final progra\\proyectoFinal\\ProyectoFinal\\LoginEmpleados.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D6B900EF-9562-48E0-99E7-702050315070}|ProyectoFinal\\ProyectoFinal.vcxproj|solutionrelative:ProyectoFinal\\LoginEmpleados.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6B900EF-9562-48E0-99E7-702050315070}|ProyectoFinal\\ProyectoFinal.vcxproj|C:\\Users\\danyd\\OneDrive\\Escritorio\\Proyecto final progra\\proyectoFinal\\ProyectoFinal\\LoginEmpleados.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form",
+      "RelativeMoniker": "D:0:0:{D6B900EF-9562-48E0-99E7-702050315070}|ProyectoFinal\\ProyectoFinal.vcxproj|solutionrelative:ProyectoFinal\\LoginEmpleados.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,8 +46,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
@@ -27,37 +59,115 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Form1.h [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\joaqu\\OneDrive\\Escritorio\\ProyectoFinal\\ProyectoFinal\\Form1.h",
-              "RelativeDocumentMoniker": "ProyectoFinal\\Form1.h",
-              "ToolTip": "C:\\Users\\joaqu\\OneDrive\\Escritorio\\ProyectoFinal\\ProyectoFinal\\Form1.h [Dise\u00F1o]",
-              "RelativeToolTip": "ProyectoFinal\\Form1.h [Dise\u00F1o]",
+              "Title": "RegistroRutas.h",
+              "DocumentMoniker": "C:\\Users\\danyd\\OneDrive\\Escritorio\\Proyecto final progra\\proyectoFinal\\ProyectoFinal\\RegistroRutas.h",
+              "RelativeDocumentMoniker": "ProyectoFinal\\RegistroRutas.h",
+              "ToolTip": "C:\\Users\\danyd\\OneDrive\\Escritorio\\Proyecto final progra\\proyectoFinal\\ProyectoFinal\\RegistroRutas.h",
+              "RelativeToolTip": "ProyectoFinal\\RegistroRutas.h",
+              "ViewState": "AQIAAE0AAAAAAAAAAAAowFUAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-21T13:08:32.587Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-05-21T19:43:53.843Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Form1.h",
-              "DocumentMoniker": "C:\\Users\\joaqu\\OneDrive\\Escritorio\\ProyectoFinal\\ProyectoFinal\\Form1.h",
-              "RelativeDocumentMoniker": "ProyectoFinal\\Form1.h",
-              "ToolTip": "C:\\Users\\joaqu\\OneDrive\\Escritorio\\ProyectoFinal\\ProyectoFinal\\Form1.h",
-              "RelativeToolTip": "ProyectoFinal\\Form1.h",
-              "ViewState": "AQIAADkAAAAAAAAAAAAAAEIAAAARAAAA",
+              "Title": "RegistroRutas.h [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\danyd\\OneDrive\\Escritorio\\Proyecto final progra\\proyectoFinal\\ProyectoFinal\\RegistroRutas.h",
+              "RelativeDocumentMoniker": "ProyectoFinal\\RegistroRutas.h",
+              "ToolTip": "C:\\Users\\danyd\\OneDrive\\Escritorio\\Proyecto final progra\\proyectoFinal\\ProyectoFinal\\RegistroRutas.h [Dise\u00F1o]",
+              "RelativeToolTip": "ProyectoFinal\\RegistroRutas.h [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-21T05:36:35.932Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 268,
-          "SelectedChildIndex": -1,
-          "Children": [
+              "WhenOpened": "2024-05-21T19:40:45.682Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LoginCliente.h",
+              "DocumentMoniker": "C:\\Users\\danyd\\OneDrive\\Escritorio\\Proyecto final progra\\proyectoFinal\\ProyectoFinal\\LoginCliente.h",
+              "RelativeDocumentMoniker": "ProyectoFinal\\LoginCliente.h",
+              "ToolTip": "C:\\Users\\danyd\\OneDrive\\Escritorio\\Proyecto final progra\\proyectoFinal\\ProyectoFinal\\LoginCliente.h",
+              "RelativeToolTip": "ProyectoFinal\\LoginCliente.h",
+              "ViewState": "AQIAAJ4AAAAAAAAAAAAAAKsAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-21T19:31:21.794Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RegistroCompras.h",
+              "DocumentMoniker": "C:\\Users\\danyd\\OneDrive\\Escritorio\\Proyecto final progra\\proyectoFinal\\ProyectoFinal\\RegistroCompras.h",
+              "RelativeDocumentMoniker": "ProyectoFinal\\RegistroCompras.h",
+              "ToolTip": "C:\\Users\\danyd\\OneDrive\\Escritorio\\Proyecto final progra\\proyectoFinal\\ProyectoFinal\\RegistroCompras.h",
+              "RelativeToolTip": "ProyectoFinal\\RegistroCompras.h",
+              "ViewState": "AQIAAE0AAAAAAAAAAAAowFUAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-21T19:30:10.424Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RegistroCompras.h [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\danyd\\OneDrive\\Escritorio\\Proyecto final progra\\proyectoFinal\\ProyectoFinal\\RegistroCompras.h",
+              "RelativeDocumentMoniker": "ProyectoFinal\\RegistroCompras.h",
+              "ToolTip": "C:\\Users\\danyd\\OneDrive\\Escritorio\\Proyecto final progra\\proyectoFinal\\ProyectoFinal\\RegistroCompras.h [Dise\u00F1o]",
+              "RelativeToolTip": "ProyectoFinal\\RegistroCompras.h [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-21T19:28:49.135Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LoginEmpleados.h",
+              "DocumentMoniker": "C:\\Users\\danyd\\OneDrive\\Escritorio\\Proyecto final progra\\proyectoFinal\\ProyectoFinal\\LoginEmpleados.h",
+              "RelativeDocumentMoniker": "ProyectoFinal\\LoginEmpleados.h",
+              "ToolTip": "C:\\Users\\danyd\\OneDrive\\Escritorio\\Proyecto final progra\\proyectoFinal\\ProyectoFinal\\LoginEmpleados.h",
+              "RelativeToolTip": "ProyectoFinal\\LoginEmpleados.h",
+              "ViewState": "AQIAAJEAAAAAAAAAAAAiwJwAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-21T19:21:55.213Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MenuEmpleados.h",
+              "DocumentMoniker": "C:\\Users\\danyd\\OneDrive\\Escritorio\\Proyecto final progra\\proyectoFinal\\ProyectoFinal\\MenuEmpleados.h",
+              "RelativeDocumentMoniker": "ProyectoFinal\\MenuEmpleados.h",
+              "ToolTip": "C:\\Users\\danyd\\OneDrive\\Escritorio\\Proyecto final progra\\proyectoFinal\\ProyectoFinal\\MenuEmpleados.h",
+              "RelativeToolTip": "ProyectoFinal\\MenuEmpleados.h",
+              "ViewState": "AQIAAGkAAAAAAAAAAAAAAIIAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-21T19:18:13.928Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MenuEmpleados.h [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\danyd\\OneDrive\\Escritorio\\Proyecto final progra\\proyectoFinal\\ProyectoFinal\\MenuEmpleados.h",
+              "RelativeDocumentMoniker": "ProyectoFinal\\MenuEmpleados.h",
+              "ToolTip": "C:\\Users\\danyd\\OneDrive\\Escritorio\\Proyecto final progra\\proyectoFinal\\ProyectoFinal\\MenuEmpleados.h [Dise\u00F1o]",
+              "RelativeToolTip": "ProyectoFinal\\MenuEmpleados.h [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-21T19:15:52.264Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LoginEmpleados.h [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\danyd\\OneDrive\\Escritorio\\Proyecto final progra\\proyectoFinal\\ProyectoFinal\\LoginEmpleados.h",
+              "RelativeDocumentMoniker": "ProyectoFinal\\LoginEmpleados.h",
+              "ToolTip": "C:\\Users\\danyd\\OneDrive\\Escritorio\\Proyecto final progra\\proyectoFinal\\ProyectoFinal\\LoginEmpleados.h [Dise\u00F1o]",
+              "RelativeToolTip": "ProyectoFinal\\LoginEmpleados.h [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-21T19:08:53.327Z",
+              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         }
