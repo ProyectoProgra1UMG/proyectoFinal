@@ -1,0 +1,3 @@
+C:\Users\joaqu\OneDrive\Escritorio\ProyectoFinal\ProyectoFinal\x64\Debug\ProyectoFinal.vcxproj.AssemblyReference.cache
+C:\Users\joaqu\OneDrive\Escritorio\ProyectoFinal\ProyectoFinal\x64\Debug\ProyectoFinal.Form1.resources
+C:\Users\joaqu\OneDrive\Escritorio\ProyectoFinal\ProyectoFinal\x64\Debug\ProyectoFinal.vcxproj.GenerateResource.cache
