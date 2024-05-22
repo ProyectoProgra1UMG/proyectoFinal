@@ -11,3 +11,11 @@ C:\Users\danyd\OneDrive\Escritorio\Proyecto final progra\proyectoFinal\ProyectoF
 C:\Users\danyd\OneDrive\Escritorio\Proyecto final progra\proyectoFinal\ProyectoFinal\x64\Debug\ProyectoFinal.MenuEmpleados.resources
 C:\Users\danyd\OneDrive\Escritorio\Proyecto final progra\proyectoFinal\ProyectoFinal\x64\Debug\ProyectoFinal.RegistroCompras.resources
 C:\Users\danyd\OneDrive\Escritorio\Proyecto final progra\proyectoFinal\ProyectoFinal\x64\Debug\ProyectoFinal.RegistroRutas.resources
+C:\Users\joaqu\OneDrive\Escritorio\ProyectoFinal\ProyectoFinal\x64\Debug\ProyectoFinal.CompraTicket.resources
+C:\Users\joaqu\OneDrive\Escritorio\ProyectoFinal\ProyectoFinal\x64\Debug\ProyectoFinal.LoginCliente.resources
+C:\Users\joaqu\OneDrive\Escritorio\ProyectoFinal\ProyectoFinal\x64\Debug\ProyectoFinal.LoginEmpleados.resources
+C:\Users\joaqu\OneDrive\Escritorio\ProyectoFinal\ProyectoFinal\x64\Debug\ProyectoFinal.MenuEmpleados.resources
+C:\Users\joaqu\OneDrive\Escritorio\ProyectoFinal\ProyectoFinal\x64\Debug\ProyectoFinal.RegistroClientes.resources
+C:\Users\joaqu\OneDrive\Escritorio\ProyectoFinal\ProyectoFinal\x64\Debug\ProyectoFinal.RegistroCompras.resources
+C:\Users\joaqu\OneDrive\Escritorio\ProyectoFinal\ProyectoFinal\x64\Debug\ProyectoFinal.RegistroRutas.resources
+C:\Users\joaqu\OneDrive\Escritorio\ProyectoFinal\ProyectoFinal\x64\Debug\Proyecto.1DA88537.Up2Date

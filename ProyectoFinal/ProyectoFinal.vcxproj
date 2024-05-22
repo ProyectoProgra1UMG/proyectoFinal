@@ -145,6 +145,7 @@
     <ClInclude Include="MenuEmpleados.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="MySQLConnector.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="RegistroClientes.h">
       <FileType>CppForm</FileType>
@@ -179,6 +180,9 @@
     <Image Include="app.ico" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector NET 8.4\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />

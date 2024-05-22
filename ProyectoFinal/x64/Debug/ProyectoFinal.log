@@ -1,7 +1,15 @@
 ﻿  CppCLR_WinFormsProject.cpp
-  LoginEmpleados.cpp
-  MenuEmpleados.cpp
-  RegistroRutas.cpp
+C:\Users\joaqu\OneDrive\Escritorio\ProyectoFinal\ProyectoFinal\MySQLConnector.h(32,27): warning C4101: 'ex': variable local sin referencia
+  (compilando archivo de origen "/CppCLR_WinFormsProject.cpp")
+  
+  LoginCliente.cpp
+C:\Users\joaqu\OneDrive\Escritorio\ProyectoFinal\ProyectoFinal\MySQLConnector.h(32,27): warning C4101: 'ex': variable local sin referencia
+  (compilando archivo de origen "/LoginCliente.cpp")
+  
+  RegistroClientes.cpp
+C:\Users\joaqu\OneDrive\Escritorio\ProyectoFinal\ProyectoFinal\MySQLConnector.h(32,27): warning C4101: 'ex': variable local sin referencia
+  (compilando archivo de origen "/RegistroClientes.cpp")
+  
   Generando código...
   AssemblyInfo.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
-  ProyectoFinal.vcxproj -> C:\Users\danyd\OneDrive\Escritorio\Proyecto final progra\proyectoFinal\x64\Debug\ProyectoFinal.exe
+  ProyectoFinal.vcxproj -> C:\Users\joaqu\OneDrive\Escritorio\ProyectoFinal\x64\Debug\ProyectoFinal.exe

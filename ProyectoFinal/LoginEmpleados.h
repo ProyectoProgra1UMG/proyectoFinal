@@ -1,4 +1,5 @@
 #pragma once
+#include "MySQLConnector.h"
 #include "MenuEmpleados.h"
 namespace ProyectoFinal {
 
@@ -15,9 +16,12 @@ namespace ProyectoFinal {
 	public ref class LoginEmpleados : public System::Windows::Forms::Form
 	{
 	public:
+		MySQLConnector^ connector = gcnew MySQLConnector();
+		MySqlConnection^ connection;
 		LoginEmpleados(void)
 		{
 			InitializeComponent();
+			connection = gcnew MySqlConnection(connector->connectionString);
 			//
 			//TODO: agregar código de constructor aquí
 			//
@@ -146,15 +150,51 @@ namespace ProyectoFinal {
 		}
 #pragma endregion
 	private: System::Void btt_login_Click(System::Object^ sender, System::EventArgs^ e) {
-		if (this->txb_usuario->Text == "danicito" && this->txb_contraseña->Text == "12345") {
-			ProyectoFinal::MenuEmpleados^ menuempleados = gcnew ProyectoFinal::MenuEmpleados();
-			menuempleados->Show();
-			Close();
-		}
-		else
+		try
 		{
-			MessageBox::Show("Usuario o Contraseña Incorrecta");
+			// Obtener el usuario y la contraseña ingresados por el usuario
+			String^ usuario = txb_usuario->Text;
+			String^ contraseña = txb_contraseña->Text;
+
+			// Consulta SQL para verificar si el usuario y la contraseña son válidos
+			String^ query = "SELECT COUNT(*) FROM empleados WHERE nombre = '" + usuario + "' AND contraseña = '" + contraseña + "'";
+
+			// Abrir la conexión antes de ejecutar la consulta
+			if (connector->OpenConnection()) {
+				MySqlCommand^ command = gcnew MySqlCommand(query, connector->getConnection());
+				int count = Convert::ToInt32(command->ExecuteScalar());
+
+				// Cerrar la conexión después de ejecutar la consulta
+				connector->CloseConnection();
+
+				// Verificar si se encontró una coincidencia en la base de datos
+				if (count > 0) {
+					ProyectoFinal::MenuEmpleados^ menuempleados = gcnew ProyectoFinal::MenuEmpleados();
+					menuempleados->Show();
+					Close();
+				}
+				else {
+					MessageBox::Show("Usuario o contraseña incorrectos. Por favor, inténtelo de nuevo.");
+					connector->CloseConnection();
+				}
+			}
+			else {
+				MessageBox::Show("Conector no ejecutado.");
+			}
 		}
+		catch (Exception^ ex) {
+			MessageBox::Show(" error: " + ex->Message);
+			connector->CloseConnection();
+		}
+		finally {
+			if (connection->State == ConnectionState::Open) {
+				connector->CloseConnection();
+			}
+		}
+
+
+		this->txb_usuario->Text = "";
+		this->txb_contraseña->Text = "";
 	}
 };
 }

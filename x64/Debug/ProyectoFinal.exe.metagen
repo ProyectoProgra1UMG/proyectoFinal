@@ -11,6 +11,8 @@ Assembly ProyectoFinal, Version=1.0.*, Culture=Todos los idiomas (todos los paí
 	hash=SHA1, flags=PublicKey
 Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
 	hash=None, flags=None
+Assembly MySql.Data, Version=8.4.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d: 
+	hash=None, flags=None
 Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
 	hash=None, flags=None
 Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
@@ -24,12 +26,33 @@ Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c5619
 Class ProyectoFinal.CompraTicket: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class MySQLConnector: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Fields:
+    System.String connectionString : Public
+    System.String host : Public
+    System.String usuario : Public
+    System.String contraseña : Public
+    System.String database : Public
+  Methods:
+    OpenConnection(): PrivateScope, Public, HideBySig
+    CloseConnection(): PrivateScope, Public, HideBySig
+    getConnection(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
 Class ProyectoFinal.RegistroClientes: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
-    Void .ctor(System.Windows.Forms.Form): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Windows.Forms.Form, MySql.Data.MySqlClient.MySqlConnection): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    MySQLConnector connector : Public
+    MySql.Data.MySqlClient.MySqlConnection connection : Public
 Class ProyectoFinal.LoginCliente: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    MySQLConnector connector : Public
+    MySql.Data.MySqlClient.MySqlConnection connection : Public
 Class ProyectoFinal.RegistroCompras: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(System.Windows.Forms.Form): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
@@ -42,6 +65,9 @@ Class ProyectoFinal.MenuEmpleados: AutoLayout, AnsiClass, Class, Public, BeforeF
 Class ProyectoFinal.LoginEmpleados: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    MySQLConnector connector : Public
+    MySql.Data.MySqlClient.MySqlConnection connection : Public
 Class CppCLRWinFormsProject.Form1: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
