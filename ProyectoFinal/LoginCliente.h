@@ -2,6 +2,7 @@
 #include "MySQLConnector.h"
 #include "RegistroClientes.h"
 #include "CompraTicket.h"
+#include "CompraTicketClass.h"
 namespace ProyectoFinal {
 
 	using namespace System;
@@ -19,10 +20,12 @@ namespace ProyectoFinal {
 	public:
 		MySQLConnector^ connector = gcnew MySQLConnector(); 
 		MySqlConnection^ connection; 
+		TickeClass^ ticketClass;
 		LoginCliente(void)
 		{
 			InitializeComponent();
 			connection = gcnew MySqlConnection(connector->connectionString);
+			ticketClass = gcnew TickeClass(connector);
 		}
 
 	protected:
@@ -190,7 +193,6 @@ private: System::Void btt_enter_Click(System::Object^ sender, System::EventArgs^
 		// Obtener el usuario y la contraseña ingresados por el usuario
 		String^ usuario = txb_usuario->Text;
 		String^ contraseña = txb_contraseña->Text;
-
 		// Consulta SQL para verificar si el usuario y la contraseña son válidos
 		String^ query = "SELECT COUNT(*) FROM clientes WHERE nombre = '" + usuario + "' AND contraseña = '" + contraseña + "'";
 
@@ -204,7 +206,8 @@ private: System::Void btt_enter_Click(System::Object^ sender, System::EventArgs^
 
 			// Verificar si se encontró una coincidencia en la base de datos
 			if (count > 0) {
-				ProyectoFinal::CompraTicket^ compraticket = gcnew ProyectoFinal::CompraTicket();
+				ticketClass->nombreCliente(txb_usuario->Text);
+				ProyectoFinal::CompraTicket^ compraticket = gcnew ProyectoFinal::CompraTicket(ticketClass);
 				compraticket->Show(); 
 				Close(); 
 			}

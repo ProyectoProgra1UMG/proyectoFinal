@@ -68,9 +68,10 @@ namespace CppCLRWinFormsProject {
 			this->lbl_encabezado->AutoSize = true;
 			this->lbl_encabezado->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lbl_encabezado->Location = System::Drawing::Point(128, 30);
+			this->lbl_encabezado->Location = System::Drawing::Point(96, 24);
+			this->lbl_encabezado->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_encabezado->Name = L"lbl_encabezado";
-			this->lbl_encabezado->Size = System::Drawing::Size(238, 38);
+			this->lbl_encabezado->Size = System::Drawing::Size(198, 31);
 			this->lbl_encabezado->TabIndex = 0;
 			this->lbl_encabezado->Text = L"TRENES TPG";
 			// 
@@ -79,9 +80,10 @@ namespace CppCLRWinFormsProject {
 			this->lbl_opciones->AutoSize = true;
 			this->lbl_opciones->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lbl_opciones->Location = System::Drawing::Point(92, 142);
+			this->lbl_opciones->Location = System::Drawing::Point(69, 115);
+			this->lbl_opciones->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_opciones->Name = L"lbl_opciones";
-			this->lbl_opciones->Size = System::Drawing::Size(302, 32);
+			this->lbl_opciones->Size = System::Drawing::Size(231, 26);
 			this->lbl_opciones->TabIndex = 1;
 			this->lbl_opciones->Text = L"Seleccione una opción";
 			// 
@@ -89,9 +91,10 @@ namespace CppCLRWinFormsProject {
 			// 
 			this->btt_cliente->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btt_cliente->Location = System::Drawing::Point(147, 191);
+			this->btt_cliente->Location = System::Drawing::Point(110, 155);
+			this->btt_cliente->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->btt_cliente->Name = L"btt_cliente";
-			this->btt_cliente->Size = System::Drawing::Size(180, 32);
+			this->btt_cliente->Size = System::Drawing::Size(135, 26);
 			this->btt_cliente->TabIndex = 2;
 			this->btt_cliente->Text = L"Soy cliente";
 			this->btt_cliente->UseVisualStyleBackColor = true;
@@ -101,9 +104,10 @@ namespace CppCLRWinFormsProject {
 			// 
 			this->btt_empleado->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btt_empleado->Location = System::Drawing::Point(147, 229);
+			this->btt_empleado->Location = System::Drawing::Point(110, 186);
+			this->btt_empleado->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->btt_empleado->Name = L"btt_empleado";
-			this->btt_empleado->Size = System::Drawing::Size(180, 37);
+			this->btt_empleado->Size = System::Drawing::Size(135, 30);
 			this->btt_empleado->TabIndex = 3;
 			this->btt_empleado->Text = L"Soy empleado";
 			this->btt_empleado->UseVisualStyleBackColor = true;
@@ -111,14 +115,14 @@ namespace CppCLRWinFormsProject {
 			// 
 			// Form1
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(545, 575);
+			this->ClientSize = System::Drawing::Size(409, 308);
 			this->Controls->Add(this->btt_empleado);
 			this->Controls->Add(this->btt_cliente);
 			this->Controls->Add(this->lbl_opciones);
 			this->Controls->Add(this->lbl_encabezado);
-			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->Name = L"Form1";
 			this->Text = L"Form1";
 			this->ResumeLayout(false);

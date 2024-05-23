@@ -1,5 +1,7 @@
 #pragma once
 #include "MySQLConnector.h"
+#include "CompraTicketClass.h"
+#include "RutasParaClientes.h"
 namespace ProyectoFinal {
 
 	using namespace System;
@@ -30,26 +32,29 @@ namespace ProyectoFinal {
 
 
 
-	private: System::Windows::Forms::TextBox^ txb_tickets;
+
 
 	private: System::Windows::Forms::Label^ lbl_horados;
 	private: System::Windows::Forms::Label^ lbl_id;
 
 
 
-
-
-
-
-
-
 	public:
 		   MySqlConnection^ connection;
-		   CompraTicket(void)
+	private: System::Windows::Forms::NumericUpDown^ nud_cantidadT;
+	private: System::Windows::Forms::Label^ lbl_usuario;
+
+	private: System::Windows::Forms::Button^ btt_rutas;
+
+	public:
+
+	public:
+		TickeClass^ ticketClass;
+		   CompraTicket(TickeClass^ _ticketClass)
 		   {
 			   InitializeComponent();
 			   connection = gcnew MySqlConnection(connector->connectionString);
-
+			   ticketClass = _ticketClass;
 			   //
 			   //TODO: agregar código de constructor aquí
 			   //
@@ -79,31 +84,9 @@ namespace ProyectoFinal {
 
 
 
-
-
-
-
-
-
 	protected:
 
 	protected:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 	private:
@@ -134,9 +117,12 @@ namespace ProyectoFinal {
 			this->lbl_hora = (gcnew System::Windows::Forms::Label());
 			this->lbl_preciodos = (gcnew System::Windows::Forms::Label());
 			this->lbl_totaldos = (gcnew System::Windows::Forms::Label());
-			this->txb_tickets = (gcnew System::Windows::Forms::TextBox());
 			this->lbl_horados = (gcnew System::Windows::Forms::Label());
 			this->lbl_id = (gcnew System::Windows::Forms::Label());
+			this->nud_cantidadT = (gcnew System::Windows::Forms::NumericUpDown());
+			this->lbl_usuario = (gcnew System::Windows::Forms::Label());
+			this->btt_rutas = (gcnew System::Windows::Forms::Button());
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->nud_cantidadT))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// lbl_encabezado
@@ -144,9 +130,10 @@ namespace ProyectoFinal {
 			this->lbl_encabezado->AutoSize = true;
 			this->lbl_encabezado->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lbl_encabezado->Location = System::Drawing::Point(84, 24);
+			this->lbl_encabezado->Location = System::Drawing::Point(128, 18);
+			this->lbl_encabezado->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_encabezado->Name = L"lbl_encabezado";
-			this->lbl_encabezado->Size = System::Drawing::Size(232, 38);
+			this->lbl_encabezado->Size = System::Drawing::Size(193, 31);
 			this->lbl_encabezado->TabIndex = 0;
 			this->lbl_encabezado->Text = L"TICKETS TPG";
 			// 
@@ -155,9 +142,10 @@ namespace ProyectoFinal {
 			this->lbl_de->AutoSize = true;
 			this->lbl_de->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lbl_de->Location = System::Drawing::Point(27, 144);
+			this->lbl_de->Location = System::Drawing::Point(92, 136);
+			this->lbl_de->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_de->Name = L"lbl_de";
-			this->lbl_de->Size = System::Drawing::Size(43, 25);
+			this->lbl_de->Size = System::Drawing::Size(34, 20);
 			this->lbl_de->TabIndex = 1;
 			this->lbl_de->Text = L"De:";
 			// 
@@ -166,9 +154,10 @@ namespace ProyectoFinal {
 			this->lbl_a->AutoSize = true;
 			this->lbl_a->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lbl_a->Location = System::Drawing::Point(218, 144);
+			this->lbl_a->Location = System::Drawing::Point(277, 136);
+			this->lbl_a->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_a->Name = L"lbl_a";
-			this->lbl_a->Size = System::Drawing::Size(32, 25);
+			this->lbl_a->Size = System::Drawing::Size(24, 20);
 			this->lbl_a->TabIndex = 2;
 			this->lbl_a->Text = L"A:";
 			// 
@@ -177,9 +166,10 @@ namespace ProyectoFinal {
 			this->lbl_fecha->AutoSize = true;
 			this->lbl_fecha->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lbl_fecha->Location = System::Drawing::Point(27, 210);
+			this->lbl_fecha->Location = System::Drawing::Point(30, 191);
+			this->lbl_fecha->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_fecha->Name = L"lbl_fecha";
-			this->lbl_fecha->Size = System::Drawing::Size(73, 25);
+			this->lbl_fecha->Size = System::Drawing::Size(58, 20);
 			this->lbl_fecha->TabIndex = 3;
 			this->lbl_fecha->Text = L"Fecha:";
 			// 
@@ -188,9 +178,10 @@ namespace ProyectoFinal {
 			this->lbl_cantickets->AutoSize = true;
 			this->lbl_cantickets->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lbl_cantickets->Location = System::Drawing::Point(218, 286);
+			this->lbl_cantickets->Location = System::Drawing::Point(30, 290);
+			this->lbl_cantickets->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_cantickets->Name = L"lbl_cantickets";
-			this->lbl_cantickets->Size = System::Drawing::Size(197, 25);
+			this->lbl_cantickets->Size = System::Drawing::Size(157, 20);
 			this->lbl_cantickets->TabIndex = 4;
 			this->lbl_cantickets->Text = L" Cantidad de Tickets:";
 			this->lbl_cantickets->Click += gcnew System::EventHandler(this, &CompraTicket::label5_Click);
@@ -200,9 +191,10 @@ namespace ProyectoFinal {
 			this->lbl_precio->AutoSize = true;
 			this->lbl_precio->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lbl_precio->Location = System::Drawing::Point(27, 286);
+			this->lbl_precio->Location = System::Drawing::Point(30, 237);
+			this->lbl_precio->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_precio->Name = L"lbl_precio";
-			this->lbl_precio->Size = System::Drawing::Size(73, 25);
+			this->lbl_precio->Size = System::Drawing::Size(57, 20);
 			this->lbl_precio->TabIndex = 5;
 			this->lbl_precio->Text = L"Precio:";
 			// 
@@ -211,9 +203,10 @@ namespace ProyectoFinal {
 			this->lbl_total->AutoSize = true;
 			this->lbl_total->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lbl_total->Location = System::Drawing::Point(156, 385);
+			this->lbl_total->Location = System::Drawing::Point(305, 290);
+			this->lbl_total->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_total->Name = L"lbl_total";
-			this->lbl_total->Size = System::Drawing::Size(56, 25);
+			this->lbl_total->Size = System::Drawing::Size(44, 20);
 			this->lbl_total->TabIndex = 6;
 			this->lbl_total->Text = L"Total";
 			// 
@@ -221,58 +214,70 @@ namespace ProyectoFinal {
 			// 
 			this->btt_comprar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btt_comprar->Location = System::Drawing::Point(160, 461);
+			this->btt_comprar->Location = System::Drawing::Point(197, 363);
+			this->btt_comprar->Margin = System::Windows::Forms::Padding(2);
 			this->btt_comprar->Name = L"btt_comprar";
-			this->btt_comprar->Size = System::Drawing::Size(110, 35);
+			this->btt_comprar->Size = System::Drawing::Size(82, 28);
 			this->btt_comprar->TabIndex = 7;
 			this->btt_comprar->Text = L"Comprar";
 			this->btt_comprar->UseVisualStyleBackColor = true;
+			this->btt_comprar->Click += gcnew System::EventHandler(this, &CompraTicket::btt_comprar_Click);
 			// 
 			// cbx_id
 			// 
 			this->cbx_id->FormattingEnabled = true;
-			this->cbx_id->Location = System::Drawing::Point(58, 102);
+			this->cbx_id->Location = System::Drawing::Point(187, 82);
+			this->cbx_id->Margin = System::Windows::Forms::Padding(2);
 			this->cbx_id->Name = L"cbx_id";
-			this->cbx_id->Size = System::Drawing::Size(121, 24);
+			this->cbx_id->Size = System::Drawing::Size(92, 21);
 			this->cbx_id->TabIndex = 15;
 			this->cbx_id->SelectedIndexChanged += gcnew System::EventHandler(this, &CompraTicket::comboBox1_SelectedIndexChanged);
 			// 
 			// lbl_dedos
 			// 
 			this->lbl_dedos->AutoSize = true;
-			this->lbl_dedos->Location = System::Drawing::Point(79, 151);
+			this->lbl_dedos->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->lbl_dedos->Location = System::Drawing::Point(130, 136);
+			this->lbl_dedos->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_dedos->Name = L"lbl_dedos";
-			this->lbl_dedos->Size = System::Drawing::Size(0, 16);
+			this->lbl_dedos->Size = System::Drawing::Size(53, 20);
 			this->lbl_dedos->TabIndex = 16;
+			this->lbl_dedos->Text = L"dedos";
 			// 
 			// lbl_adedos
 			// 
 			this->lbl_adedos->AutoSize = true;
 			this->lbl_adedos->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lbl_adedos->Location = System::Drawing::Point(272, 151);
+			this->lbl_adedos->Location = System::Drawing::Point(305, 136);
+			this->lbl_adedos->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_adedos->Name = L"lbl_adedos";
-			this->lbl_adedos->Size = System::Drawing::Size(0, 25);
+			this->lbl_adedos->Size = System::Drawing::Size(62, 20);
 			this->lbl_adedos->TabIndex = 17;
+			this->lbl_adedos->Text = L"adedos";
 			// 
 			// lbl_fechados
 			// 
 			this->lbl_fechados->AutoSize = true;
 			this->lbl_fechados->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lbl_fechados->Location = System::Drawing::Point(101, 210);
+			this->lbl_fechados->Location = System::Drawing::Point(92, 191);
+			this->lbl_fechados->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_fechados->Name = L"lbl_fechados";
-			this->lbl_fechados->Size = System::Drawing::Size(0, 25);
+			this->lbl_fechados->Size = System::Drawing::Size(75, 20);
 			this->lbl_fechados->TabIndex = 18;
+			this->lbl_fechados->Text = L"fechados";
 			// 
 			// lbl_hora
 			// 
 			this->lbl_hora->AutoSize = true;
 			this->lbl_hora->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lbl_hora->Location = System::Drawing::Point(218, 210);
+			this->lbl_hora->Location = System::Drawing::Point(301, 191);
+			this->lbl_hora->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_hora->Name = L"lbl_hora";
-			this->lbl_hora->Size = System::Drawing::Size(60, 25);
+			this->lbl_hora->Size = System::Drawing::Size(48, 20);
 			this->lbl_hora->TabIndex = 19;
 			this->lbl_hora->Text = L"Hora:";
 			// 
@@ -281,57 +286,86 @@ namespace ProyectoFinal {
 			this->lbl_preciodos->AutoSize = true;
 			this->lbl_preciodos->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lbl_preciodos->Location = System::Drawing::Point(32, 334);
+			this->lbl_preciodos->Location = System::Drawing::Point(92, 237);
+			this->lbl_preciodos->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_preciodos->Name = L"lbl_preciodos";
-			this->lbl_preciodos->Size = System::Drawing::Size(0, 25);
+			this->lbl_preciodos->Size = System::Drawing::Size(78, 20);
 			this->lbl_preciodos->TabIndex = 20;
+			this->lbl_preciodos->Text = L"preciodos";
 			// 
 			// lbl_totaldos
 			// 
 			this->lbl_totaldos->AutoSize = true;
 			this->lbl_totaldos->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lbl_totaldos->Location = System::Drawing::Point(160, 414);
+			this->lbl_totaldos->Location = System::Drawing::Point(301, 323);
+			this->lbl_totaldos->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_totaldos->Name = L"lbl_totaldos";
-			this->lbl_totaldos->Size = System::Drawing::Size(0, 25);
+			this->lbl_totaldos->Size = System::Drawing::Size(66, 20);
 			this->lbl_totaldos->TabIndex = 22;
-			// 
-			// txb_tickets
-			// 
-			this->txb_tickets->Location = System::Drawing::Point(249, 314);
-			this->txb_tickets->Name = L"txb_tickets";
-			this->txb_tickets->Size = System::Drawing::Size(100, 22);
-			this->txb_tickets->TabIndex = 23;
+			this->lbl_totaldos->Text = L"totaldos";
 			// 
 			// lbl_horados
 			// 
 			this->lbl_horados->AutoSize = true;
 			this->lbl_horados->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lbl_horados->Location = System::Drawing::Point(290, 219);
+			this->lbl_horados->Location = System::Drawing::Point(353, 191);
+			this->lbl_horados->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_horados->Name = L"lbl_horados";
-			this->lbl_horados->Size = System::Drawing::Size(0, 25);
+			this->lbl_horados->Size = System::Drawing::Size(70, 20);
 			this->lbl_horados->TabIndex = 24;
+			this->lbl_horados->Text = L"horaldos";
 			// 
 			// lbl_id
 			// 
 			this->lbl_id->AutoSize = true;
 			this->lbl_id->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lbl_id->Location = System::Drawing::Point(27, 102);
+			this->lbl_id->Location = System::Drawing::Point(153, 83);
+			this->lbl_id->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_id->Name = L"lbl_id";
-			this->lbl_id->Size = System::Drawing::Size(37, 25);
+			this->lbl_id->Size = System::Drawing::Size(30, 20);
 			this->lbl_id->TabIndex = 25;
 			this->lbl_id->Text = L"ID:";
 			// 
+			// nud_cantidadT
+			// 
+			this->nud_cantidadT->Location = System::Drawing::Point(57, 326);
+			this->nud_cantidadT->Name = L"nud_cantidadT";
+			this->nud_cantidadT->Size = System::Drawing::Size(95, 20);
+			this->nud_cantidadT->TabIndex = 26;
+			this->nud_cantidadT->ValueChanged += gcnew System::EventHandler(this, &CompraTicket::numericUpDown1_ValueChanged);
+			// 
+			// lbl_usuario
+			// 
+			this->lbl_usuario->AutoSize = true;
+			this->lbl_usuario->Location = System::Drawing::Point(12, 9);
+			this->lbl_usuario->Name = L"lbl_usuario";
+			this->lbl_usuario->Size = System::Drawing::Size(16, 13);
+			this->lbl_usuario->TabIndex = 27;
+			this->lbl_usuario->Text = L"---";
+			// 
+			// btt_rutas
+			// 
+			this->btt_rutas->Location = System::Drawing::Point(378, 80);
+			this->btt_rutas->Name = L"btt_rutas";
+			this->btt_rutas->Size = System::Drawing::Size(107, 23);
+			this->btt_rutas->TabIndex = 29;
+			this->btt_rutas->Text = L"Mostrar Rutas";
+			this->btt_rutas->UseVisualStyleBackColor = true;
+			this->btt_rutas->Click += gcnew System::EventHandler(this, &CompraTicket::btt_rutas_Click);
+			// 
 			// CompraTicket
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(491, 508);
+			this->ClientSize = System::Drawing::Size(497, 413);
+			this->Controls->Add(this->btt_rutas);
+			this->Controls->Add(this->lbl_usuario);
+			this->Controls->Add(this->nud_cantidadT);
 			this->Controls->Add(this->lbl_id);
 			this->Controls->Add(this->lbl_horados);
-			this->Controls->Add(this->txb_tickets);
 			this->Controls->Add(this->lbl_totaldos);
 			this->Controls->Add(this->lbl_preciodos);
 			this->Controls->Add(this->lbl_hora);
@@ -347,9 +381,11 @@ namespace ProyectoFinal {
 			this->Controls->Add(this->lbl_a);
 			this->Controls->Add(this->lbl_de);
 			this->Controls->Add(this->lbl_encabezado);
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"CompraTicket";
 			this->Text = L"CompraTicket";
 			this->Load += gcnew System::EventHandler(this, &CompraTicket::CompraTicket_Load);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->nud_cantidadT))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -357,50 +393,40 @@ namespace ProyectoFinal {
 #pragma endregion
 	private: System::Void label5_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
+
 	private: System::Void comboBox1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
-		String^ selectedValue = cbx_id->SelectedItem->ToString();
+		String^ seleccion = cbx_id->SelectedItem->ToString();
+		ticketClass->autoRelleno(lbl_dedos, lbl_adedos, lbl_fechados, lbl_horados, lbl_preciodos, seleccion);
+		ticketClass->totalString(lbl_totaldos);
 	}
-		   void comboxSalida() {
-			   try
-			   {
-
-				   String^ query = "SELECT idlugar FROM lugares";
-
-
-				   if (connector->OpenConnection()) {
-					   MySqlCommand^ command = gcnew MySqlCommand(query, connector->getConnection());
-					   MySqlDataReader^ reader = command->ExecuteReader();
-
-
-					   cbx_id->Items->Clear();
-
-
-					   while (reader->Read()) {
-						   int id = reader->GetInt32(0);
-						   cbx_id->Items->Add(id.ToString());
-					   }
-
-					   // Cerrar el lector y la conexión después de obtener los datos
-					   reader->Close();
-					   connector->CloseConnection();
-				   }
-				   else {
-					   MessageBox::Show("Conector no ejecutado.");
-				   }
-			   }
-			   catch (Exception^ ex) {
-				   MessageBox::Show(" error: " + ex->Message);
-				   connector->CloseConnection();
-			   }
-		   }
 
 	private: System::Void CompraTicket_Load(System::Object^ sender, System::EventArgs^ e) {
-		comboxSalida();
-
+		ticketClass->comboxID(cbx_id);
+		nud_cantidadT->Text = "1";
+		lbl_usuario->Text = ticketClass->nombreUsuario();
 	}
-	
 
-		   //--------------------------------------------------------------------------------------------------------------------
-	
+	private: System::Void numericUpDown1_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
+		int cantidad = Decimal::ToInt32(nud_cantidadT->Value);
+		ticketClass->darCantidad(cantidad);
+		ticketClass->totalString(lbl_totaldos);
+	}
+
+	private: System::Void btt_comprar_Click(System::Object^ sender, System::EventArgs^ e) {
+		int cantidad = Decimal::ToInt32(nud_cantidadT->Value); 
+
+		if (!(cantidad <= 0)) {
+			ticketClass->registroCompras(lbl_dedos, lbl_adedos, lbl_preciodos, lbl_fechados, lbl_horados, nud_cantidadT, lbl_totaldos);
+		}
+		else
+		{
+			MessageBox::Show("Cantidad de tickets invalida");
+		}
+	}
+
+	private: System::Void btt_rutas_Click(System::Object^ sender, System::EventArgs^ e) {
+		ProyectoFinal::RutasParaClientes^ rutas = gcnew ProyectoFinal::RutasParaClientes();
+		rutas->Show();
+	}
 };
 }

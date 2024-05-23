@@ -23,3 +23,7 @@ C:\Users\danyd\OneDrive\Escritorio\Proyecto final progra\proyectoFinal\ProyectoF
 C:\Users\danyd\OneDrive\Escritorio\Proyecto final progra\proyectoFinal\ProyectoFinal\x64\Debug\ProyectoFinal.EliminarRutas.resources
 C:\Users\danyd\OneDrive\Escritorio\Proyecto final progra\proyectoFinal\ProyectoFinal\x64\Debug\ProyectoFinal.InsertarRutas.resources
 C:\Users\danyd\OneDrive\Escritorio\Proyecto final progra\proyectoFinal\ProyectoFinal\x64\Debug\ProyectoFinal.MostrarRutas.resources
+C:\Users\joaqu\OneDrive\Escritorio\ProyectoFinal\ProyectoFinal\x64\Debug\ProyectoFinal.EliminarRutas.resources
+C:\Users\joaqu\OneDrive\Escritorio\ProyectoFinal\ProyectoFinal\x64\Debug\ProyectoFinal.InsertarRutas.resources
+C:\Users\joaqu\OneDrive\Escritorio\ProyectoFinal\ProyectoFinal\x64\Debug\ProyectoFinal.MostrarRutas.resources
+C:\Users\joaqu\OneDrive\Escritorio\ProyectoFinal\ProyectoFinal\x64\Debug\ProyectoFinal.RutasParaClientes.resources

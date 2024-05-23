@@ -133,6 +133,7 @@
     <ClInclude Include="CompraTicket.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="CompraTicketClass.h" />
     <ClInclude Include="EliminarRutas.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -166,6 +167,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="RutasParaClientes.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
@@ -187,6 +191,7 @@
     <ClCompile Include="RegistroClientes.cpp" />
     <ClCompile Include="RegistroCompras.cpp" />
     <ClCompile Include="RegistroRutas.cpp" />
+    <ClCompile Include="RutasParaClientes.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="app.ico" />
@@ -234,6 +239,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RegistroRutas.resx">
       <DependentUpon>RegistroRutas.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RutasParaClientes.resx">
+      <DependentUpon>RutasParaClientes.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

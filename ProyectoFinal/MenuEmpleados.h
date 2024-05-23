@@ -1,6 +1,8 @@
 #pragma once
+#include <stdlib.h>
 #include "RegistroCompras.h"
 #include "RegistroRutas.h"
+
 namespace ProyectoFinal {
 
 	using namespace System;
@@ -40,6 +42,7 @@ namespace ProyectoFinal {
 	private: System::Windows::Forms::Button^ btt_rutas;
 
 
+
 	protected:
 
 
@@ -67,9 +70,10 @@ namespace ProyectoFinal {
 			this->lbl_bienvenida->AutoSize = true;
 			this->lbl_bienvenida->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lbl_bienvenida->Location = System::Drawing::Point(60, 9);
+			this->lbl_bienvenida->Location = System::Drawing::Point(45, 7);
+			this->lbl_bienvenida->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_bienvenida->Name = L"lbl_bienvenida";
-			this->lbl_bienvenida->Size = System::Drawing::Size(197, 39);
+			this->lbl_bienvenida->Size = System::Drawing::Size(158, 31);
 			this->lbl_bienvenida->TabIndex = 0;
 			this->lbl_bienvenida->Text = L"Bienvenido";
 			// 
@@ -77,9 +81,10 @@ namespace ProyectoFinal {
 			// 
 			this->btt_compras->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btt_compras->Location = System::Drawing::Point(45, 104);
+			this->btt_compras->Location = System::Drawing::Point(34, 84);
+			this->btt_compras->Margin = System::Windows::Forms::Padding(2);
 			this->btt_compras->Name = L"btt_compras";
-			this->btt_compras->Size = System::Drawing::Size(229, 35);
+			this->btt_compras->Size = System::Drawing::Size(172, 28);
 			this->btt_compras->TabIndex = 1;
 			this->btt_compras->Text = L"Registro de Compras";
 			this->btt_compras->UseVisualStyleBackColor = true;
@@ -89,9 +94,10 @@ namespace ProyectoFinal {
 			// 
 			this->btt_rutas->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btt_rutas->Location = System::Drawing::Point(67, 165);
+			this->btt_rutas->Location = System::Drawing::Point(50, 134);
+			this->btt_rutas->Margin = System::Windows::Forms::Padding(2);
 			this->btt_rutas->Name = L"btt_rutas";
-			this->btt_rutas->Size = System::Drawing::Size(156, 36);
+			this->btt_rutas->Size = System::Drawing::Size(117, 29);
 			this->btt_rutas->TabIndex = 2;
 			this->btt_rutas->Text = L"Menú Rutas";
 			this->btt_rutas->UseVisualStyleBackColor = true;
@@ -99,12 +105,13 @@ namespace ProyectoFinal {
 			// 
 			// MenuEmpleados
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(335, 333);
+			this->ClientSize = System::Drawing::Size(251, 271);
 			this->Controls->Add(this->btt_rutas);
 			this->Controls->Add(this->btt_compras);
 			this->Controls->Add(this->lbl_bienvenida);
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"MenuEmpleados";
 			this->Text = L"MenuEmpleados";
 			this->ResumeLayout(false);
@@ -117,16 +124,18 @@ namespace ProyectoFinal {
 		ProyectoFinal::RegistroRutas^ registrorutas = gcnew ProyectoFinal::RegistroRutas(this);
 		registrorutas->Show();
 	}
-		   System::Void RegistroRutasClosed(System::Object^ sender, System::Windows::Forms::FormClosedEventArgs^ e) {
-			   this->Show();
-		   }
+
+	System::Void RegistroRutasClosed(System::Object^ sender, System::Windows::Forms::FormClosedEventArgs^ e) {
+		this->Show();
+	}
 	private: System::Void btt_compras_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Hide();
 		ProyectoFinal::RegistroCompras^ registrocompras = gcnew ProyectoFinal::RegistroCompras(this);
 		registrocompras->Show();
 	}
-		   System::Void RegistroComprasClosed(System::Object^ sender, System::Windows::Forms::FormClosedEventArgs^ e) {
-			   this->Show();
-		   }
+
+	System::Void RegistroComprasClosed(System::Object^ sender, System::Windows::Forms::FormClosedEventArgs^ e) {
+		this->Show();
+	}
 };
 }
