@@ -1,8 +1,8 @@
 ﻿  CompraTicket.cpp
+  CppCLR_WinFormsProject.cpp
 C:\Users\danyd\OneDrive\Escritorio\Proyecto final progra\proyectoFinal\ProyectoFinal\MySQLConnector.h(31,27): warning C4101: 'ex': variable local sin referencia
   (compilando archivo de origen "/CompraTicket.cpp")
   
-  CppCLR_WinFormsProject.cpp
 C:\Users\danyd\OneDrive\Escritorio\Proyecto final progra\proyectoFinal\ProyectoFinal\MySQLConnector.h(31,27): warning C4101: 'ex': variable local sin referencia
   (compilando archivo de origen "/CppCLR_WinFormsProject.cpp")
   
