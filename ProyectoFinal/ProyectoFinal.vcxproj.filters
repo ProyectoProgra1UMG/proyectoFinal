@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Rutas">
+      <UniqueIdentifier>{ecbf064e-b30b-408c-b56b-11edbe8b0002}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc">
@@ -53,6 +56,15 @@
     <ClInclude Include="MySQLConnector.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="InsertarRutas.h">
+      <Filter>Header Files\Rutas</Filter>
+    </ClInclude>
+    <ClInclude Include="EliminarRutas.h">
+      <Filter>Header Files\Rutas</Filter>
+    </ClInclude>
+    <ClInclude Include="MostrarRutas.h">
+      <Filter>Header Files\Rutas</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppCLR_WinFormsProject.cpp">
@@ -87,6 +99,15 @@
     </ClCompile>
     <ClCompile Include="RegistroRutas.cpp">
       <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InsertarRutas.cpp">
+      <Filter>Header Files\Rutas</Filter>
+    </ClCompile>
+    <ClCompile Include="EliminarRutas.cpp">
+      <Filter>Header Files\Rutas</Filter>
+    </ClCompile>
+    <ClCompile Include="MostrarRutas.cpp">
+      <Filter>Header Files\Rutas</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

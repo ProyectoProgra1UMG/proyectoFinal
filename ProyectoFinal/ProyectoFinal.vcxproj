@@ -133,7 +133,13 @@
     <ClInclude Include="CompraTicket.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="EliminarRutas.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Form1.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="InsertarRutas.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="LoginCliente.h">
@@ -143,6 +149,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MenuEmpleados.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MostrarRutas.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MySQLConnector.h" />
@@ -162,10 +171,13 @@
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="CompraTicket.cpp" />
     <ClCompile Include="CppCLR_WinFormsProject.cpp" />
+    <ClCompile Include="EliminarRutas.cpp" />
     <ClCompile Include="Form1.cpp" />
+    <ClCompile Include="InsertarRutas.cpp" />
     <ClCompile Include="LoginCliente.cpp" />
     <ClCompile Include="LoginEmpleados.cpp" />
     <ClCompile Include="MenuEmpleados.cpp" />
+    <ClCompile Include="MostrarRutas.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -193,8 +205,14 @@
     <EmbeddedResource Include="CompraTicket.resx">
       <DependentUpon>CompraTicket.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EliminarRutas.resx">
+      <DependentUpon>EliminarRutas.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertarRutas.resx">
+      <DependentUpon>InsertarRutas.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginCliente.resx">
       <DependentUpon>LoginCliente.h</DependentUpon>
@@ -204,6 +222,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MenuEmpleados.resx">
       <DependentUpon>MenuEmpleados.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MostrarRutas.resx">
+      <DependentUpon>MostrarRutas.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegistroClientes.resx">
       <DependentUpon>RegistroClientes.h</DependentUpon>

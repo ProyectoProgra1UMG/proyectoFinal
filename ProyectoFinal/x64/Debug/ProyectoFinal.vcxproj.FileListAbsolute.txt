@@ -19,3 +19,7 @@ C:\Users\joaqu\OneDrive\Escritorio\ProyectoFinal\ProyectoFinal\x64\Debug\Proyect
 C:\Users\joaqu\OneDrive\Escritorio\ProyectoFinal\ProyectoFinal\x64\Debug\ProyectoFinal.RegistroCompras.resources
 C:\Users\joaqu\OneDrive\Escritorio\ProyectoFinal\ProyectoFinal\x64\Debug\ProyectoFinal.RegistroRutas.resources
 C:\Users\joaqu\OneDrive\Escritorio\ProyectoFinal\ProyectoFinal\x64\Debug\Proyecto.1DA88537.Up2Date
+C:\Users\danyd\OneDrive\Escritorio\Proyecto final progra\proyectoFinal\ProyectoFinal\x64\Debug\Proyecto.1DA88537.Up2Date
+C:\Users\danyd\OneDrive\Escritorio\Proyecto final progra\proyectoFinal\ProyectoFinal\x64\Debug\ProyectoFinal.EliminarRutas.resources
+C:\Users\danyd\OneDrive\Escritorio\Proyecto final progra\proyectoFinal\ProyectoFinal\x64\Debug\ProyectoFinal.InsertarRutas.resources
+C:\Users\danyd\OneDrive\Escritorio\Proyecto final progra\proyectoFinal\ProyectoFinal\x64\Debug\ProyectoFinal.MostrarRutas.resources

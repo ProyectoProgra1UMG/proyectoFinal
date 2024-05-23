@@ -48,4 +48,22 @@ public:
     ~MySQLConnector() {
         CloseConnection();
     }
+    DataTable^ ExecuteQuery(String^ query) {
+        DataTable^ dataTable = gcnew DataTable();
+
+        try {
+            if (OpenConnection()) {
+                MySqlCommand^ cmd = gcnew MySqlCommand(query, connection);
+                MySqlDataAdapter^ dataAdapter = gcnew MySqlDataAdapter(cmd);
+
+                dataAdapter->Fill(dataTable);
+                CloseConnection();
+            }
+        }
+        catch (Exception^ ex) {
+            Console::WriteLine("Error: " + ex->Message);
+        }
+
+        return dataTable;
+    }
 };

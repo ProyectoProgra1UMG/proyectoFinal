@@ -204,7 +204,7 @@ private: System::Void btt_enter_Click(System::Object^ sender, System::EventArgs^
 
 			// Verificar si se encontró una coincidencia en la base de datos
 			if (count > 0) {
-				ProyectoFinal::CompraTicket^ compraticket = gcnew ProyectoFinal::CompraTicket(); 
+				ProyectoFinal::CompraTicket^ compraticket = gcnew ProyectoFinal::CompraTicket();
 				compraticket->Show(); 
 				Close(); 
 			}

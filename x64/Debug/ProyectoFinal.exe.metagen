@@ -1,8 +1,11 @@
   ProyectoFinal.CompraTicket.resources - Embedded, ContainedInManifestFile, 
+  ProyectoFinal.EliminarRutas.resources - Embedded, ContainedInManifestFile, 
   ProyectoFinal.Form1.resources - Embedded, ContainedInManifestFile, 
+  ProyectoFinal.InsertarRutas.resources - Embedded, ContainedInManifestFile, 
   ProyectoFinal.LoginCliente.resources - Embedded, ContainedInManifestFile, 
   ProyectoFinal.LoginEmpleados.resources - Embedded, ContainedInManifestFile, 
   ProyectoFinal.MenuEmpleados.resources - Embedded, ContainedInManifestFile, 
+  ProyectoFinal.MostrarRutas.resources - Embedded, ContainedInManifestFile, 
   ProyectoFinal.RegistroClientes.resources - Embedded, ContainedInManifestFile, 
   ProyectoFinal.RegistroCompras.resources - Embedded, ContainedInManifestFile, 
   ProyectoFinal.RegistroRutas.resources - Embedded, ContainedInManifestFile, 
@@ -23,9 +26,6 @@ Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=
 	hash=None, flags=None
 Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
 	hash=None, flags=None
-Class ProyectoFinal.CompraTicket: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
-  :System.Windows.Forms.Form
-    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class MySQLConnector: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Interfaces:
@@ -40,7 +40,14 @@ Class MySQLConnector: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     OpenConnection(): PrivateScope, Public, HideBySig
     CloseConnection(): PrivateScope, Public, HideBySig
     getConnection(): PrivateScope, Public, HideBySig
+    ExecuteQuery(String): PrivateScope, Public, HideBySig
     Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class ProyectoFinal.CompraTicket: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    MySQLConnector connector : Public
+    MySql.Data.MySqlClient.MySqlConnection connection : Public
 Class ProyectoFinal.RegistroClientes: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(System.Windows.Forms.Form, MySql.Data.MySqlClient.MySqlConnection): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
@@ -56,6 +63,24 @@ Class ProyectoFinal.LoginCliente: AutoLayout, AnsiClass, Class, Public, BeforeFi
 Class ProyectoFinal.RegistroCompras: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(System.Windows.Forms.Form): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class ProyectoFinal.InsertarRutas: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    MySQLConnector connector : Public
+    MySql.Data.MySqlClient.MySqlConnection connection : Public
+Class ProyectoFinal.EliminarRutas: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    MySQLConnector connector : Public
+    MySql.Data.MySqlClient.MySqlConnection connection : Public
+Class ProyectoFinal.MostrarRutas: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    MySQLConnector connector : Public
+    MySql.Data.MySqlClient.MySqlConnection connection : Public
 Class ProyectoFinal.RegistroRutas: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(System.Windows.Forms.Form): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

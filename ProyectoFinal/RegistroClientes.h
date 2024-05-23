@@ -263,6 +263,7 @@ namespace ProyectoFinal {
 
 		this->txb_usuario->Text = "";
 		this->txb_contraseña->Text = "";
+		this->txb_nit->Text = "";
 	}
 private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
 }
