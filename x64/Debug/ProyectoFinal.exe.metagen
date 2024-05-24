@@ -83,6 +83,9 @@ Class ProyectoFinal.LoginCliente: AutoLayout, AnsiClass, Class, Public, BeforeFi
 Class ProyectoFinal.RegistroCompras: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(System.Windows.Forms.Form): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    MySQLConnector connector : Public
+    MySql.Data.MySqlClient.MySqlConnection connection : Public
 Class ProyectoFinal.InsertarRutas: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

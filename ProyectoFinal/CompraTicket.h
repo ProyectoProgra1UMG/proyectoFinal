@@ -413,6 +413,13 @@ namespace ProyectoFinal {
 	}
 
 	private: System::Void btt_comprar_Click(System::Object^ sender, System::EventArgs^ e) {
+		String^ datos = lbl_totaldos->Text;
+
+		if (datos == "Q0") {
+			MessageBox::Show("Por favor, complete todos los campos.");
+			return;
+		}
+
 		int cantidad = Decimal::ToInt32(nud_cantidadT->Value); 
 
 		if (!(cantidad <= 0)) {

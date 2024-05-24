@@ -6,20 +6,29 @@ C:\Users\joaqu\OneDrive\Escritorio\ProyectoFinal\ProyectoFinal\MySQLConnector.h(
 C:\Users\joaqu\OneDrive\Escritorio\ProyectoFinal\ProyectoFinal\MySQLConnector.h(31,27): warning C4101: 'ex': variable local sin referencia
   (compilando archivo de origen "/CppCLR_WinFormsProject.cpp")
   
-  LoginCliente.cpp
+  LoginEmpleados.cpp
 C:\Users\joaqu\OneDrive\Escritorio\ProyectoFinal\ProyectoFinal\MySQLConnector.h(31,27): warning C4101: 'ex': variable local sin referencia
-  (compilando archivo de origen "/LoginCliente.cpp")
+  (compilando archivo de origen "/LoginEmpleados.cpp")
   
-  RegistroClientes.cpp
+  MenuEmpleados.cpp
 C:\Users\joaqu\OneDrive\Escritorio\ProyectoFinal\ProyectoFinal\MySQLConnector.h(31,27): warning C4101: 'ex': variable local sin referencia
-  (compilando archivo de origen "/RegistroClientes.cpp")
+  (compilando archivo de origen "/MenuEmpleados.cpp")
+  
+  RegistroCompras.cpp
+C:\Users\joaqu\OneDrive\Escritorio\ProyectoFinal\ProyectoFinal\MySQLConnector.h(31,27): warning C4101: 'ex': variable local sin referencia
+  (compilando archivo de origen "/RegistroCompras.cpp")
   
   Generando código...
-C:\Users\joaqu\OneDrive\Escritorio\ProyectoFinal\ProyectoFinal\RutasParaClientes.h(115,1): warning C4715: 'ProyectoFinal::RutasParaClientes::ObtenerUsuarios': no todas las rutas de acceso de control devuelven un valor
-C:\Users\joaqu\OneDrive\Escritorio\ProyectoFinal\ProyectoFinal\RutasParaClientes.h(115,1): warning C4715: 'ProyectoFinal::RutasParaClientes::ObtenerUsuarios': no todas las rutas de acceso de control devuelven un valor
-C:\Users\joaqu\OneDrive\Escritorio\ProyectoFinal\ProyectoFinal\RutasParaClientes.h(115,1): warning C4715: 'ProyectoFinal::RutasParaClientes::ObtenerUsuarios': no todas las rutas de acceso de control devuelven un valor
+C:\Users\joaqu\OneDrive\Escritorio\ProyectoFinal\ProyectoFinal\RegistroCompras.h(139,1): warning C4715: 'ProyectoFinal::RegistroCompras::ObtenerUsuarios': no todas las rutas de acceso de control devuelven un valor
+C:\Users\joaqu\OneDrive\Escritorio\ProyectoFinal\ProyectoFinal\RegistroCompras.h(139,1): warning C4715: 'ProyectoFinal::RegistroCompras::ObtenerUsuarios': no todas las rutas de acceso de control devuelven un valor
+C:\Users\joaqu\OneDrive\Escritorio\ProyectoFinal\ProyectoFinal\MostrarRutas.h(117,1): warning C4715: 'ProyectoFinal::MostrarRutas::ObtenerUsuarios': no todas las rutas de acceso de control devuelven un valor
+C:\Users\joaqu\OneDrive\Escritorio\ProyectoFinal\ProyectoFinal\RegistroCompras.h(139,1): warning C4715: 'ProyectoFinal::RegistroCompras::ObtenerUsuarios': no todas las rutas de acceso de control devuelven un valor
 C:\Users\joaqu\OneDrive\Escritorio\ProyectoFinal\ProyectoFinal\MostrarRutas.h(117,1): warning C4715: 'ProyectoFinal::MostrarRutas::ObtenerUsuarios': no todas las rutas de acceso de control devuelven un valor
 C:\Users\joaqu\OneDrive\Escritorio\ProyectoFinal\ProyectoFinal\RutasParaClientes.h(115,1): warning C4715: 'ProyectoFinal::RutasParaClientes::ObtenerUsuarios': no todas las rutas de acceso de control devuelven un valor
+C:\Users\joaqu\OneDrive\Escritorio\ProyectoFinal\ProyectoFinal\RegistroCompras.h(139,1): warning C4715: 'ProyectoFinal::RegistroCompras::ObtenerUsuarios': no todas las rutas de acceso de control devuelven un valor
+C:\Users\joaqu\OneDrive\Escritorio\ProyectoFinal\ProyectoFinal\MostrarRutas.h(117,1): warning C4715: 'ProyectoFinal::MostrarRutas::ObtenerUsuarios': no todas las rutas de acceso de control devuelven un valor
+C:\Users\joaqu\OneDrive\Escritorio\ProyectoFinal\ProyectoFinal\RutasParaClientes.h(115,1): warning C4715: 'ProyectoFinal::RutasParaClientes::ObtenerUsuarios': no todas las rutas de acceso de control devuelven un valor
+C:\Users\joaqu\OneDrive\Escritorio\ProyectoFinal\ProyectoFinal\RegistroCompras.h(139,1): warning C4715: 'ProyectoFinal::RegistroCompras::ObtenerUsuarios': no todas las rutas de acceso de control devuelven un valor
 C:\Users\joaqu\OneDrive\Escritorio\ProyectoFinal\ProyectoFinal\MostrarRutas.h(117,1): warning C4715: 'ProyectoFinal::MostrarRutas::ObtenerUsuarios': no todas las rutas de acceso de control devuelven un valor
   AssemblyInfo.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
   ProyectoFinal.vcxproj -> C:\Users\joaqu\OneDrive\Escritorio\ProyectoFinal\x64\Debug\ProyectoFinal.exe

@@ -224,6 +224,10 @@ namespace ProyectoFinal {
 			String^ contraseña = this->txb_contraseña->Text;
 			String^ nit = this->txb_nit->Text;
 
+			if (String::IsNullOrEmpty(nombre) || String::IsNullOrEmpty(contraseña) || String::IsNullOrEmpty(nit)) {
+				MessageBox::Show("Por favor, complete todos los campos."); 
+				return; 
+			}
 			// Consulta SQL para insertar los datos del usuario
 			String^ query = "INSERT INTO clientes (nombre, contraseña, nit) VALUES (@nombre, @contraseña, @nit)";
 

@@ -244,6 +244,11 @@ namespace ProyectoFinal {
 			String^ hora = this->txb_hora->Text;
 
 
+			if (String::IsNullOrEmpty(salida) || String::IsNullOrEmpty(destino) || String::IsNullOrEmpty(precio) || String::IsNullOrEmpty(fecha) || String::IsNullOrEmpty(hora)) {
+				MessageBox::Show("Por favor, complete todos los campos.");
+				return;
+			}
+
 			// Consulta SQL para insertar los datos del usuario
 			String^ query = "INSERT INTO lugares (lugarSalida, lugarDestino, precio, fecha, hora) VALUES (@lugarSalida, @lugarDestino, @precio, @fecha, @hora)";
 
