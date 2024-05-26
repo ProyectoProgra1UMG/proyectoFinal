@@ -11,6 +11,11 @@ namespace ProyectoFinal {
 	using namespace System::Data;
 	using namespace System::Drawing;
 
+	using namespace iTextSharp::text;
+	using namespace iTextSharp::text::pdf;
+	using namespace iTextSharp::tool::xml;
+	using namespace System::IO;
+
 	/// <summary>
 	/// Resumen de CompraTicket
 	/// </summary>
@@ -413,6 +418,58 @@ namespace ProyectoFinal {
 	}
 
 	private: System::Void btt_comprar_Click(System::Object^ sender, System::EventArgs^ e) {
+		//---------------------------------------------------------------------------
+
+		MessageBox::Show("Imprimir voleto");
+		SaveFileDialog^ guardar = gcnew SaveFileDialog();
+		guardar->FileName = "ticket" + DateTime::Now.ToString("ddMMyyyy") + ".pdf";
+
+		String^ textHtml = "<table><tr><td>Hola A Todos</td></tr></table>";
+
+
+		if (guardar->ShowDialog() == System::Windows::Forms::DialogResult::OK)
+		{
+			String^ filePath = guardar->FileName;
+			FileStream^ stream = gcnew FileStream(filePath, FileMode::Create);
+
+			try {
+				// Definir un tamaño de página personalizado para el ticket
+				float altura = 3 * 72; // 3 pulgadas en puntos 
+				float ancho = 8 * 72; // 8 pulgadas en puntos 
+				iTextSharp::text::Rectangle^ ticketSize = gcnew iTextSharp::text::Rectangle(ancho, altura);
+
+				// Crear el documento PDF con el tamaño de página personalizado
+				Document^ pdf = gcnew Document(ticketSize, 1, 1, 1, 1);
+
+				PdfWriter^ whiter = PdfWriter::GetInstance(pdf, stream);
+				pdf->Open();
+				//pdf->Add(gcnew Phrase("Hola Mundo"));
+
+				StringReader^ strR = gcnew StringReader(textHtml);
+				try
+				{
+					XMLWorkerHelper::GetInstance()->ParseXHtml(whiter, pdf, strR);
+				}
+				finally
+				{
+					if (strR != nullptr) {
+						strR->Close();
+					}
+				}
+
+				pdf->Close();
+				stream->Close();
+			}
+			finally {
+				// Asegurarse de que el stream se cierre al salir del bloque try
+				if (stream != nullptr) {
+					stream->Close();
+				}
+			}
+		}
+
+
+		//---------------------------------------------------------------------------
 		String^ datos = lbl_totaldos->Text;
 
 		if (datos == "Q0") {

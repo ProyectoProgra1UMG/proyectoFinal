@@ -197,6 +197,12 @@
     <Image Include="app.ico" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\..\..\.nuget\packages\itextsharp\5.5.13\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xmlworker">
+      <HintPath>..\..\..\..\.nuget\packages\itextsharp.xmlworker\5.5.13\lib\itextsharp.xmlworker.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector NET 8.4\MySql.Data.dll</HintPath>
     </Reference>
