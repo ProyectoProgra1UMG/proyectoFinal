@@ -11,6 +11,9 @@ namespace ProyectoFinal {
 	using namespace System::Data;
 	using namespace System::Drawing;
 
+	using namespace System::Reflection;
+	using namespace System::Resources;
+
 	using namespace iTextSharp::text;
 	using namespace iTextSharp::text::pdf;
 	using namespace iTextSharp::tool::xml;
@@ -422,9 +425,21 @@ namespace ProyectoFinal {
 
 		MessageBox::Show("Imprimir voleto");
 		SaveFileDialog^ guardar = gcnew SaveFileDialog();
-		guardar->FileName = "ticket" + DateTime::Now.ToString("ddMMyyyy") + ".pdf";
+		guardar->FileName = "ticket" + DateTime::Now.ToString("ddMMyyyyHHmmss") + ".pdf";
 
-		String^ textHtml = "<table><tr><td>Hola A Todos</td></tr></table>";
+		String^ htmlFilePath = "ticket.html";
+		StreamReader^ reader = gcnew StreamReader(htmlFilePath);
+		String^ textHtml = reader->ReadToEnd();
+		reader->Close();
+
+		textHtml = textHtml->Replace("@NOMBRE", lbl_usuario->Text);
+		textHtml = textHtml->Replace("@FECHA", lbl_fechados->Text);
+		textHtml = textHtml->Replace("@HORA", lbl_horados->Text);
+		textHtml = textHtml->Replace("@SALIDA", lbl_dedos->Text);
+		textHtml = textHtml->Replace("@DESTINO", lbl_adedos->Text);
+		textHtml = textHtml->Replace("@CANTIDAD", nud_cantidadT->Text);
+		textHtml = textHtml->Replace("@TOTAL", lbl_totaldos->Text);
+
 
 
 		if (guardar->ShowDialog() == System::Windows::Forms::DialogResult::OK)
@@ -443,7 +458,22 @@ namespace ProyectoFinal {
 
 				PdfWriter^ whiter = PdfWriter::GetInstance(pdf, stream);
 				pdf->Open();
-				//pdf->Add(gcnew Phrase("Hola Mundo"));
+				
+				//iTextSharp::text::Image^ img = iTextSharp::text::Image::GetInstance("logo.png", System::Drawing::Imaging::ImageFormat::Png);
+				// Cargar la imagen desde el archivo
+				System::Drawing::Image^ imgFromFile = System::Drawing::Image::FromFile("logo.png"); 
+
+				// Convertir la imagen a un flujo de datos
+				System::IO::MemoryStream^ ms = gcnew System::IO::MemoryStream();
+				imgFromFile->Save(ms, System::Drawing::Imaging::ImageFormat::Png); 
+
+				// Crear una instancia de iTextSharp Image usando el flujo de datos
+				iTextSharp::text::Image^ img = iTextSharp::text::Image::GetInstance(ms->GetBuffer()); 
+
+				img->ScaleToFit(80, 60);
+				img->Alignment = iTextSharp::text::Image::UNDERLYING;
+				img->SetAbsolutePosition(pdf->LeftMargin + 20, pdf->Top - 45);
+				pdf->Add(img);
 
 				StringReader^ strR = gcnew StringReader(textHtml);
 				try

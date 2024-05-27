@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Title of the document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        body {
+            background-color: #406c86;
+        }
+        table.border {
+            border-collapse: collapse;
+            border: 1px solid #406e83;
+        }
+
+            table.border tr {
+                padding: 5px;
+                border: 1px solid #406c86;
+            }
+
+            table.border th {
+                padding: 5px;
+                border: 1px solid #406c86;
+            }
+
+            table.border td {
+                padding: 5px;
+                border: 0px solid black;
+            }
+        .texto1 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 32px;
+            font-weight: bold;
+            color: #2c5263;
+        }
+        .texto2 {
+            background-color: #c3d1d8;
+            font-family: 'Roboto', sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            color: #406c86;
+        }
+        .texto3 {
+            background-color: #c3d1d8;
+            font-family: 'Roboto', sans-serif;
+            font-size: 20px;
+            color: #406c86;
+        }
+    </style>
+</head>
+<body>
+    <table style="width:100%">
+        <tr><td colspan="3" height="20"></td></tr>
+        <tr>
+            <td style="width:30%"></td>
+            <td style="width:40%" align="center" valign="top">
+                <table style="width:100%;">
+                    <tr align="center" , style="width:100%;">
+                        <td class="texto1", style="width:100%;">TRENES TPG</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <tr><td colspan="3" height="20"></td></tr>
+
+        <tr>
+            <td colspan="3">
+                <table class="border" style="width:100%;">
+                    <thead>
+                        <tr style="background-color:#234a5c">
+                            <th class="texto2", align="center" height="50">TICKET DE TREN</th>
+                            <th class="texto2", align="center" height="50">CANTIDAD</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="texto3", align="left">
+                                <table style="width:100%;">
+                                    <tr >
+                                        <td colspan="1" style="width:0%">NOMBRE:</td>
+                                        <td height="30">@NOMBRE</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" style="width:0%">FECHA:</td>
+                                        <td>@FECHA</td>
+                                        <td colspan="1" style="width:0%">HORA:</td>
+                                        <td height="30">@HORA</td>
+                                    </tr>
+                                </table>
+                                <table style="width:100%;">
+                                    <tr>
+                                        <td colspan="1" style="width:0%">DE:</td>
+                                        <td>@SALIDA</td>
+                                        <td colspan="1" style="width:0%">A:</td>
+                                        <td height="30">@DESTINO</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <th class="texto3", align="center">@CANTIDAD</th>
+                        </tr>
+                        <tr>
+                            <th class="texto3" align="right">TOTAL</th>
+                            <th class="texto2">@TOTAL</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
