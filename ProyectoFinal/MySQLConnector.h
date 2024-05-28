@@ -1,5 +1,4 @@
 #pragma once
-#include <iostream>
 
 using namespace System;
 using namespace MySql::Data::MySqlClient;

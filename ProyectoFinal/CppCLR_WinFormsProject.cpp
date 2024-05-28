@@ -12,10 +12,11 @@ using namespace System;
 using namespace System::Windows::Forms;
 
 [STAThread]
-int main()
+int main(array<System::String^>^ args)
 {
   Application::EnableVisualStyles();
   Application::SetCompatibleTextRenderingDefault(false);
-  Application::Run(gcnew CppCLRWinFormsProject::Form1());
+  CppCLRWinFormsProject::Form1 form;
+  Application::Run(% form);
   return 0;
 }
