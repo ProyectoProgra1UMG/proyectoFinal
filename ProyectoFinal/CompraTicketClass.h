@@ -81,7 +81,13 @@ public:
                     String^ hora = reader["hora"]->ToString();
 
                     // Esto elimina el primer carácter, que se asume es "Q"
-                    String^ precioString = precio->Substring(1);
+                    String^ precioString; 
+                    if (precio->StartsWith("Q")) { 
+                        precioString = precio->Substring(1); 
+                    } 
+                    else { 
+                        precioString = precio; 
+                    }
                     precioDouble = Convert::ToDouble(precioString);
                     calculoTotal();
 
@@ -107,10 +113,10 @@ public:
 
 
     //--------------------------------CALCULAR TOTAL-------------------------------------------
-    void calculoTotal() {
-        total = precioDouble * cantidad;
-        String^ totalString = Convert::ToString(total);
-        totaldosString = "Q"+totalString;
+    void calculoTotal() { 
+        total = precioDouble * cantidad; 
+        String^ totalString = String::Format("{0:F2}", total);
+        totaldosString = "Q" + totalString; 
     }
 
 
