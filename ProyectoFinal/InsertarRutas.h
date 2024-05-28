@@ -16,7 +16,12 @@ namespace ProyectoFinal {
 	{
 	public:
 		MySQLConnector^ connector = gcnew MySQLConnector();
-		MySqlConnection^ connection;
+
+	public:
+
+
+
+		   MySqlConnection^ connection;
 		InsertarRutas(void)
 
 		{
@@ -97,30 +102,34 @@ namespace ProyectoFinal {
 			// 
 			// txb_salida
 			// 
-			this->txb_salida->Location = System::Drawing::Point(118, 88);
+			this->txb_salida->Location = System::Drawing::Point(230, 74);
+			this->txb_salida->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->txb_salida->Name = L"txb_salida";
-			this->txb_salida->Size = System::Drawing::Size(215, 22);
+			this->txb_salida->Size = System::Drawing::Size(162, 20);
 			this->txb_salida->TabIndex = 0;
 			// 
 			// txb_precio
 			// 
-			this->txb_precio->Location = System::Drawing::Point(161, 206);
+			this->txb_precio->Location = System::Drawing::Point(230, 164);
+			this->txb_precio->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->txb_precio->Name = L"txb_precio";
-			this->txb_precio->Size = System::Drawing::Size(172, 22);
+			this->txb_precio->Size = System::Drawing::Size(162, 20);
 			this->txb_precio->TabIndex = 1;
 			// 
 			// txb_hora
 			// 
-			this->txb_hora->Location = System::Drawing::Point(233, 324);
+			this->txb_hora->Location = System::Drawing::Point(230, 242);
+			this->txb_hora->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->txb_hora->Name = L"txb_hora";
-			this->txb_hora->Size = System::Drawing::Size(193, 22);
+			this->txb_hora->Size = System::Drawing::Size(162, 20);
 			this->txb_hora->TabIndex = 2;
 			// 
 			// txb_destino
 			// 
-			this->txb_destino->Location = System::Drawing::Point(118, 147);
+			this->txb_destino->Location = System::Drawing::Point(230, 118);
+			this->txb_destino->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->txb_destino->Name = L"txb_destino";
-			this->txb_destino->Size = System::Drawing::Size(215, 22);
+			this->txb_destino->Size = System::Drawing::Size(162, 20);
 			this->txb_destino->TabIndex = 3;
 			// 
 			// lbl_salida
@@ -128,9 +137,10 @@ namespace ProyectoFinal {
 			this->lbl_salida->AutoSize = true;
 			this->lbl_salida->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lbl_salida->Location = System::Drawing::Point(75, 88);
+			this->lbl_salida->Location = System::Drawing::Point(192, 72);
+			this->lbl_salida->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_salida->Name = L"lbl_salida";
-			this->lbl_salida->Size = System::Drawing::Size(43, 25);
+			this->lbl_salida->Size = System::Drawing::Size(34, 20);
 			this->lbl_salida->TabIndex = 4;
 			this->lbl_salida->Text = L"De:";
 			// 
@@ -139,9 +149,10 @@ namespace ProyectoFinal {
 			this->lbl_destino->AutoSize = true;
 			this->lbl_destino->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lbl_destino->Location = System::Drawing::Point(75, 143);
+			this->lbl_destino->Location = System::Drawing::Point(192, 118);
+			this->lbl_destino->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_destino->Name = L"lbl_destino";
-			this->lbl_destino->Size = System::Drawing::Size(32, 25);
+			this->lbl_destino->Size = System::Drawing::Size(24, 20);
 			this->lbl_destino->TabIndex = 5;
 			this->lbl_destino->Text = L"A:";
 			// 
@@ -150,9 +161,10 @@ namespace ProyectoFinal {
 			this->lbl_fechas->AutoSize = true;
 			this->lbl_fechas->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lbl_fechas->Location = System::Drawing::Point(77, 258);
+			this->lbl_fechas->Location = System::Drawing::Point(64, 198);
+			this->lbl_fechas->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_fechas->Name = L"lbl_fechas";
-			this->lbl_fechas->Size = System::Drawing::Size(189, 25);
+			this->lbl_fechas->Size = System::Drawing::Size(152, 20);
 			this->lbl_fechas->TabIndex = 6;
 			this->lbl_fechas->Text = L"Fechas Disponibles:";
 			// 
@@ -161,9 +173,10 @@ namespace ProyectoFinal {
 			this->lbl_precio->AutoSize = true;
 			this->lbl_precio->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lbl_precio->Location = System::Drawing::Point(75, 202);
+			this->lbl_precio->Location = System::Drawing::Point(159, 164);
+			this->lbl_precio->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_precio->Name = L"lbl_precio";
-			this->lbl_precio->Size = System::Drawing::Size(73, 25);
+			this->lbl_precio->Size = System::Drawing::Size(57, 20);
 			this->lbl_precio->TabIndex = 7;
 			this->lbl_precio->Text = L"Precio:";
 			// 
@@ -172,9 +185,10 @@ namespace ProyectoFinal {
 			this->lbl_encabezado->AutoSize = true;
 			this->lbl_encabezado->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lbl_encabezado->Location = System::Drawing::Point(234, 9);
+			this->lbl_encabezado->Location = System::Drawing::Point(176, 7);
+			this->lbl_encabezado->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_encabezado->Name = L"lbl_encabezado";
-			this->lbl_encabezado->Size = System::Drawing::Size(275, 38);
+			this->lbl_encabezado->Size = System::Drawing::Size(230, 31);
 			this->lbl_encabezado->TabIndex = 8;
 			this->lbl_encabezado->Text = L"Insertar Registros";
 			// 
@@ -182,9 +196,10 @@ namespace ProyectoFinal {
 			// 
 			this->btt_insertar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btt_insertar->Location = System::Drawing::Point(161, 412);
+			this->btt_insertar->Location = System::Drawing::Point(230, 302);
+			this->btt_insertar->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->btt_insertar->Name = L"btt_insertar";
-			this->btt_insertar->Size = System::Drawing::Size(98, 31);
+			this->btt_insertar->Size = System::Drawing::Size(74, 25);
 			this->btt_insertar->TabIndex = 9;
 			this->btt_insertar->Text = L"Insertar";
 			this->btt_insertar->UseVisualStyleBackColor = true;
@@ -192,9 +207,10 @@ namespace ProyectoFinal {
 			// 
 			// dtp_fecha
 			// 
-			this->dtp_fecha->Location = System::Drawing::Point(306, 258);
+			this->dtp_fecha->Location = System::Drawing::Point(241, 198);
+			this->dtp_fecha->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->dtp_fecha->Name = L"dtp_fecha";
-			this->dtp_fecha->Size = System::Drawing::Size(200, 22);
+			this->dtp_fecha->Size = System::Drawing::Size(151, 20);
 			this->dtp_fecha->TabIndex = 10;
 			// 
 			// lbl_hora
@@ -202,17 +218,18 @@ namespace ProyectoFinal {
 			this->lbl_hora->AutoSize = true;
 			this->lbl_hora->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lbl_hora->Location = System::Drawing::Point(80, 320);
+			this->lbl_hora->Location = System::Drawing::Point(98, 240);
+			this->lbl_hora->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_hora->Name = L"lbl_hora";
-			this->lbl_hora->Size = System::Drawing::Size(147, 25);
+			this->lbl_hora->Size = System::Drawing::Size(118, 20);
 			this->lbl_hora->TabIndex = 11;
 			this->lbl_hora->Text = L"Hora de Salida:";
 			// 
 			// InsertarRutas
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(890, 533);
+			this->ClientSize = System::Drawing::Size(668, 433);
 			this->Controls->Add(this->lbl_hora);
 			this->Controls->Add(this->dtp_fecha);
 			this->Controls->Add(this->btt_insertar);
@@ -226,6 +243,7 @@ namespace ProyectoFinal {
 			this->Controls->Add(this->txb_precio);
 			this->Controls->Add(this->txb_salida);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
+			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->Name = L"InsertarRutas";
 			this->Text = L"InsertarRutas";
 			this->ResumeLayout(false);
