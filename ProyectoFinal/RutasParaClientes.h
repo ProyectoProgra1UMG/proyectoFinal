@@ -88,7 +88,7 @@ namespace ProyectoFinal {
 			this->ClientSize = System::Drawing::Size(706, 357);
 			this->Controls->Add(this->dgv_registros);
 			this->Controls->Add(this->lbl_encavezado);
-			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 			this->Name = L"RutasParaClientes";
 			this->Text = L"RutasParaClientes";
 			this->Load += gcnew System::EventHandler(this, &RutasParaClientes::RutasParaClientes_Load);

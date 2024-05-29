@@ -53,7 +53,7 @@ namespace ProyectoFinal {
 	private: System::Windows::Forms::Label^ lbl_usuario;
 
 	private: System::Windows::Forms::Button^ btt_rutas;
-	private: System::Windows::Forms::Panel^ panel1;
+
 
 	public:
 
@@ -65,7 +65,6 @@ namespace ProyectoFinal {
 			   connection = gcnew MySqlConnection(connector->connectionString);
 			   ticketClass = _ticketClass;
 
-			   this->WindowState = FormWindowState::Maximized;
 			   //
 			   //TODO: agregar código de constructor aquí
 			   //
@@ -133,7 +132,6 @@ namespace ProyectoFinal {
 			this->nud_cantidadT = (gcnew System::Windows::Forms::NumericUpDown());
 			this->lbl_usuario = (gcnew System::Windows::Forms::Label());
 			this->btt_rutas = (gcnew System::Windows::Forms::Button());
-			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->nud_cantidadT))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -368,19 +366,11 @@ namespace ProyectoFinal {
 			this->btt_rutas->UseVisualStyleBackColor = true;
 			this->btt_rutas->Click += gcnew System::EventHandler(this, &CompraTicket::btt_rutas_Click);
 			// 
-			// panel1
-			// 
-			this->panel1->Location = System::Drawing::Point(468, 36);
-			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(722, 396);
-			this->panel1->TabIndex = 30;
-			// 
 			// CompraTicket
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1202, 444);
-			this->Controls->Add(this->panel1);
+			this->ClientSize = System::Drawing::Size(469, 444);
 			this->Controls->Add(this->btt_rutas);
 			this->Controls->Add(this->lbl_usuario);
 			this->Controls->Add(this->nud_cantidadT);
@@ -529,24 +519,10 @@ namespace ProyectoFinal {
 			MessageBox::Show("Cantidad de tickets invalida");
 		}
 	}
-
-
-	template<class T>
-		void AbrirPanel(T FormHijo)
-		{
-			if (this->panel1->Controls->Count > 0)
-			this->panel1->Controls->RemoveAt(0);
-			FormHijo->TopLevel = false;
-			FormHijo->Dock = DockStyle::Fill;
-			this->panel1->Controls->Add(FormHijo);
-			this->panel1->Tag = FormHijo;
-			FormHijo->Show();
-		}
 	
-	
-	
-	private: System::Void btt_rutas_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->AbrirPanel(gcnew ProyectoFinal::RutasParaClientes);
-	}
+	private: System::Void btt_rutas_Click(System::Object^ sender, System::EventArgs^ e) { 
+		ProyectoFinal::RutasParaClientes^ rclientes = gcnew ProyectoFinal::RutasParaClientes();
+		rclientes->Show();
+	} 
 };
 }
