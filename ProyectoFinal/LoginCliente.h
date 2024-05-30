@@ -126,6 +126,7 @@ namespace ProyectoFinal {
 			this->txb_contraseña->Name = L"txb_contraseña";
 			this->txb_contraseña->Size = System::Drawing::Size(190, 20);
 			this->txb_contraseña->TabIndex = 3;
+			this->txb_contraseña->UseSystemPasswordChar = true;
 			// 
 			// txb_usuario
 			// 

@@ -118,6 +118,7 @@ namespace ProyectoFinal {
 			this->txb_contraseña->Name = L"txb_contraseña";
 			this->txb_contraseña->Size = System::Drawing::Size(135, 22);
 			this->txb_contraseña->TabIndex = 4;
+			this->txb_contraseña->UseSystemPasswordChar = true;
 			// 
 			// btt_login
 			// 

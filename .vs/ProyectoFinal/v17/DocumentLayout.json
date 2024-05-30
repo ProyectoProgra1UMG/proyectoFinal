@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\joaqu\\OneDrive\\Escritorio\\ProyectoFinal\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D6B900EF-9562-48E0-99E7-702050315070}|ProyectoFinal\\ProyectoFinal.vcxproj|C:\\Users\\joaqu\\OneDrive\\Escritorio\\ProyectoFinal\\ProyectoFinal\\CompraTicket.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D6B900EF-9562-48E0-99E7-702050315070}|ProyectoFinal\\ProyectoFinal.vcxproj|solutionrelative:ProyectoFinal\\CompraTicket.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D6B900EF-9562-48E0-99E7-702050315070}|ProyectoFinal\\ProyectoFinal.vcxproj|C:\\Users\\joaqu\\OneDrive\\Escritorio\\ProyectoFinal\\ProyectoFinal\\RutasParaClientes.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form",
-      "RelativeMoniker": "D:0:0:{D6B900EF-9562-48E0-99E7-702050315070}|ProyectoFinal\\ProyectoFinal.vcxproj|solutionrelative:ProyectoFinal\\RutasParaClientes.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D6B900EF-9562-48E0-99E7-702050315070}|ProyectoFinal\\ProyectoFinal.vcxproj|C:\\Users\\joaqu\\OneDrive\\Escritorio\\ProyectoFinal\\ProyectoFinal\\CompraTicket.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form",
       "RelativeMoniker": "D:0:0:{D6B900EF-9562-48E0-99E7-702050315070}|ProyectoFinal\\ProyectoFinal.vcxproj|solutionrelative:ProyectoFinal\\CompraTicket.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6B900EF-9562-48E0-99E7-702050315070}|ProyectoFinal\\ProyectoFinal.vcxproj|C:\\Users\\joaqu\\OneDrive\\Escritorio\\ProyectoFinal\\ProyectoFinal\\LoginCliente.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form",
+      "RelativeMoniker": "D:0:0:{D6B900EF-9562-48E0-99E7-702050315070}|ProyectoFinal\\ProyectoFinal.vcxproj|solutionrelative:ProyectoFinal\\LoginCliente.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6B900EF-9562-48E0-99E7-702050315070}|ProyectoFinal\\ProyectoFinal.vcxproj|C:\\Users\\joaqu\\OneDrive\\Escritorio\\ProyectoFinal\\ProyectoFinal\\LoginCliente.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D6B900EF-9562-48E0-99E7-702050315070}|ProyectoFinal\\ProyectoFinal.vcxproj|solutionrelative:ProyectoFinal\\LoginCliente.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6B900EF-9562-48E0-99E7-702050315070}|ProyectoFinal\\ProyectoFinal.vcxproj|C:\\Users\\joaqu\\OneDrive\\Escritorio\\ProyectoFinal\\ProyectoFinal\\LoginEmpleados.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D6B900EF-9562-48E0-99E7-702050315070}|ProyectoFinal\\ProyectoFinal.vcxproj|solutionrelative:ProyectoFinal\\LoginEmpleados.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6B900EF-9562-48E0-99E7-702050315070}|ProyectoFinal\\ProyectoFinal.vcxproj|C:\\Users\\joaqu\\OneDrive\\Escritorio\\ProyectoFinal\\ProyectoFinal\\LoginEmpleados.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form",
+      "RelativeMoniker": "D:0:0:{D6B900EF-9562-48E0-99E7-702050315070}|ProyectoFinal\\ProyectoFinal.vcxproj|solutionrelative:ProyectoFinal\\LoginEmpleados.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,39 +38,64 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CompraTicket.h",
-              "DocumentMoniker": "C:\\Users\\joaqu\\OneDrive\\Escritorio\\ProyectoFinal\\ProyectoFinal\\CompraTicket.h",
-              "RelativeDocumentMoniker": "ProyectoFinal\\CompraTicket.h",
-              "ToolTip": "C:\\Users\\joaqu\\OneDrive\\Escritorio\\ProyectoFinal\\ProyectoFinal\\CompraTicket.h",
-              "RelativeToolTip": "ProyectoFinal\\CompraTicket.h",
-              "ViewState": "AQIAAPoBAAAAAAAAAAAAAAsCAAACAAAA",
+              "DocumentIndex": 4,
+              "Title": "LoginEmpleados.h [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\joaqu\\OneDrive\\Escritorio\\ProyectoFinal\\ProyectoFinal\\LoginEmpleados.h",
+              "RelativeDocumentMoniker": "ProyectoFinal\\LoginEmpleados.h",
+              "ToolTip": "C:\\Users\\joaqu\\OneDrive\\Escritorio\\ProyectoFinal\\ProyectoFinal\\LoginEmpleados.h [Dise\u00F1o]",
+              "RelativeToolTip": "ProyectoFinal\\LoginEmpleados.h [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-28T20:37:38.836Z",
+              "WhenOpened": "2024-05-30T03:52:11.893Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginEmpleados.h",
+              "DocumentMoniker": "C:\\Users\\joaqu\\OneDrive\\Escritorio\\ProyectoFinal\\ProyectoFinal\\LoginEmpleados.h",
+              "RelativeDocumentMoniker": "ProyectoFinal\\LoginEmpleados.h",
+              "ToolTip": "C:\\Users\\joaqu\\OneDrive\\Escritorio\\ProyectoFinal\\ProyectoFinal\\LoginEmpleados.h",
+              "RelativeToolTip": "ProyectoFinal\\LoginEmpleados.h",
+              "ViewState": "AQIAAGQAAAAAAAAAAAASwHoAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-30T03:52:13.377Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginCliente.h",
+              "DocumentMoniker": "C:\\Users\\joaqu\\OneDrive\\Escritorio\\ProyectoFinal\\ProyectoFinal\\LoginCliente.h",
+              "RelativeDocumentMoniker": "ProyectoFinal\\LoginCliente.h",
+              "ToolTip": "C:\\Users\\joaqu\\OneDrive\\Escritorio\\ProyectoFinal\\ProyectoFinal\\LoginCliente.h",
+              "RelativeToolTip": "ProyectoFinal\\LoginCliente.h",
+              "ViewState": "AQIAAG4AAAAAAAAAAAASwIAAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-30T03:50:55.089Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "RutasParaClientes.h [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\joaqu\\OneDrive\\Escritorio\\ProyectoFinal\\ProyectoFinal\\RutasParaClientes.h",
-              "RelativeDocumentMoniker": "ProyectoFinal\\RutasParaClientes.h",
-              "ToolTip": "C:\\Users\\joaqu\\OneDrive\\Escritorio\\ProyectoFinal\\ProyectoFinal\\RutasParaClientes.h [Dise\u00F1o]",
-              "RelativeToolTip": "ProyectoFinal\\RutasParaClientes.h [Dise\u00F1o]",
+              "Title": "LoginCliente.h [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\joaqu\\OneDrive\\Escritorio\\ProyectoFinal\\ProyectoFinal\\LoginCliente.h",
+              "RelativeDocumentMoniker": "ProyectoFinal\\LoginCliente.h",
+              "ToolTip": "C:\\Users\\joaqu\\OneDrive\\Escritorio\\ProyectoFinal\\ProyectoFinal\\LoginCliente.h [Dise\u00F1o]",
+              "RelativeToolTip": "ProyectoFinal\\LoginCliente.h [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-28T20:34:27.663Z",
+              "WhenOpened": "2024-05-30T03:37:39.644Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "CompraTicket.h [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\joaqu\\OneDrive\\Escritorio\\ProyectoFinal\\ProyectoFinal\\CompraTicket.h",
               "RelativeDocumentMoniker": "ProyectoFinal\\CompraTicket.h",
               "ToolTip": "C:\\Users\\joaqu\\OneDrive\\Escritorio\\ProyectoFinal\\ProyectoFinal\\CompraTicket.h [Dise\u00F1o]",
               "RelativeToolTip": "ProyectoFinal\\CompraTicket.h [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-28T20:30:39.031Z",
+              "WhenOpened": "2024-05-30T03:37:32.304Z",
               "EditorCaption": " [Dise\u00F1o]"
             }
           ]
