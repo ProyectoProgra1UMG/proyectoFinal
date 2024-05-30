@@ -78,18 +78,25 @@ namespace ProyectoFinal {
 			// 
 			// btt_regresar
 			// 
-			this->btt_regresar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btt_regresar->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(172)),
+				static_cast<System::Int32>(static_cast<System::Byte>(198)));
+			this->btt_regresar->FlatAppearance->BorderSize = 0;
+			this->btt_regresar->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btt_regresar->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btt_regresar->Location = System::Drawing::Point(25, 35);
+			this->btt_regresar->ForeColor = System::Drawing::Color::WhiteSmoke;
+			this->btt_regresar->Location = System::Drawing::Point(789, 12);
 			this->btt_regresar->Name = L"btt_regresar";
-			this->btt_regresar->Size = System::Drawing::Size(122, 36);
+			this->btt_regresar->Size = System::Drawing::Size(107, 36);
 			this->btt_regresar->TabIndex = 0;
 			this->btt_regresar->Text = L"Regresar";
-			this->btt_regresar->UseVisualStyleBackColor = true;
+			this->btt_regresar->UseVisualStyleBackColor = false;
 			this->btt_regresar->Click += gcnew System::EventHandler(this, &RegistroRutas::btt_regresar_Click);
 			// 
 			// pnl_menu
 			// 
+			this->pnl_menu->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(40)), static_cast<System::Int32>(static_cast<System::Byte>(120)),
+				static_cast<System::Int32>(static_cast<System::Byte>(140)));
 			this->pnl_menu->Controls->Add(this->btt_mostrar);
 			this->pnl_menu->Controls->Add(this->btt_regresar);
 			this->pnl_menu->Controls->Add(this->btt_eliminar);
@@ -102,37 +109,63 @@ namespace ProyectoFinal {
 			// 
 			// btt_mostrar
 			// 
-			this->btt_mostrar->Location = System::Drawing::Point(357, 45);
+			this->btt_mostrar->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(104)), static_cast<System::Int32>(static_cast<System::Byte>(210)),
+				static_cast<System::Int32>(static_cast<System::Byte>(232)));
+			this->btt_mostrar->FlatAppearance->BorderSize = 0;
+			this->btt_mostrar->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btt_mostrar->Font = (gcnew System::Drawing::Font(L"Segoe UI", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->btt_mostrar->ForeColor = System::Drawing::Color::WhiteSmoke;
+			this->btt_mostrar->Location = System::Drawing::Point(178, 30);
 			this->btt_mostrar->Name = L"btt_mostrar";
-			this->btt_mostrar->Size = System::Drawing::Size(124, 23);
+			this->btt_mostrar->Size = System::Drawing::Size(157, 47);
 			this->btt_mostrar->TabIndex = 2;
 			this->btt_mostrar->Text = L"Mostrar Rutas";
-			this->btt_mostrar->UseVisualStyleBackColor = true;
+			this->btt_mostrar->UseVisualStyleBackColor = false;
 			this->btt_mostrar->Click += gcnew System::EventHandler(this, &RegistroRutas::btt_mostrar_Click);
 			// 
 			// btt_eliminar
 			// 
-			this->btt_eliminar->Location = System::Drawing::Point(509, 45);
+			this->btt_eliminar->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(104)), static_cast<System::Int32>(static_cast<System::Byte>(210)),
+				static_cast<System::Int32>(static_cast<System::Byte>(232)));
+			this->btt_eliminar->FlatAppearance->BorderSize = 0;
+			this->btt_eliminar->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btt_eliminar->Font = (gcnew System::Drawing::Font(L"Segoe UI", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->btt_eliminar->ForeColor = System::Drawing::Color::WhiteSmoke;
+			this->btt_eliminar->Location = System::Drawing::Point(350, 30);
 			this->btt_eliminar->Name = L"btt_eliminar";
-			this->btt_eliminar->Size = System::Drawing::Size(114, 23);
+			this->btt_eliminar->Size = System::Drawing::Size(155, 47);
 			this->btt_eliminar->TabIndex = 1;
 			this->btt_eliminar->Text = L"Eliminar Rutas";
-			this->btt_eliminar->UseVisualStyleBackColor = true;
+			this->btt_eliminar->UseVisualStyleBackColor = false;
 			this->btt_eliminar->Click += gcnew System::EventHandler(this, &RegistroRutas::btt_eliminar_Click);
 			// 
 			// btt_insertar
 			// 
-			this->btt_insertar->Location = System::Drawing::Point(205, 45);
+			this->btt_insertar->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(104)), static_cast<System::Int32>(static_cast<System::Byte>(210)),
+				static_cast<System::Int32>(static_cast<System::Byte>(232)));
+			this->btt_insertar->FlatAppearance->BorderSize = 0;
+			this->btt_insertar->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btt_insertar->Font = (gcnew System::Drawing::Font(L"Segoe UI", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->btt_insertar->ForeColor = System::Drawing::Color::WhiteSmoke;
+			this->btt_insertar->Location = System::Drawing::Point(28, 30);
 			this->btt_insertar->Name = L"btt_insertar";
-			this->btt_insertar->Size = System::Drawing::Size(135, 23);
+			this->btt_insertar->Size = System::Drawing::Size(135, 47);
 			this->btt_insertar->TabIndex = 0;
 			this->btt_insertar->Text = L"Insertar Rutas";
-			this->btt_insertar->UseVisualStyleBackColor = true;
+			this->btt_insertar->UseVisualStyleBackColor = false;
 			this->btt_insertar->Click += gcnew System::EventHandler(this, &RegistroRutas::btt_insertar_Click);
 			// 
 			// pnl_contenedor
 			// 
+			this->pnl_contenedor->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(40)), static_cast<System::Int32>(static_cast<System::Byte>(120)),
+				static_cast<System::Int32>(static_cast<System::Byte>(140)));
 			this->pnl_contenedor->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->pnl_contenedor->Font = (gcnew System::Drawing::Font(L"Segoe UI", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->pnl_contenedor->ForeColor = System::Drawing::Color::WhiteSmoke;
 			this->pnl_contenedor->Location = System::Drawing::Point(0, 100);
 			this->pnl_contenedor->Name = L"pnl_contenedor";
 			this->pnl_contenedor->Size = System::Drawing::Size(908, 580);

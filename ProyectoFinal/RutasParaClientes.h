@@ -57,6 +57,10 @@ namespace ProyectoFinal {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle3 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle4 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->lbl_encavezado = (gcnew System::Windows::Forms::Label());
 			this->dgv_registros = (gcnew System::Windows::Forms::DataGridView());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_registros))->BeginInit();
@@ -65,30 +69,76 @@ namespace ProyectoFinal {
 			// lbl_encavezado
 			// 
 			this->lbl_encavezado->AutoSize = true;
-			this->lbl_encavezado->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->lbl_encavezado->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lbl_encavezado->Location = System::Drawing::Point(262, 20);
+			this->lbl_encavezado->ForeColor = System::Drawing::Color::WhiteSmoke;
+			this->lbl_encavezado->Location = System::Drawing::Point(371, 25);
+			this->lbl_encavezado->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lbl_encavezado->Name = L"lbl_encavezado";
-			this->lbl_encavezado->Size = System::Drawing::Size(138, 20);
+			this->lbl_encavezado->Size = System::Drawing::Size(181, 28);
 			this->lbl_encavezado->TabIndex = 0;
 			this->lbl_encavezado->Text = L"Rutas Disponibles";
 			// 
 			// dgv_registros
 			// 
+			this->dgv_registros->BackgroundColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(122)),
+				static_cast<System::Int32>(static_cast<System::Byte>(178)), static_cast<System::Int32>(static_cast<System::Byte>(178)));
+			dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(104)),
+				static_cast<System::Int32>(static_cast<System::Byte>(210)), static_cast<System::Int32>(static_cast<System::Byte>(232)));
+			dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Segoe UI", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			dataGridViewCellStyle1->ForeColor = System::Drawing::Color::WhiteSmoke;
+			dataGridViewCellStyle1->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle1->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->dgv_registros->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
 			this->dgv_registros->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dgv_registros->Location = System::Drawing::Point(12, 61);
+			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(122)),
+				static_cast<System::Int32>(static_cast<System::Byte>(178)), static_cast<System::Int32>(static_cast<System::Byte>(178)));
+			dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Segoe UI", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			dataGridViewCellStyle2->ForeColor = System::Drawing::Color::WhiteSmoke;
+			dataGridViewCellStyle2->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			this->dgv_registros->DefaultCellStyle = dataGridViewCellStyle2;
+			this->dgv_registros->EnableHeadersVisualStyles = false;
+			this->dgv_registros->GridColor = System::Drawing::SystemColors::ActiveBorder;
+			this->dgv_registros->Location = System::Drawing::Point(30, 85);
+			this->dgv_registros->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->dgv_registros->Name = L"dgv_registros";
-			this->dgv_registros->Size = System::Drawing::Size(682, 272);
+			dataGridViewCellStyle3->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(3)), static_cast<System::Int32>(static_cast<System::Byte>(174)),
+				static_cast<System::Int32>(static_cast<System::Byte>(210)));
+			dataGridViewCellStyle3->Font = (gcnew System::Drawing::Font(L"Segoe UI", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			dataGridViewCellStyle3->ForeColor = System::Drawing::Color::WhiteSmoke;
+			dataGridViewCellStyle3->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle3->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle3->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->dgv_registros->RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+			this->dgv_registros->RowHeadersWidth = 51;
+			dataGridViewCellStyle4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(3)), static_cast<System::Int32>(static_cast<System::Byte>(174)),
+				static_cast<System::Int32>(static_cast<System::Byte>(210)));
+			dataGridViewCellStyle4->Font = (gcnew System::Drawing::Font(L"Segoe UI", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->dgv_registros->RowsDefaultCellStyle = dataGridViewCellStyle4;
+			this->dgv_registros->Size = System::Drawing::Size(876, 303);
 			this->dgv_registros->TabIndex = 1;
 			// 
 			// RutasParaClientes
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(706, 357);
+			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(40)), static_cast<System::Int32>(static_cast<System::Byte>(120)),
+				static_cast<System::Int32>(static_cast<System::Byte>(140)));
+			this->ClientSize = System::Drawing::Size(941, 439);
 			this->Controls->Add(this->dgv_registros);
 			this->Controls->Add(this->lbl_encavezado);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
+			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->Name = L"RutasParaClientes";
 			this->Text = L"RutasParaClientes";
 			this->Load += gcnew System::EventHandler(this, &RutasParaClientes::RutasParaClientes_Load);

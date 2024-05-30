@@ -50,6 +50,7 @@ namespace CppCLRWinFormsProject {
 
 
 
+
 	protected:
 
 	private:
@@ -83,7 +84,7 @@ namespace CppCLRWinFormsProject {
 			this->lbl_encabezado->Location = System::Drawing::Point(62, 37);
 			this->lbl_encabezado->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_encabezado->Name = L"lbl_encabezado";
-			this->lbl_encabezado->Size = System::Drawing::Size(208, 45);
+			this->lbl_encabezado->Size = System::Drawing::Size(255, 54);
 			this->lbl_encabezado->TabIndex = 0;
 			this->lbl_encabezado->Text = L"TRENES TPG";
 			// 
@@ -97,7 +98,7 @@ namespace CppCLRWinFormsProject {
 			this->lbl_opciones->Location = System::Drawing::Point(18, 82);
 			this->lbl_opciones->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_opciones->Name = L"lbl_opciones";
-			this->lbl_opciones->Size = System::Drawing::Size(282, 37);
+			this->lbl_opciones->Size = System::Drawing::Size(355, 46);
 			this->lbl_opciones->TabIndex = 1;
 			this->lbl_opciones->Text = L"Seleccione una opción";
 			// 

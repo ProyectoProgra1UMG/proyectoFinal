@@ -1,0 +1,1786 @@
+  iTextSharp.errors.errors_en.properties - Embedded, ContainedInManifestFile, 
+  iTextSharp.errors.errors.properties - Embedded, ContainedInManifestFile, 
+  iTextSharp.errors.errors_nl.properties - Embedded, ContainedInManifestFile, 
+  iTextSharp.tool.xml.css.default.css - Embedded, ContainedInManifestFile, 
+ImageRuntimeVersion: v2.0.50727
+Assembly itextsharp.xmlworker, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca: 
+	hash=SHA1, flags=PublicKey
+Assembly itextsharp, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca: 
+	hash=None, flags=None
+Assembly mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Interface iTextSharp.tool.xml.html.ICssApplier: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    Apply(IElement, Tag, IMarginMemory, IPageSizeContainable, HtmlPipelineContext): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class iTextSharp.tool.xml.html.CssApplier`1[T]: AutoLayout, AnsiClass, Class, Public, Abstract, BeforeFieldInit
+  Type parameter: T, iTextSharp.text.IElement
+  Interfaces:
+    iTextSharp.tool.xml.html.ICssApplier
+  Methods:
+    Apply(T, Tag, IMarginMemory, IPageSizeContainable, HtmlPipelineContext): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class iTextSharp.tool.xml.css.apply.ChunkCssApplier: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :iTextSharp.tool.xml.html.CssApplier`1[iTextSharp.text.Chunk]
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(iTextSharp.text.IFontProvider): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Collections.Generic.IList`1[System.String] BOLD : Public, Static
+  Properties:
+    iTextSharp.text.IFontProvider FontProvider 'get set' : 
+  Methods:
+    Apply(Chunk, Tag): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Apply(Chunk, Tag, IMarginMemory, IPageSizeContainable, HtmlPipelineContext): PrivateScope, Public, Virtual, HideBySig
+    ApplyFontStyles(Tag): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetWidestWord(Chunk): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    CopyChunkStyles(Chunk, Chunk): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_FontProvider(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_FontProvider(IFontProvider): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+Class iTextSharp.tool.xml.css.apply.DivCssApplier: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :iTextSharp.tool.xml.html.CssApplier`1[iTextSharp.text.pdf.PdfDiv]
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Apply(PdfDiv, Tag, IMarginMemory, IPageSizeContainable, HtmlPipelineContext): PrivateScope, Public, Virtual, HideBySig
+Class iTextSharp.tool.xml.css.apply.HtmlCellCssApplier: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :iTextSharp.tool.xml.html.CssApplier`1[iTextSharp.tool.xml.html.pdfelement.HtmlCell]
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Apply(HtmlCell, Tag, IMarginMemory, IPageSizeContainable): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Apply(HtmlCell, Tag, IMarginMemory, IPageSizeContainable, HtmlPipelineContext): PrivateScope, Public, Virtual, HideBySig
+Class iTextSharp.tool.xml.css.apply.ImageCssApplier: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :iTextSharp.tool.xml.html.CssApplier`1[iTextSharp.text.Image]
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Apply(Image, Tag): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Apply(Image, Tag, IMarginMemory, IPageSizeContainable, HtmlPipelineContext): PrivateScope, Public, Virtual, HideBySig
+Class iTextSharp.tool.xml.css.apply.LineSeparatorCssApplier: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :iTextSharp.tool.xml.html.CssApplier`1[iTextSharp.text.pdf.draw.LineSeparator]
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Apply(LineSeparator, Tag, IPageSizeContainable): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Apply(LineSeparator, Tag, IMarginMemory, IPageSizeContainable, HtmlPipelineContext): PrivateScope, Public, Virtual, HideBySig
+Class iTextSharp.tool.xml.css.apply.ListStyleTypeCssApplier: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :iTextSharp.tool.xml.html.CssApplier`1[iTextSharp.text.List]
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Apply(List, Tag, HtmlPipelineContext): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Apply(List, Tag, IMarginMemory, IPageSizeContainable, HtmlPipelineContext): PrivateScope, Public, Virtual, HideBySig
+Interface iTextSharp.tool.xml.css.apply.IMarginMemory: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Properties:
+    Single LastMarginBottom 'get set' : 
+  Methods:
+    get_LastMarginBottom(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_LastMarginBottom(Single): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    GetRootTags(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class iTextSharp.tool.xml.css.apply.MaxLeadingAndSize: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    GetLargestLeading(): PrivateScope, Public, HideBySig
+    GetLargestFont(): PrivateScope, Public, HideBySig
+    SetVariablesBasedOnChildren(Tag): PrivateScope, Public, HideBySig
+    SetLeading(Tag): PrivateScope, Public, HideBySig
+    GetLargestFontFromChildren(IList`1): PrivateScope, Public, HideBySig
+    CalculateLeading(Tag): PrivateScope, Public, HideBySig
+Class iTextSharp.tool.xml.css.apply.NoNewLineParagraphCssApplier: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :iTextSharp.tool.xml.html.CssApplier`1[iTextSharp.tool.xml.html.pdfelement.NoNewLineParagraph]
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Apply(NoNewLineParagraph, Tag, IMarginMemory): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Apply(NoNewLineParagraph, Tag, IMarginMemory, IPageSizeContainable, HtmlPipelineContext): PrivateScope, Public, Virtual, HideBySig
+Interface iTextSharp.tool.xml.css.apply.IPageSizeContainable: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Properties:
+    iTextSharp.text.Rectangle PageSize 'get ' : 
+  Methods:
+    get_PageSize(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Class iTextSharp.tool.xml.css.apply.ParagraphCssApplier: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :iTextSharp.tool.xml.html.CssApplier`1[iTextSharp.text.Paragraph]
+    Void .ctor(iTextSharp.tool.xml.html.CssAppliers): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Apply(Paragraph, Tag, IMarginMemory): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Apply(Paragraph, Tag, IMarginMemory, IPageSizeContainable, HtmlPipelineContext): PrivateScope, Public, Virtual, HideBySig
+Class iTextSharp.tool.xml.css.CSS: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed
+  Methods:
+    GetElementAlignment(String): PrivateScope, Public, Static, HideBySig
+Class iTextSharp.tool.xml.css.CSS+Property: AutoLayout, AnsiClass, Class, NestedPublic, Abstract, Sealed, BeforeFieldInit
+  Fields:
+    System.String BACKGROUND = background : Public, Static, Literal, HasDefault
+    System.String BACKGROUND_IMAGE = background-image : Public, Static, Literal, HasDefault
+    System.String BACKGROUND_REPEAT = background-repeat : Public, Static, Literal, HasDefault
+    System.String BACKGROUND_ATTACHMENT = background-attachment : Public, Static, Literal, HasDefault
+    System.String BACKGROUND_POSITION = background-position : Public, Static, Literal, HasDefault
+    System.String BACKGROUND_COLOR = background-color : Public, Static, Literal, HasDefault
+    System.String LIST_STYLE = list-style : Public, Static, Literal, HasDefault
+    System.String LIST_STYLE_TYPE = list-style-type : Public, Static, Literal, HasDefault
+    System.String LIST_STYLE_POSITION = list-style-position : Public, Static, Literal, HasDefault
+    System.String LIST_STYLE_IMAGE = list-style-image : Public, Static, Literal, HasDefault
+    System.String MARGIN = margin : Public, Static, Literal, HasDefault
+    System.String TOP = top : Public, Static, Literal, HasDefault
+    System.String MARGIN_LEFT = margin-left : Public, Static, Literal, HasDefault
+    System.String MARGIN_RIGHT = margin-right : Public, Static, Literal, HasDefault
+    System.String MARGIN_TOP = margin-top : Public, Static, Literal, HasDefault
+    System.String MARGIN_BOTTOM = margin-bottom : Public, Static, Literal, HasDefault
+    System.String BORDER = border : Public, Static, Literal, HasDefault
+    System.String BORDER_LEFT = border-left : Public, Static, Literal, HasDefault
+    System.String BORDER_TOP = border-top : Public, Static, Literal, HasDefault
+    System.String BORDER_RIGHT = border-right : Public, Static, Literal, HasDefault
+    System.String BORDER_BOTTOM = border-bottom : Public, Static, Literal, HasDefault
+    System.String BORDER_WIDTH = border-width : Public, Static, Literal, HasDefault
+    System.String BORDER_STYLE = border-style : Public, Static, Literal, HasDefault
+    System.String BORDER_COLOR = border-color : Public, Static, Literal, HasDefault
+    System.String BORDER_COLLAPSE = border-collapse : Public, Static, Literal, HasDefault
+    System.String BORDER_SPACING = border-spacing : Public, Static, Literal, HasDefault
+    System.String BORDER_TOP_WIDTH = border-top-width : Public, Static, Literal, HasDefault
+    System.String BORDER_BOTTOM_WIDTH = border-bottom-width : Public, Static, Literal, HasDefault
+    System.String BORDER_LEFT_WIDTH = border-left-width : Public, Static, Literal, HasDefault
+    System.String BORDER_RIGHT_WIDTH = border-right-width : Public, Static, Literal, HasDefault
+    System.String BORDER_TOP_COLOR = border-top-color : Public, Static, Literal, HasDefault
+    System.String BORDER_BOTTOM_COLOR = border-bottom-color : Public, Static, Literal, HasDefault
+    System.String BORDER_LEFT_COLOR = border-left-color : Public, Static, Literal, HasDefault
+    System.String BORDER_RIGHT_COLOR = border-right-color : Public, Static, Literal, HasDefault
+    System.String BORDER_TOP_STYLE = border-top-style : Public, Static, Literal, HasDefault
+    System.String BORDER_BOTTOM_STYLE = border-bottom-style : Public, Static, Literal, HasDefault
+    System.String BORDER_LEFT_STYLE = border-left-style : Public, Static, Literal, HasDefault
+    System.String BORDER_RIGHT_STYLE = border-right-style : Public, Static, Literal, HasDefault
+    System.String PADDING = padding : Public, Static, Literal, HasDefault
+    System.String PADDING_TOP = padding-top : Public, Static, Literal, HasDefault
+    System.String PADDING_BOTTOM = padding-bottom : Public, Static, Literal, HasDefault
+    System.String PADDING_LEFT = padding-left : Public, Static, Literal, HasDefault
+    System.String PADDING_RIGHT = padding-right : Public, Static, Literal, HasDefault
+    System.String FONT = font : Public, Static, Literal, HasDefault
+    System.String FONT_WEIGHT = font-weight : Public, Static, Literal, HasDefault
+    System.String FONT_SIZE = font-size : Public, Static, Literal, HasDefault
+    System.String FONT_STYLE = font-style : Public, Static, Literal, HasDefault
+    System.String FONT_FAMILY = font-family : Public, Static, Literal, HasDefault
+    System.String TEXT_DECORATION = text-decoration : Public, Static, Literal, HasDefault
+    System.String COLOR = color : Public, Static, Literal, HasDefault
+    System.String TAB_INTERVAL = tab-interval : Public, Static, Literal, HasDefault
+    System.String XFA_TAB_COUNT = xfa-tab-count : Public, Static, Literal, HasDefault
+    System.String XFA_FONT_HORIZONTAL_SCALE = xfa-font-horizontal-scale : Public, Static, Literal, HasDefault
+    System.String XFA_FONT_VERTICAL_SCALE = xfa-font-vertical-scale : Public, Static, Literal, HasDefault
+    System.String BEFORE = before : Public, Static, Literal, HasDefault
+    System.String AFTER = after : Public, Static, Literal, HasDefault
+    System.String HEIGHT = height : Public, Static, Literal, HasDefault
+    System.String WIDTH = width : Public, Static, Literal, HasDefault
+    System.String LETTER_SPACING = letter-spacing : Public, Static, Literal, HasDefault
+    System.String VERTICAL_ALIGN = vertical-align : Public, Static, Literal, HasDefault
+    System.String LINE_HEIGHT = line-height : Public, Static, Literal, HasDefault
+    System.String TEXT_ALIGN = text-align : Public, Static, Literal, HasDefault
+    System.String TEXT_VALIGN = text-valign : Public, Static, Literal, HasDefault
+    System.String TEXT_INDENT = text-indent : Public, Static, Literal, HasDefault
+    System.String POSITION = position : Public, Static, Literal, HasDefault
+    System.String EMPTY_CELLS = empty-cells : Public, Static, Literal, HasDefault
+    System.String CELLPADDING = cellpadding : Public, Static, Literal, HasDefault
+    System.String CELLPADDING_LEFT = cellpadding-left : Public, Static, Literal, HasDefault
+    System.String CELLPADDING_TOP = cellpadding-top : Public, Static, Literal, HasDefault
+    System.String CELLPADDING_RIGHT = cellpadding-right : Public, Static, Literal, HasDefault
+    System.String CELLPADDING_BOTTOM = cellpadding-bottom : Public, Static, Literal, HasDefault
+    System.String CAPTION_SIDE = caption-side : Public, Static, Literal, HasDefault
+    System.String TAB_STOPS = tab-stops : Public, Static, Literal, HasDefault
+    System.String XFA_TAB_STOPS = xfa-tab-stops : Public, Static, Literal, HasDefault
+    System.String PAGE_BREAK_BEFORE = page-break-before : Public, Static, Literal, HasDefault
+    System.String PAGE_BREAK_INSIDE = page-break-inside : Public, Static, Literal, HasDefault
+    System.String PAGE_BREAK_AFTER = page-break-after : Public, Static, Literal, HasDefault
+    System.String REPEAT_HEADER = repeat-header : Public, Static, Literal, HasDefault
+    System.String REPEAT_FOOTER = repeat-footer : Public, Static, Literal, HasDefault
+    System.String LEFT = left : Public, Static, Literal, HasDefault
+    System.String DISPLAY = display : Public, Static, Literal, HasDefault
+    System.String MIN_WIDTH = min-width : Public, Static, Literal, HasDefault
+    System.String MAX_WIDTH = max-width : Public, Static, Literal, HasDefault
+    System.String MIN_HEIGHT = min-height : Public, Static, Literal, HasDefault
+    System.String MAX_HEIGHT = max-height : Public, Static, Literal, HasDefault
+    System.String RIGHT = right : Public, Static, Literal, HasDefault
+    System.String BOTTOM = bottom : Public, Static, Literal, HasDefault
+    System.String FLOAT = float : Public, Static, Literal, HasDefault
+    System.String DIRECTION = direction : Public, Static, Literal, HasDefault
+Class iTextSharp.tool.xml.css.CSS+Value: AutoLayout, AnsiClass, Class, NestedPublic, Abstract, Sealed, BeforeFieldInit
+  Fields:
+    System.String THIN = thin : Public, Static, Literal, HasDefault
+    System.String MEDIUM = medium : Public, Static, Literal, HasDefault
+    System.String THICK = thick : Public, Static, Literal, HasDefault
+    System.String NONE = none : Public, Static, Literal, HasDefault
+    System.String HIDDEN = hidden : Public, Static, Literal, HasDefault
+    System.String DOTTED = dotted : Public, Static, Literal, HasDefault
+    System.String DASHED = dashed : Public, Static, Literal, HasDefault
+    System.String SOLID = solid : Public, Static, Literal, HasDefault
+    System.String DOUBLE = double : Public, Static, Literal, HasDefault
+    System.String GROOVE = groove : Public, Static, Literal, HasDefault
+    System.String RIDGE = ridge : Public, Static, Literal, HasDefault
+    System.String INSET = inset : Public, Static, Literal, HasDefault
+    System.String OUTSET = outset : Public, Static, Literal, HasDefault
+    System.String LEFT = left : Public, Static, Literal, HasDefault
+    System.String CENTER = center : Public, Static, Literal, HasDefault
+    System.String JUSTIFY = justify : Public, Static, Literal, HasDefault
+    System.String BOTTOM = bottom : Public, Static, Literal, HasDefault
+    System.String TOP = top : Public, Static, Literal, HasDefault
+    System.String RIGHT = right : Public, Static, Literal, HasDefault
+    System.String REPEAT = repeat : Public, Static, Literal, HasDefault
+    System.String NO_REPEAT = no-repeat : Public, Static, Literal, HasDefault
+    System.String REPEAT_X = repeat-x : Public, Static, Literal, HasDefault
+    System.String REPEAT_Y = repeat-y : Public, Static, Literal, HasDefault
+    System.String FIXED = fixed : Public, Static, Literal, HasDefault
+    System.String SCROLL = scroll : Public, Static, Literal, HasDefault
+    System.String DISC = disc : Public, Static, Literal, HasDefault
+    System.String SQUARE = square : Public, Static, Literal, HasDefault
+    System.String CIRCLE = circle : Public, Static, Literal, HasDefault
+    System.String DECIMAL = decimal : Public, Static, Literal, HasDefault
+    System.String LOWER_ROMAN = lower-roman : Public, Static, Literal, HasDefault
+    System.String UPPER_ROMAN = upper-roman : Public, Static, Literal, HasDefault
+    System.String LOWER_GREEK = lower-greek : Public, Static, Literal, HasDefault
+    System.String UPPER_GREEK = upper-greek : Public, Static, Literal, HasDefault
+    System.String LOWER_ALPHA = lower-alpha : Public, Static, Literal, HasDefault
+    System.String UPPER_ALPHA = upper-alpha : Public, Static, Literal, HasDefault
+    System.String LOWER_LATIN = lower-latin : Public, Static, Literal, HasDefault
+    System.String UPPER_LATIN = upper-latin : Public, Static, Literal, HasDefault
+    System.String INSIDE = inside : Public, Static, Literal, HasDefault
+    System.String OUTSIDE = outside : Public, Static, Literal, HasDefault
+    System.String INHERIT = inherit : Public, Static, Literal, HasDefault
+    System.String UNDERLINE = underline : Public, Static, Literal, HasDefault
+    System.String BOLD = bold : Public, Static, Literal, HasDefault
+    System.String ITALIC = italic : Public, Static, Literal, HasDefault
+    System.String OBLIQUE = oblique : Public, Static, Literal, HasDefault
+    System.String SUPER = super : Public, Static, Literal, HasDefault
+    System.String SUB = sub : Public, Static, Literal, HasDefault
+    System.String TEXT_TOP = text-top : Public, Static, Literal, HasDefault
+    System.String TEXT_BOTTOM = text-bottom : Public, Static, Literal, HasDefault
+    System.String LINE_THROUGH = line-through : Public, Static, Literal, HasDefault
+    System.String RELATIVE = relative : Public, Static, Literal, HasDefault
+    System.String HIDE = hide : Public, Static, Literal, HasDefault
+    System.String XX_SMALL = xx-small : Public, Static, Literal, HasDefault
+    System.String X_SMALL = x-small : Public, Static, Literal, HasDefault
+    System.String SMALL = small : Public, Static, Literal, HasDefault
+    System.String LARGE = large : Public, Static, Literal, HasDefault
+    System.String X_LARGE = x-large : Public, Static, Literal, HasDefault
+    System.String XX_LARGE = xx-large : Public, Static, Literal, HasDefault
+    System.String SMALLER = smaller : Public, Static, Literal, HasDefault
+    System.String LARGER = larger : Public, Static, Literal, HasDefault
+    System.String PX = px : Public, Static, Literal, HasDefault
+    System.String IN = in : Public, Static, Literal, HasDefault
+    System.String CM = cm : Public, Static, Literal, HasDefault
+    System.String MM = mm : Public, Static, Literal, HasDefault
+    System.String PT = pt : Public, Static, Literal, HasDefault
+    System.String PC = pc : Public, Static, Literal, HasDefault
+    System.String PERCENTAGE = % : Public, Static, Literal, HasDefault
+    System.String EM = em : Public, Static, Literal, HasDefault
+    System.String EX = ex : Public, Static, Literal, HasDefault
+    System.String ALWAYS = always : Public, Static, Literal, HasDefault
+    System.String AVOID = avoid : Public, Static, Literal, HasDefault
+    System.String ABSOLUTE = absolute : Public, Static, Literal, HasDefault
+    System.String AUTO = auto : Public, Static, Literal, HasDefault
+    System.String INLINE = inline : Public, Static, Literal, HasDefault
+    System.String BLOCK = block : Public, Static, Literal, HasDefault
+    System.String SEPARATE = separate : Public, Static, Literal, HasDefault
+    System.String COLLAPSE = collapse : Public, Static, Literal, HasDefault
+    System.String RTL = rtl : Public, Static, Literal, HasDefault
+    System.String LTR = ltr : Public, Static, Literal, HasDefault
+    System.String INLINE_BLOCK = inline-block : Public, Static, Literal, HasDefault
+    System.String INLINE_TABLE = inline-table : Public, Static, Literal, HasDefault
+    System.String LIST_ITEM = list-item : Public, Static, Literal, HasDefault
+    System.String RUN_IN = run-in : Public, Static, Literal, HasDefault
+    System.String TABLE = table : Public, Static, Literal, HasDefault
+    System.String TABLE_CAPTION = table-caption : Public, Static, Literal, HasDefault
+    System.String TABLE_CELL = table-cell : Public, Static, Literal, HasDefault
+    System.String TABLE_COLUMN_GROUP = table-column-group : Public, Static, Literal, HasDefault
+    System.String TABLE_COLUMN = table-column : Public, Static, Literal, HasDefault
+    System.String TABLE_FOOTER_GROUP = table-footer-group : Public, Static, Literal, HasDefault
+    System.String TABLE_HEADER_GROUP = table-header-group : Public, Static, Literal, HasDefault
+    System.String TABLE_ROW = table-row : Public, Static, Literal, HasDefault
+    System.String TABLE_ROW_GROUP = table-row-group : Public, Static, Literal, HasDefault
+Interface iTextSharp.tool.xml.css.ICssFile: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    Add(String, IDictionary`2): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Get(Tag): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    IsPersistent(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    IsPersistent(Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class iTextSharp.tool.xml.css.CssFileImpl: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.css.ICssFile
+  Methods:
+    Add(String, IDictionary`2): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Get(Tag): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IsPersistent(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IsPersistent(Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Interface iTextSharp.tool.xml.net.IReadingProcessor: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    Process(Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class iTextSharp.tool.xml.css.CssFileProcessor: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.net.IReadingProcessor
+  Methods:
+    Process(Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetCss(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Interface iTextSharp.tool.xml.css.ICssFiles: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    HasFiles(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetCSS(Tag): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Add(ICssFile): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Clear(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class iTextSharp.tool.xml.css.CssFilesImpl: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(iTextSharp.tool.xml.css.ICssFile): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.css.ICssFiles
+  Methods:
+    HasFiles(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetCSS(Tag): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    PopulateCss(Tag, IDictionary`2): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    PopulateOneCss(IDictionary`2, IDictionary`2): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Add(ICssFile): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Clear(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class iTextSharp.tool.xml.css.CSSFileWrapper: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(iTextSharp.tool.xml.css.ICssFile, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.css.ICssFile
+  Methods:
+    Add(String, IDictionary`2): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Get(Tag): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IsPersistent(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IsPersistent(Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class iTextSharp.tool.xml.css.CssRule: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.Collections.Generic.IList`1[iTextSharp.tool.xml.css.ICssSelectorItem], System.Collections.Generic.IDictionary`2[System.String,System.String]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IComparable`1[iTextSharp.tool.xml.css.CssRule]
+  Properties:
+    iTextSharp.tool.xml.css.CssSelector Selector 'get ' : 
+    System.Collections.Generic.IDictionary`2[System.String,System.String] NormalDeclarations 'get ' : 
+    System.Collections.Generic.IDictionary`2[System.String,System.String] ImportantDeclarations 'get ' : 
+  Methods:
+    get_Selector(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_NormalDeclarations(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ImportantDeclarations(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    CompareTo(CssRule): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Class iTextSharp.tool.xml.css.CssSelector: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.Collections.Generic.IList`1[iTextSharp.tool.xml.css.ICssSelectorItem]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Matches(Tag): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    CalculateSpecifity(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class iTextSharp.tool.xml.css.CssUtils: AutoLayout, AnsiClass, Class, Public
+  Fields:
+    Char[] whitespace : Public, Static
+    Int32 DEFAULT_FONT_SIZE_PT = 12 : Public, Static, Literal, HasDefault
+  Methods:
+    GetInstance(): PrivateScope, Public, Static, HideBySig
+    ParseBoxValues(String, String, String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ParseBoxValues(String, String, String, String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    MapPutAll(IDictionary`2, IDictionary`2): PrivateScope, Public, Static, HideBySig
+    MapPutAll(IDictionary`2, IDictionary`2): PrivateScope, Public, Static, HideBySig
+    ParseBorder(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ParseBorder(String, String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    StripDoubleSpacesAndTrim(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    StripDoubleSpacesTrimAndToLowerCase(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ProcessBackground(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ProcessListStyle(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ProcessFont(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    CheckMetricStyle(Tag, String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    CheckMetricStyle(IDictionary`2, String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IsMetricValue(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IsRelativeValue(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IsNumericValue(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ParseValueToPt(String, Single): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ParseRelativeValue(String, Single): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ParsePxInCmMmPcToPt(String, String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ParsePxInCmMmPcToPt(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    DeterminePositionBetweenValueAndUnit(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetLeftAndRightMargin(Tag, Single): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ExtractUrl(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ValidateTextHeight(IDictionary`2, Single): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    CalculateMarginTop(String, Single, IMarginMemory): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    CalculateMarginTop(Single, IMarginMemory): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    TrimAndRemoveQuoutes(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SplitComplexCssStyle(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Interface iTextSharp.tool.xml.css.ICssInheritanceRules: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    InheritCssTag(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    InheritCssSelector(Tag, String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class iTextSharp.tool.xml.css.DefaultCssInheritanceRules: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.css.ICssInheritanceRules
+  Methods:
+    InheritCssTag(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    InheritCssSelector(Tag, String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class iTextSharp.tool.xml.css.FontSizeTranslator: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Single DEFAULT_FONT_SIZE = 12 : Public, Static, Literal, HasDefault
+  Methods:
+    GetInstance(): PrivateScope, Public, Static, HideBySig
+    TranslateFontSize(Tag): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetFontSize(Tag): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class iTextSharp.tool.xml.css.HeightCalculator: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    GetHeight(Tag, Single): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Interface iTextSharp.tool.xml.css.ICssSelectorItem: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Properties:
+    Char Separator 'get ' : 
+    Int32 Specificity 'get ' : 
+  Methods:
+    Matches(Tag): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_Separator(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Specificity(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Class iTextSharp.tool.xml.css.parser.CssSelectorParser: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    CreateCssSelector(String): PrivateScope, Public, Static, HideBySig
+Class iTextSharp.tool.xml.css.parser.CssSelectorParser+CssTagSelector: AutoLayout, AnsiClass, Class, NestedAssembly, BeforeFieldInit
+    Void .ctor(System.String): PrivateScope, Assembly, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.css.ICssSelectorItem
+  Properties:
+    Char Separator 'get ' : 
+    Int32 Specificity 'get ' : 
+  Methods:
+    Matches(Tag): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_Separator(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Specificity(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class iTextSharp.tool.xml.css.parser.CssSelectorParser+CssClassSelector: AutoLayout, AnsiClass, Class, NestedAssembly, BeforeFieldInit
+    Void .ctor(System.String): PrivateScope, Assembly, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.css.ICssSelectorItem
+  Properties:
+    Char Separator 'get ' : 
+    Int32 Specificity 'get ' : 
+  Methods:
+    Matches(Tag): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_Separator(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Specificity(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class iTextSharp.tool.xml.css.parser.CssSelectorParser+CssIdSelector: AutoLayout, AnsiClass, Class, NestedAssembly, BeforeFieldInit
+    Void .ctor(System.String): PrivateScope, Assembly, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.css.ICssSelectorItem
+  Properties:
+    Char Separator 'get ' : 
+    Int32 Specificity 'get ' : 
+  Methods:
+    Matches(Tag): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_Separator(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Specificity(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class iTextSharp.tool.xml.css.parser.CssSelectorParser+CssAttributeSelector: AutoLayout, AnsiClass, Class, NestedAssembly, BeforeFieldInit
+    Void .ctor(System.String): PrivateScope, Assembly, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.css.ICssSelectorItem
+  Properties:
+    Char Separator 'get ' : 
+    Int32 Specificity 'get ' : 
+  Methods:
+    get_Separator(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    Matches(Tag): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_Specificity(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class iTextSharp.tool.xml.css.parser.CssSelectorParser+CssPseudoSelector: AutoLayout, AnsiClass, Class, NestedAssembly, BeforeFieldInit
+    Void .ctor(System.String): PrivateScope, Assembly, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.css.ICssSelectorItem
+  Properties:
+    Char Separator 'get ' : 
+    Int32 Specificity 'get ' : 
+  Methods:
+    Matches(Tag): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_Separator(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Specificity(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class iTextSharp.tool.xml.css.parser.CssSelectorParser+CssSeparatorSelector: AutoLayout, AnsiClass, Class, NestedAssembly, BeforeFieldInit
+    Void .ctor(Char): PrivateScope, Assembly, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.css.ICssSelectorItem
+  Properties:
+    Char Separator 'get ' : 
+    Int32 Specificity 'get ' : 
+  Methods:
+    get_Separator(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    Matches(Tag): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_Specificity(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class iTextSharp.tool.xml.css.parser.CssStateController: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(iTextSharp.tool.xml.css.ICssFile): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Append(Char): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Previous(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Process(Char): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    StateCommentEnd(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    StateCommentInside(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    StateCommentStart(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    StateProperties(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    StateUnknown(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    StateRule(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    StoreSelector(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    StoreProperties(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Interface iTextSharp.tool.xml.css.parser.IState: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    Process(Char): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class iTextSharp.tool.xml.css.parser.state.CommentEnd: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(iTextSharp.tool.xml.css.parser.CssStateController): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.css.parser.IState
+  Methods:
+    Process(Char): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class iTextSharp.tool.xml.css.parser.state.CommentInside: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(iTextSharp.tool.xml.css.parser.CssStateController): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.css.parser.IState
+  Methods:
+    Process(Char): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class iTextSharp.tool.xml.css.parser.state.CommentStart: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(iTextSharp.tool.xml.css.parser.CssStateController): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.css.parser.IState
+  Methods:
+    Process(Char): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class iTextSharp.tool.xml.css.parser.state.Properties: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(iTextSharp.tool.xml.css.parser.CssStateController): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.css.parser.IState
+  Methods:
+    Process(Char): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class iTextSharp.tool.xml.css.parser.state.Rule: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(iTextSharp.tool.xml.css.parser.CssStateController): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.css.parser.IState
+  Methods:
+    Process(Char): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class iTextSharp.tool.xml.css.parser.state.Unknown: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(iTextSharp.tool.xml.css.parser.CssStateController): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.css.parser.IState
+  Methods:
+    Process(Char): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Interface iTextSharp.tool.xml.pipeline.css.ICSSResolver: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Properties:
+    iTextSharp.tool.xml.net.IFileRetrieve FileRetrieve 'set' : 
+  Methods:
+    ResolveStyles(Tag): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    AddCss(String, String, Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    AddCssFile(String, Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    AddCss(String, Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    AddCss(ICssFile): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    set_FileRetrieve(IFileRetrieve): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    Clear(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class iTextSharp.tool.xml.css.StyleAttrCSSResolver: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(iTextSharp.tool.xml.css.ICssFiles): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(iTextSharp.tool.xml.css.ICssFiles, iTextSharp.tool.xml.css.CssUtils): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(iTextSharp.tool.xml.css.ICssInheritanceRules, iTextSharp.tool.xml.css.ICssFiles, iTextSharp.tool.xml.css.CssUtils): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(iTextSharp.tool.xml.css.ICssInheritanceRules, iTextSharp.tool.xml.css.ICssFiles, iTextSharp.tool.xml.css.CssUtils, iTextSharp.tool.xml.net.IFileRetrieve): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(iTextSharp.tool.xml.css.ICssFiles, iTextSharp.tool.xml.net.IFileRetrieve): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.pipeline.css.ICSSResolver
+  Fields:
+    System.String STYLE = style : Public, Static, Literal, HasDefault
+  Properties:
+    iTextSharp.tool.xml.net.IFileRetrieve FileRetrieve 'set' : 
+  Methods:
+    ResolveStyles(Tag): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SetCssInheritance(ICssInheritanceRules): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    AddCss(String, String, Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    AddCssFile(String, Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    AddCss(ICssFile): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    AddCss(String, Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SetCssInheritanceRules(ICssInheritanceRules): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    set_FileRetrieve(IFileRetrieve): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    Clear(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class iTextSharp.tool.xml.css.WidthCalculator: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    GetWidth(Tag, IList`1, Single): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetWidth(Tag, IList`1, Single, Single): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Interface iTextSharp.tool.xml.IElementHandler: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    Add(IWritable): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class iTextSharp.tool.xml.ElementList: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Collections.Generic.List`1[iTextSharp.text.IElement]
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.IElementHandler
+  Methods:
+    Add(IWritable): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class iTextSharp.tool.xml.exceptions.CssResolverException: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :System.Exception
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, System.Exception): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Exception): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class iTextSharp.tool.xml.exceptions.LocaleMessages: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Globalization.CultureInfo): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String UNSUPPORTED_CHARSET = unsupported.charset : Public, Static, Literal, HasDefault
+    System.String INVALID_NESTED_TAG = tag.invalidnesting : Public, Static, Literal, HasDefault
+    System.String NO_CUSTOM_CONTEXT = customcontext.404 : Public, Static, Literal, HasDefault
+    System.String CUSTOMCONTEXT_404_CONTINUE = customcontext.404.continue : Public, Static, Literal, HasDefault
+    System.String UNSUPPORTED_CLONING = unsupported.clone : Public, Static, Literal, HasDefault
+    System.String NO_TAGPROCESSOR = tag.noprocessor : Public, Static, Literal, HasDefault
+    System.String NO_SIBLING = tag.nosibling : Public, Static, Literal, HasDefault
+    System.String PIPELINE_AUTODOC = pipeline.autodoc.missingdep : Public, Static, Literal, HasDefault
+    System.String STACK_404 = pipeline.html.missingstack : Public, Static, Literal, HasDefault
+    System.String OWN_CONTEXT_404 = pipeline.owncontextmissing : Public, Static, Literal, HasDefault
+    System.String ELEMENT_NOT_ADDED = pipeline.pdfwriter.elemnotadded : Public, Static, Literal, HasDefault
+    System.String ELEMENT_NOT_ADDED_EXC = pipeline.pdfwriter.elemnotaddedexc : Public, Static, Literal, HasDefault
+    System.String IMG_SRC_NOTCONVERTED = exc.img.notconverted : Public, Static, Literal, HasDefault
+    System.String HTML_IMG_USE = html.tag.img.try : Public, Static, Literal, HasDefault
+    System.String HTML_IMG_RETRIEVE_FAIL = html.tag.img.failedretrieve : Public, Static, Literal, HasDefault
+    System.String ADD_HEADER = html.tag.h.create : Public, Static, Literal, HasDefault
+    System.String HEADER_BM_DISABLED = html.tag.h.disabled : Public, Static, Literal, HasDefault
+    System.String A_LOCALGOTO = html.tag.a.local : Public, Static, Literal, HasDefault
+    System.String A_EXTERNAL = html.tag.a.external : Public, Static, Literal, HasDefault
+    System.String A_SETLOCALGOTO = html.tag.a.setlocal : Public, Static, Literal, HasDefault
+    System.String SPACEHACK = html.tag.a.spacehack : Public, Static, Literal, HasDefault
+    System.String COLSPAN = html.tag.table.colspan : Public, Static, Literal, HasDefault
+    System.String LINK_404 = html.tag.link.404 : Public, Static, Literal, HasDefault
+    System.String META_CC = html.tag.meta.cc : Public, Static, Literal, HasDefault
+    System.String META_404 = html.tag.meta.404 : Public, Static, Literal, HasDefault
+    System.String STYLE_NOTPARSED = html.tag.style.notparsed : Public, Static, Literal, HasDefault
+  Methods:
+    GetInstance(): PrivateScope, Public, Static, HideBySig
+    GetMessage(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class iTextSharp.tool.xml.exceptions.NoDataException: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :System.Exception
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Exception): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, System.Exception): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class iTextSharp.tool.xml.exceptions.NoSiblingException: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :System.Exception
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, System.Exception): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class iTextSharp.tool.xml.exceptions.NoTagProcessorException: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :System.Exception
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, System.Exception): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class iTextSharp.tool.xml.exceptions.NotImplementedException: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :System.Exception
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Exception): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, System.Exception): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class iTextSharp.tool.xml.exceptions.RuntimeWorkerException: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :System.Exception
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, System.Exception): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Exception): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Interface iTextSharp.tool.xml.html.ITagProcessor: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    StartElement(IWorkerContext, Tag): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Content(IWorkerContext, Tag, String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    EndElement(IWorkerContext, Tag, IList`1): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    IsStackOwner(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface iTextSharp.tool.xml.html.CssAppliersAware: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    SetCssAppliers(CssAppliers): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetCssAppliers(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class iTextSharp.tool.xml.html.AbstractTagProcessor: AutoLayout, AnsiClass, Class, Public, Abstract, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.html.ITagProcessor
+    iTextSharp.tool.xml.html.CssAppliersAware
+  Methods:
+    GetCSSResolver(IWorkerContext): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetHtmlPipelineContext(IWorkerContext): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    StartElement(IWorkerContext, Tag): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Start(IWorkerContext, Tag): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Content(IWorkerContext, Tag, String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndElement(IWorkerContext, Tag, IList`1): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    End(IWorkerContext, Tag, IList`1): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IsStackOwner(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    CurrentContentToParagraph(IList`1, Boolean, Boolean, Tag, IWorkerContext): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    CurrentContentToParagraph(IList`1, Boolean): PrivateScope, Public, HideBySig
+    SetCssAppliers(CssAppliers): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetCssAppliers(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class iTextSharp.tool.xml.html.Anchor: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :iTextSharp.tool.xml.html.AbstractTagProcessor
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Content(IWorkerContext, Tag, String): PrivateScope, Public, Virtual, HideBySig
+    End(IWorkerContext, Tag, IList`1): PrivateScope, Public, Virtual, HideBySig
+    IsStackOwner(): PrivateScope, Public, Virtual, HideBySig
+Class iTextSharp.tool.xml.html.Body: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :iTextSharp.tool.xml.html.AbstractTagProcessor
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Content(IWorkerContext, Tag, String): PrivateScope, Public, Virtual, HideBySig
+    Start(IWorkerContext, Tag): PrivateScope, Public, Virtual, HideBySig
+Class iTextSharp.tool.xml.html.Break: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :iTextSharp.tool.xml.html.AbstractTagProcessor
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    End(IWorkerContext, Tag, IList`1): PrivateScope, Public, Virtual, HideBySig
+Interface iTextSharp.tool.xml.html.CssAppliers: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Properties:
+    iTextSharp.tool.xml.css.apply.ChunkCssApplier ChunkCssAplier 'get set' : 
+  Methods:
+    Apply(IElement, Tag, IMarginMemory, IPageSizeContainable, HtmlPipelineContext): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Apply(IElement, Tag, HtmlPipelineContext): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_ChunkCssAplier(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ChunkCssAplier(ChunkCssApplier): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    Clone(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class iTextSharp.tool.xml.html.CssAppliersImpl: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(iTextSharp.text.IFontProvider): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.html.CssAppliers
+  Properties:
+    iTextSharp.tool.xml.css.apply.ChunkCssApplier ChunkCssAplier 'get set' : 
+  Methods:
+    PutCssApplier(Type, ICssApplier): PrivateScope, Public, HideBySig
+    GetCssApplier(Type): PrivateScope, Public, HideBySig
+    Apply(IElement, Tag, IMarginMemory, IPageSizeContainable, HtmlPipelineContext): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Apply(IElement, Tag, HtmlPipelineContext): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetChunkCssAplier(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_ChunkCssAplier(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_ChunkCssAplier(ChunkCssApplier): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    Clone(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Interface iTextSharp.tool.xml.html.ITagProcessorFactory: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    GetProcessor(String, String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    AddProcessor(ITagProcessor, String[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    RemoveProcessor(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class iTextSharp.tool.xml.html.DefaultTagProcessorFactory: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.html.ITagProcessorFactory
+  Methods:
+    GetProcessor(String, String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    AddProcessor(String, String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    AddProcessor(String, ITagProcessor): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    AddProcessor(ITagProcessor, String[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    AddProcessor(String, String[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    RemoveProcessor(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class iTextSharp.tool.xml.html.Div: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :iTextSharp.tool.xml.html.AbstractTagProcessor
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Content(IWorkerContext, Tag, String): PrivateScope, Public, Virtual, HideBySig
+    End(IWorkerContext, Tag, IList`1): PrivateScope, Public, Virtual, HideBySig
+    IsStackOwner(): PrivateScope, Public, Virtual, HideBySig
+Class iTextSharp.tool.xml.html.DummyTagProcessor: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.html.ITagProcessor
+  Methods:
+    StartElement(IWorkerContext, Tag): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Content(IWorkerContext, Tag, String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndElement(IWorkerContext, Tag, IList`1): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IsStackOwner(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class iTextSharp.tool.xml.html.Header: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :iTextSharp.tool.xml.html.AbstractTagProcessor
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Content(IWorkerContext, Tag, String): PrivateScope, Public, Virtual, HideBySig
+    End(IWorkerContext, Tag, IList`1): PrivateScope, Public, Virtual, HideBySig
+    IsStackOwner(): PrivateScope, Public, Virtual, HideBySig
+Class iTextSharp.tool.xml.html.HeaderNode: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Int32, iTextSharp.text.pdf.PdfOutline, iTextSharp.tool.xml.html.HeaderNode): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    iTextSharp.tool.xml.html.HeaderNode Parent 'get ' : 
+    Int32 Level 'get ' : 
+    iTextSharp.text.pdf.PdfOutline Outline 'get ' : 
+  Methods:
+    get_Parent(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Level(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Outline(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+Class iTextSharp.tool.xml.html.head.Link: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :iTextSharp.tool.xml.html.AbstractTagProcessor
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Start(IWorkerContext, Tag): PrivateScope, Public, Virtual, HideBySig
+Class iTextSharp.tool.xml.html.head.Meta: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :iTextSharp.tool.xml.html.AbstractTagProcessor
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Start(IWorkerContext, Tag): PrivateScope, Public, Virtual, HideBySig
+Class iTextSharp.tool.xml.html.head.Style: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :iTextSharp.tool.xml.html.AbstractTagProcessor
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Content(IWorkerContext, Tag, String): PrivateScope, Public, Virtual, HideBySig
+Class iTextSharp.tool.xml.html.head.Title: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :iTextSharp.tool.xml.html.AbstractTagProcessor
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Content(IWorkerContext, Tag, String): PrivateScope, Public, Virtual, HideBySig
+Class iTextSharp.tool.xml.html.head.XML: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :iTextSharp.tool.xml.html.AbstractTagProcessor
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Start(IWorkerContext, Tag): PrivateScope, Public, Virtual, HideBySig
+Class iTextSharp.tool.xml.html.HorizontalRule: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :iTextSharp.tool.xml.html.AbstractTagProcessor
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Start(IWorkerContext, Tag): PrivateScope, Public, Virtual, HideBySig
+Class iTextSharp.tool.xml.html.HTML: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class iTextSharp.tool.xml.html.HTML+Tag: AutoLayout, AnsiClass, Class, NestedPublic, Abstract, Sealed, BeforeFieldInit
+  Fields:
+    System.String XML = xml : Public, Static, Literal, HasDefault
+    System.String THEAD = thead : Public, Static, Literal, HasDefault
+    System.String TBODY = tbody : Public, Static, Literal, HasDefault
+    System.String TFOOT = tfoot : Public, Static, Literal, HasDefault
+    System.String OL = ol : Public, Static, Literal, HasDefault
+    System.String UL = ul : Public, Static, Literal, HasDefault
+    System.String CAPTION = caption : Public, Static, Literal, HasDefault
+    System.String PRE = pre : Public, Static, Literal, HasDefault
+    System.String P = p : Public, Static, Literal, HasDefault
+    System.String DIV = div : Public, Static, Literal, HasDefault
+    System.String H1 = h1 : Public, Static, Literal, HasDefault
+    System.String H2 = h2 : Public, Static, Literal, HasDefault
+    System.String H3 = h3 : Public, Static, Literal, HasDefault
+    System.String H4 = h4 : Public, Static, Literal, HasDefault
+    System.String H5 = h5 : Public, Static, Literal, HasDefault
+    System.String H6 = h6 : Public, Static, Literal, HasDefault
+    System.String TD = td : Public, Static, Literal, HasDefault
+    System.String BR = br : Public, Static, Literal, HasDefault
+    System.String LI = li : Public, Static, Literal, HasDefault
+    System.String DD = dd : Public, Static, Literal, HasDefault
+    System.String DT = dt : Public, Static, Literal, HasDefault
+    System.String TH = th : Public, Static, Literal, HasDefault
+    System.String HR = hr : Public, Static, Literal, HasDefault
+    System.String BODY = body : Public, Static, Literal, HasDefault
+    System.String HTML = html : Public, Static, Literal, HasDefault
+    System.String TABLE = table : Public, Static, Literal, HasDefault
+    System.String SCRIPT = script : Public, Static, Literal, HasDefault
+    System.String HEAD = head : Public, Static, Literal, HasDefault
+    System.String LINK = link : Public, Static, Literal, HasDefault
+    System.String META = meta : Public, Static, Literal, HasDefault
+    System.String STYLE = style : Public, Static, Literal, HasDefault
+    System.String ADDRESS = address : Public, Static, Literal, HasDefault
+    System.String ARTICLE = article : Public, Static, Literal, HasDefault
+    System.String ASIDE = aside : Public, Static, Literal, HasDefault
+    System.String AUDIO = audio : Public, Static, Literal, HasDefault
+    System.String BLOCKQUOTE = blockquote : Public, Static, Literal, HasDefault
+    System.String CANVAS = canvas : Public, Static, Literal, HasDefault
+    System.String FIELDSET = fieldset : Public, Static, Literal, HasDefault
+    System.String FIGCAPTION = figcaption : Public, Static, Literal, HasDefault
+    System.String FIGURE = figure : Public, Static, Literal, HasDefault
+    System.String FOOTER = footer : Public, Static, Literal, HasDefault
+    System.String FONT = font : Public, Static, Literal, HasDefault
+    System.String FORM = form : Public, Static, Literal, HasDefault
+    System.String HEADER = header : Public, Static, Literal, HasDefault
+    System.String HGROUP = hgroup : Public, Static, Literal, HasDefault
+    System.String NOSCRIPT = noscript : Public, Static, Literal, HasDefault
+    System.String OUTPUT = output : Public, Static, Literal, HasDefault
+    System.String SECTION = section : Public, Static, Literal, HasDefault
+    System.String VIDEO = video : Public, Static, Literal, HasDefault
+    System.String BASE = base : Public, Static, Literal, HasDefault
+    System.String COMMAND = command : Public, Static, Literal, HasDefault
+    System.String TITLE = title : Public, Static, Literal, HasDefault
+    System.String A = a : Public, Static, Literal, HasDefault
+    System.String ABBR = abbr : Public, Static, Literal, HasDefault
+    System.String B = b : Public, Static, Literal, HasDefault
+    System.String BDO = bdo : Public, Static, Literal, HasDefault
+    System.String BUTTON = button : Public, Static, Literal, HasDefault
+    System.String DETAILS = details : Public, Static, Literal, HasDefault
+    System.String CODE = code : Public, Static, Literal, HasDefault
+    System.String DEL = del : Public, Static, Literal, HasDefault
+    System.String DATALIST = datalist : Public, Static, Literal, HasDefault
+    System.String DFN = dfn : Public, Static, Literal, HasDefault
+    System.String EMBED = embed : Public, Static, Literal, HasDefault
+    System.String CITE = cite : Public, Static, Literal, HasDefault
+    System.String DL = dl : Public, Static, Literal, HasDefault
+    System.String EM = em : Public, Static, Literal, HasDefault
+    System.String I = i : Public, Static, Literal, HasDefault
+    System.String IFRAME = iframe : Public, Static, Literal, HasDefault
+    System.String INPUT = input : Public, Static, Literal, HasDefault
+    System.String IMG = img : Public, Static, Literal, HasDefault
+    System.String INS = ins : Public, Static, Literal, HasDefault
+    System.String MAP = map : Public, Static, Literal, HasDefault
+    System.String KEYGEN = keygen : Public, Static, Literal, HasDefault
+    System.String METER = meter : Public, Static, Literal, HasDefault
+    System.String MENU = menu : Public, Static, Literal, HasDefault
+    System.String NAV = nav : Public, Static, Literal, HasDefault
+    System.String KBD = kbd : Public, Static, Literal, HasDefault
+    System.String MATH = math : Public, Static, Literal, HasDefault
+    System.String MARK = mark : Public, Static, Literal, HasDefault
+    System.String LABEL = label : Public, Static, Literal, HasDefault
+    System.String Q = q : Public, Static, Literal, HasDefault
+    System.String SAMP = samp : Public, Static, Literal, HasDefault
+    System.String PROGRESS = progress : Public, Static, Literal, HasDefault
+    System.String RUBY = ruby : Public, Static, Literal, HasDefault
+    System.String OBJECT = object : Public, Static, Literal, HasDefault
+    System.String SMALL = small : Public, Static, Literal, HasDefault
+    System.String SUB = sub : Public, Static, Literal, HasDefault
+    System.String SUP = sup : Public, Static, Literal, HasDefault
+    System.String STRONG = strong : Public, Static, Literal, HasDefault
+    System.String SELECT = select : Public, Static, Literal, HasDefault
+    System.String SPAN = span : Public, Static, Literal, HasDefault
+    System.String SVG = svg : Public, Static, Literal, HasDefault
+    System.String WBR = wbr : Public, Static, Literal, HasDefault
+    System.String TIME = time : Public, Static, Literal, HasDefault
+    System.String TEXTAREA = textarea : Public, Static, Literal, HasDefault
+    System.String VAR = var : Public, Static, Literal, HasDefault
+    System.String TR = tr : Public, Static, Literal, HasDefault
+    System.String BIG = big : Public, Static, Literal, HasDefault
+    System.String S = s : Public, Static, Literal, HasDefault
+    System.String STRIKE = strike : Public, Static, Literal, HasDefault
+    System.String TT = tt : Public, Static, Literal, HasDefault
+    System.String U = u : Public, Static, Literal, HasDefault
+Class iTextSharp.tool.xml.html.HTML+Category: AutoLayout, AnsiClass, Class, NestedPublic, Abstract, Sealed, BeforeFieldInit
+  Fields:
+    System.Collections.Generic.Dictionary`2[System.String,System.Object] NOT_VISIBLE : Public, Static
+    System.Collections.Generic.Dictionary`2[System.String,System.Object] BLOCK_LEVEL : Public, Static
+    System.Collections.Generic.Dictionary`2[System.String,System.Object] METADATA : Public, Static
+    System.Collections.Generic.Dictionary`2[System.String,System.Object] FLOW_CONTENT : Public, Static
+    System.Collections.Generic.Dictionary`2[System.String,System.Object] SECTIONING_CONTENT : Public, Static
+    System.Collections.Generic.Dictionary`2[System.String,System.Object] HEADING_CONTENT : Public, Static
+    System.Collections.Generic.Dictionary`2[System.String,System.Object] PHRASING_CONTENT : Public, Static
+    System.Collections.Generic.Dictionary`2[System.String,System.Object] EMBEDDED_CONTENT : Public, Static
+Class iTextSharp.tool.xml.html.HTML+Attribute: AutoLayout, AnsiClass, Class, NestedPublic, Abstract, Sealed, BeforeFieldInit
+  Fields:
+    System.String ALT = alt : Public, Static, Literal, HasDefault
+    System.String CELLPADDING = cellpadding : Public, Static, Literal, HasDefault
+    System.String CELLSPACING = cellspacing : Public, Static, Literal, HasDefault
+    System.String STYLE = style : Public, Static, Literal, HasDefault
+    System.String CLASS = class : Public, Static, Literal, HasDefault
+    System.String ID = id : Public, Static, Literal, HasDefault
+    System.String HREF = href : Public, Static, Literal, HasDefault
+    System.String NAME = name : Public, Static, Literal, HasDefault
+    System.String SRC = src : Public, Static, Literal, HasDefault
+    System.String WIDTH = width : Public, Static, Literal, HasDefault
+    System.String HEIGHT = height : Public, Static, Literal, HasDefault
+    System.String TYPE = type : Public, Static, Literal, HasDefault
+    System.String COLSPAN = colspan : Public, Static, Literal, HasDefault
+    System.String ROWSPAN = rowspan : Public, Static, Literal, HasDefault
+    System.String VALIGN = valign : Public, Static, Literal, HasDefault
+    System.String ALIGN = align : Public, Static, Literal, HasDefault
+    System.String FACE = face : Public, Static, Literal, HasDefault
+    System.String SIZE = size : Public, Static, Literal, HasDefault
+    System.String COLOR = color : Public, Static, Literal, HasDefault
+    System.String START = start : Public, Static, Literal, HasDefault
+    System.String DIR = dir : Public, Static, Literal, HasDefault
+Class iTextSharp.tool.xml.html.HTML+Attribute+Value: AutoLayout, AnsiClass, Class, NestedPublic, Abstract, Sealed, BeforeFieldInit
+  Fields:
+    System.String TEXTCSS = text/css : Public, Static, Literal, HasDefault
+Class iTextSharp.tool.xml.html.HTMLUtils: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Methods:
+    Sanitize(String, Boolean): PrivateScope, Public, Static, HideBySig
+    SanitizeInline(String, Boolean): PrivateScope, Public, Static, HideBySig
+    SanitizeInline(String, Boolean, Boolean): PrivateScope, Public, Static, HideBySig
+    IsWhiteSpace(Char): PrivateScope, Public, Static, HideBySig
+Class iTextSharp.tool.xml.html.Image: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :iTextSharp.tool.xml.html.AbstractTagProcessor
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    End(IWorkerContext, Tag, IList`1): PrivateScope, Public, Virtual, HideBySig
+    IsStackOwner(): PrivateScope, Public, Virtual, HideBySig
+Class iTextSharp.tool.xml.html.NonSanitizedTag: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :iTextSharp.tool.xml.html.AbstractTagProcessor
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Content(IWorkerContext, Tag, String): PrivateScope, Public, Virtual, HideBySig
+    End(IWorkerContext, Tag, IList`1): PrivateScope, Public, Virtual, HideBySig
+Class iTextSharp.tool.xml.html.OrderedUnorderedList: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :iTextSharp.tool.xml.html.AbstractTagProcessor
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    End(IWorkerContext, Tag, IList`1): PrivateScope, Public, Virtual, HideBySig
+    IsStackOwner(): PrivateScope, Public, Virtual, HideBySig
+Class iTextSharp.tool.xml.html.OrderedUnorderedListItem: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :iTextSharp.tool.xml.html.AbstractTagProcessor
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Content(IWorkerContext, Tag, String): PrivateScope, Public, Virtual, HideBySig
+    End(IWorkerContext, Tag, IList`1): PrivateScope, Public, Virtual, HideBySig
+    IsStackOwner(): PrivateScope, Public, Virtual, HideBySig
+Class iTextSharp.tool.xml.html.ParaGraph: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :iTextSharp.tool.xml.html.AbstractTagProcessor
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Content(IWorkerContext, Tag, String): PrivateScope, Public, Virtual, HideBySig
+    End(IWorkerContext, Tag, IList`1): PrivateScope, Public, Virtual, HideBySig
+    IsStackOwner(): PrivateScope, Public, Virtual, HideBySig
+Class iTextSharp.tool.xml.html.pdfelement.HtmlCell: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :iTextSharp.text.pdf.PdfPCell
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(iTextSharp.text.pdf.PdfPCell, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(iTextSharp.text.pdf.PdfPCell): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Single FixedWidth 'get set' : 
+    iTextSharp.tool.xml.html.table.TableStyleValues CellValues 'get set' : 
+  Methods:
+    get_FixedWidth(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_FixedWidth(Single): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_CellValues(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_CellValues(TableStyleValues): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+Class iTextSharp.tool.xml.html.pdfelement.NoNewLineParagraph: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :iTextSharp.text.Phrase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Single): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(iTextSharp.text.Chunk): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Single, iTextSharp.text.Chunk): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, iTextSharp.text.Font): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Single, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Single, System.String, iTextSharp.text.Font): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(iTextSharp.text.Phrase): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.text.api.IIndentable
+  Properties:
+    Int32 Alignment 'get set' : 
+    Single IndentationLeft 'get set' : 
+    Single IndentationRight 'get set' : 
+    Single FirstLineIndent 'get set' : 
+    Single SpacingBefore 'get set' : 
+    Single SpacingAfter 'get set' : 
+    Boolean KeepTogether 'get set' : 
+    Single ExtraParagraphSpace 'get set' : 
+  Methods:
+    Add(IElement): PrivateScope, Public, Virtual, HideBySig
+    set_Alignment(Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Alignment(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_IndentationLeft(Single): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_IndentationLeft(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_IndentationRight(Single): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_IndentationRight(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_FirstLineIndent(Single): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_FirstLineIndent(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_SpacingBefore(Single): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_SpacingBefore(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_SpacingAfter(Single): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_SpacingAfter(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_KeepTogether(Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_KeepTogether(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_ExtraParagraphSpace(Single): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ExtraParagraphSpace(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+Class iTextSharp.tool.xml.html.pdfelement.TabbedChunk: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :iTextSharp.text.Chunk
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(iTextSharp.text.pdf.draw.VerticalPositionMark, Single, Boolean, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(iTextSharp.text.pdf.draw.VerticalPositionMark, Single, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int32 TabCount 'get set' : 
+    System.String Alignment 'get set' : 
+  Methods:
+    get_TabCount(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_TabCount(Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Alignment(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Alignment(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+Class iTextSharp.tool.xml.html.Span: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :iTextSharp.tool.xml.html.AbstractTagProcessor
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Content(IWorkerContext, Tag, String): PrivateScope, Public, Virtual, HideBySig
+    End(IWorkerContext, Tag, IList`1): PrivateScope, Public, Virtual, HideBySig
+    IsStackOwner(): PrivateScope, Public, Virtual, HideBySig
+Class iTextSharp.tool.xml.html.table.CellSpacingEvent: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(iTextSharp.tool.xml.html.table.TableStyleValues): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.text.pdf.IPdfPCellEvent
+  Methods:
+    CellLayout(PdfPCell, Rectangle, PdfContentByte[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class iTextSharp.tool.xml.html.table.Table: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :iTextSharp.tool.xml.html.AbstractTagProcessor
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Single DEFAULT_CELL_BORDER_WIDTH = 0.75 : Public, Static, Literal, HasDefault
+  Methods:
+    End(IWorkerContext, Tag, IList`1): PrivateScope, Public, Virtual, HideBySig
+    SetStyleValues(Tag): PrivateScope, Public, Static, HideBySig
+    SetBorderAttributeForCell(Tag): PrivateScope, Public, Static, HideBySig
+    GetBorderOrCellSpacing(Boolean, IDictionary`2, IDictionary`2): PrivateScope, Public, Static, HideBySig
+    IsStackOwner(): PrivateScope, Public, Virtual, HideBySig
+Class iTextSharp.tool.xml.html.table.TableBorderEvent: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(iTextSharp.tool.xml.html.table.TableStyleValues): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.text.pdf.IPdfPTableEvent
+  Properties:
+    iTextSharp.tool.xml.html.table.TableStyleValues TableStyleValues 'get ' : 
+  Methods:
+    TableLayout(PdfPTable, Single[][], Single[], Int32, Int32, PdfContentByte[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_TableStyleValues(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+Class iTextSharp.tool.xml.html.table.TableData: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :iTextSharp.tool.xml.html.AbstractTagProcessor
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Content(IWorkerContext, Tag, String): PrivateScope, Public, Virtual, HideBySig
+    End(IWorkerContext, Tag, IList`1): PrivateScope, Public, Virtual, HideBySig
+    IsStackOwner(): PrivateScope, Public, Virtual, HideBySig
+Class iTextSharp.tool.xml.html.table.TableRow: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :iTextSharp.tool.xml.html.AbstractTagProcessor
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    End(IWorkerContext, Tag, IList`1): PrivateScope, Public, Virtual, HideBySig
+    IsStackOwner(): PrivateScope, Public, Virtual, HideBySig
+Class iTextSharp.tool.xml.html.table.TableRowElement: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.Collections.Generic.IList`1[iTextSharp.text.IElement], Place): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.text.IElement
+  Properties:
+    Int32 Type 'get ' : 
+    System.Collections.Generic.IList`1[iTextSharp.text.Chunk] Chunks 'get ' : 
+    System.Collections.Generic.IList`1[iTextSharp.tool.xml.html.pdfelement.HtmlCell] Content 'get ' : 
+    Place RowPlace 'get ' : 
+  Methods:
+    Process(IElementListener): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_Type(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    IsContent(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IsNestable(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_Chunks(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Content(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_RowPlace(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+Class iTextSharp.tool.xml.html.table.TableRowElement+Place: AutoLayout, AnsiClass, Class, NestedPublic, BeforeFieldInit
+  Fields:
+    Place CAPTION_TOP : Public, Static, InitOnly
+    Place HEADER : Public, Static, InitOnly
+    Place BODY : Public, Static, InitOnly
+    Place FOOTER : Public, Static, InitOnly
+    Place CAPTION_BOTTOM : Public, Static, InitOnly
+  Properties:
+    Int32 Normal 'get ' : 
+    Int32 Repeated 'get ' : 
+  Methods:
+    get_Normal(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Repeated(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    Equals(Object): PrivateScope, Public, Virtual, HideBySig
+    GetHashCode(): PrivateScope, Public, Virtual, HideBySig
+Class iTextSharp.tool.xml.html.table.TableStyleValues: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Single HorBorderSpacing 'get set' : 
+    Single VerBorderSpacing 'get set' : 
+    Single BorderWidthLeft 'get set' : 
+    iTextSharp.text.BaseColor BorderColorLeft 'get set' : 
+    Single BorderWidthRight 'get set' : 
+    iTextSharp.text.BaseColor BorderColorRight 'get set' : 
+    Single BorderWidthTop 'get set' : 
+    iTextSharp.text.BaseColor BorderColorTop 'get set' : 
+    Single BorderWidthBottom 'get set' : 
+    iTextSharp.text.BaseColor BorderColorBottom 'get set' : 
+    Boolean IsLastInRow 'get set' : 
+    iTextSharp.text.BaseColor Background 'get set' : 
+    Single BorderWidth 'set' : 
+    iTextSharp.text.BaseColor BorderColor 'set' : 
+  Methods:
+    get_HorBorderSpacing(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_HorBorderSpacing(Single): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_VerBorderSpacing(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_VerBorderSpacing(Single): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_BorderWidthLeft(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_BorderWidthLeft(Single): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    GetBorderWidthLeft(Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_BorderColorLeft(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_BorderColorLeft(BaseColor): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_BorderWidthRight(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_BorderWidthRight(Single): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    GetBorderWidthRight(Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_BorderColorRight(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_BorderColorRight(BaseColor): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_BorderWidthTop(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_BorderWidthTop(Single): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    GetBorderWidthTop(Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_BorderColorTop(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_BorderColorTop(BaseColor): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_BorderWidthBottom(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_BorderWidthBottom(Single): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    GetBorderWidthBottom(Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_BorderColorBottom(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_BorderColorBottom(BaseColor): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_IsLastInRow(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_IsLastInRow(Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Background(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Background(BaseColor): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_BorderWidth(Single): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_BorderColor(BaseColor): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+Class iTextSharp.tool.xml.html.Tags: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    GetHtmlTagProcessorFactory(): PrivateScope, Public, Static, HideBySig
+Interface iTextSharp.tool.xml.ICustomContext: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+Interface iTextSharp.tool.xml.IPipeline: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    Init(IWorkerContext): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Open(IWorkerContext, Tag, ProcessObject): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Content(IWorkerContext, Tag, String, ProcessObject): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Close(IWorkerContext, Tag, ProcessObject): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetNext(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface iTextSharp.tool.xml.IWorkerContext: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    Get(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Put(String, ICustomContext): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SetCurrentTag(Tag): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetCurrentTag(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface iTextSharp.tool.xml.IWritable: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+Class iTextSharp.tool.xml.net.exc.NoImageException: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :System.Exception
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, System.Exception): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Interface iTextSharp.tool.xml.net.IFileRetrieve: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    ProcessFromHref(String, IReadingProcessor): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ProcessFromStream(Stream, IReadingProcessor): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class iTextSharp.tool.xml.net.FileRetrieveImpl: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.net.IFileRetrieve
+  Methods:
+    ProcessFromHref(String, IReadingProcessor): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ProcessFromStream(Stream, IReadingProcessor): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    AddRootDir(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    AddURL(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class iTextSharp.tool.xml.net.ImageRetrieve: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String, iTextSharp.tool.xml.pipeline.html.IImageProvider): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(iTextSharp.tool.xml.pipeline.html.IImageProvider): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    RetrieveImage(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class iTextSharp.tool.xml.NoCustomContextException: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :System.Exception
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Exception): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, System.Exception): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class iTextSharp.tool.xml.parser.io.EncodingUtil: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    GetDeclaredEncoding(String): PrivateScope, Public, Static, HideBySig
+Interface iTextSharp.tool.xml.parser.io.IAppender: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    Append(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Append(Char): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface iTextSharp.tool.xml.parser.io.IParserMonitor: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    Read(Char[], Int32, Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class iTextSharp.tool.xml.parser.io.MonitorInputReader: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.IO.TextReader
+    Void .ctor(System.IO.TextReader, iTextSharp.tool.xml.parser.io.IParserMonitor): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Read(Char[], Int32, Int32): PrivateScope, Public, Virtual, HideBySig
+    Peek(): PrivateScope, Public, Virtual, HideBySig
+Interface iTextSharp.tool.xml.parser.IXMLParserListener: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    StartElement(String, IDictionary`2, String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Text(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    EndElement(String, String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    UnknownText(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Comment(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Init(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Close(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class iTextSharp.tool.xml.parser.io.ParserListenerWriter: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(iTextSharp.tool.xml.parser.io.IAppender, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(iTextSharp.tool.xml.parser.io.IAppender): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.parser.IXMLParserListener
+  Methods:
+    UnknownText(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Text(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    StartElement(String, IDictionary`2, String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndElement(String, String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Comment(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Init(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Close(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Interface iTextSharp.tool.xml.parser.IState: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    Process(Char): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class iTextSharp.tool.xml.parser.StateController: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(iTextSharp.tool.xml.parser.XMLParser, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    SetState(IState): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    PreviousState(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Unknown(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    TagEncountered(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    TagAttributes(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    InTag(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    AttributeValue(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SingleQuotedAttr(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    DoubleQuotedAttr(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ProcessingInstructions(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SelfClosing(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SpecialChar(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ClosingTag(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Comment(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    CloseComment(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Cdata(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Xml(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Doctype(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    UnquotedAttr(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    StarComment(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    CloseStarComment(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetPreviousState(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class iTextSharp.tool.xml.parser.state.AttributeValueState: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(iTextSharp.tool.xml.parser.XMLParser): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.parser.IState
+  Methods:
+    Process(Char): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class iTextSharp.tool.xml.parser.state.CdataState: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(iTextSharp.tool.xml.parser.XMLParser): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.parser.IState
+  Methods:
+    Process(Char): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class iTextSharp.tool.xml.parser.state.CloseCommentState: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(iTextSharp.tool.xml.parser.XMLParser): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.parser.IState
+  Methods:
+    Process(Char): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class iTextSharp.tool.xml.parser.state.CloseStarCommentState: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(iTextSharp.tool.xml.parser.XMLParser): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.parser.IState
+  Methods:
+    Process(Char): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class iTextSharp.tool.xml.parser.state.ClosingTagState: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(iTextSharp.tool.xml.parser.XMLParser): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.parser.IState
+  Methods:
+    Process(Char): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class iTextSharp.tool.xml.parser.state.CommentState: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(iTextSharp.tool.xml.parser.XMLParser): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.parser.IState
+  Methods:
+    Process(Char): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class iTextSharp.tool.xml.parser.state.DocTypeState: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(iTextSharp.tool.xml.parser.XMLParser): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.parser.IState
+  Methods:
+    Process(Char): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class iTextSharp.tool.xml.parser.state.DoubleQuotedAttrValueState: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(iTextSharp.tool.xml.parser.XMLParser): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.parser.IState
+  Methods:
+    Process(Char): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class iTextSharp.tool.xml.parser.state.InsideTagHTMLState: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(iTextSharp.tool.xml.parser.XMLParser): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.parser.IState
+  Methods:
+    Process(Char): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class iTextSharp.tool.xml.parser.state.InsideTagState: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(iTextSharp.tool.xml.parser.XMLParser): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.parser.IState
+  Methods:
+    Process(Char): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class iTextSharp.tool.xml.parser.state.TagAttributeState: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(iTextSharp.tool.xml.parser.XMLParser): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.parser.IState
+  Methods:
+    Process(Char): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class iTextSharp.tool.xml.parser.state.ProcessingInstructionEncounteredState: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :iTextSharp.tool.xml.parser.state.TagAttributeState
+    Void .ctor(iTextSharp.tool.xml.parser.XMLParser): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Process(Char): PrivateScope, Public, Virtual, HideBySig
+Class iTextSharp.tool.xml.parser.state.SelfClosingTagState: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(iTextSharp.tool.xml.parser.XMLParser): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.parser.IState
+  Methods:
+    Process(Char): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class iTextSharp.tool.xml.parser.state.SingleQuotedAttrValueState: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(iTextSharp.tool.xml.parser.XMLParser): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.parser.IState
+  Methods:
+    Process(Char): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class iTextSharp.tool.xml.parser.state.SpecialCharState: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(iTextSharp.tool.xml.parser.XMLParser): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.parser.IState
+  Methods:
+    Process(Char): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class iTextSharp.tool.xml.parser.state.StarCommentState: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(iTextSharp.tool.xml.parser.XMLParser): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.parser.IState
+  Methods:
+    Process(Char): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class iTextSharp.tool.xml.parser.state.TagEncounteredState: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(iTextSharp.tool.xml.parser.XMLParser): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.parser.IState
+  Methods:
+    Process(Char): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class iTextSharp.tool.xml.parser.state.UnknownState: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(iTextSharp.tool.xml.parser.XMLParser): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.parser.IState
+  Methods:
+    Process(Char): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class iTextSharp.tool.xml.parser.state.UnquotedAttrState: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(iTextSharp.tool.xml.parser.XMLParser): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.parser.IState
+  Methods:
+    Process(Char): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class iTextSharp.tool.xml.parser.state.XmlState: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(iTextSharp.tool.xml.parser.XMLParser): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.parser.IState
+  Methods:
+    Process(Char): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Struct iTextSharp.tool.xml.parser.TagState: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    iTextSharp.tool.xml.parser.TagState OPEN = 0 : Public, Static, Literal, HasDefault
+    iTextSharp.tool.xml.parser.TagState CLOSE = 1 : Public, Static, Literal, HasDefault
+    iTextSharp.tool.xml.parser.TagState NONE = 2 : Public, Static, Literal, HasDefault
+Class iTextSharp.tool.xml.parser.XMLParser: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Boolean, System.Text.Encoding): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(iTextSharp.tool.xml.parser.IXMLParserListener, System.Text.Encoding): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Boolean, iTextSharp.tool.xml.parser.IXMLParserListener): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(iTextSharp.tool.xml.parser.IXMLParserListener): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Boolean, iTextSharp.tool.xml.parser.IXMLParserListener, System.Text.Encoding): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.Text.Encoding Charset 'get ' : 
+  Methods:
+    AddListener(IXMLParserListener): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    RemoveListener(IXMLParserListener): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Parse(Stream): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Parse(Stream, Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Parse(Stream, Encoding): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Parse(TextReader): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    DetectEncoding(Stream): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Append(Char): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SelectState(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    UnknownData(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Flush(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Current(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Memory(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    StartElement(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndElement(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Text(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Comment(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    CurrentLastChar(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    CurrentTag(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    CurrentTagState(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SetMonitor(IParserMonitor): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SetDecodeSpecialChars(Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IsDecodeSpecialChars(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BufferToString(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Append(Char[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BufferSize(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Append(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_Charset(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+Class iTextSharp.tool.xml.parser.XMLParserMemory: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Char LastChar 'get set' : 
+    System.String StoredString 'get set' : 
+  Methods:
+    CurrentTag(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    CurrentAttr(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    HasCurrentAttribute(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    PutCurrentAttrValue(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Current(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetCurrentTag(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetAttributes(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    CurrentEntity(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Comment(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ProcessingInstruction(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    WhitespaceTag(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    WhitespaceTag(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Namespace(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    FlushNameSpace(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetNameSpace(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ResetBuffer(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_LastChar(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_LastChar(Char): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_StoredString(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_StoredString(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+Class iTextSharp.tool.xml.PipelineException: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :System.Exception
+    Void .ctor(System.Exception): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, System.Exception): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class iTextSharp.tool.xml.pipeline.AbstractPipeline: AutoLayout, AnsiClass, Class, Public, Abstract, BeforeFieldInit
+    Void .ctor(iTextSharp.tool.xml.IPipeline): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.IPipeline
+  Methods:
+    GetNext(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Open(IWorkerContext, Tag, ProcessObject): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Content(IWorkerContext, Tag, String, ProcessObject): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Close(IWorkerContext, Tag, ProcessObject): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetLocalContext(IWorkerContext): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SetNext(IPipeline): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetContextKey(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Init(IWorkerContext): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class iTextSharp.tool.xml.pipeline.css.CssResolverPipeline: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :iTextSharp.tool.xml.pipeline.AbstractPipeline
+    Void .ctor(iTextSharp.tool.xml.pipeline.css.ICSSResolver, iTextSharp.tool.xml.IPipeline): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String CSS_RESOLVER = CSS_RESOLVER : Public, Static, Literal, HasDefault
+  Methods:
+    Init(IWorkerContext): PrivateScope, Public, Virtual, HideBySig
+    Open(IWorkerContext, Tag, ProcessObject): PrivateScope, Public, Virtual, HideBySig
+    SetResolver(ICSSResolver): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetContextKey(): PrivateScope, Public, Virtual, HideBySig
+Class iTextSharp.tool.xml.pipeline.ctx.MapContext: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.ICustomContext
+  Properties:
+    System.Object Item [System.String] 'get set' : 
+  Methods:
+    get_Item(String): PrivateScope, Public, HideBySig, SpecialName
+    set_Item(String, Object): PrivateScope, Public, HideBySig, SpecialName
+Class iTextSharp.tool.xml.pipeline.ctx.ObjectContext`1[T]: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Type parameter: T
+    Void .ctor(T): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.ICustomContext
+  Methods:
+    Get(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class iTextSharp.tool.xml.pipeline.ctx.WorkerContextImpl: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.IWorkerContext
+  Methods:
+    Get(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Put(String, ICustomContext): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SetCurrentTag(Tag): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetCurrentTag(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class iTextSharp.tool.xml.pipeline.end.ElementHandlerPipeline: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :iTextSharp.tool.xml.pipeline.AbstractPipeline
+    Void .ctor(iTextSharp.tool.xml.IElementHandler, iTextSharp.tool.xml.IPipeline): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Open(IWorkerContext, Tag, ProcessObject): PrivateScope, Public, Virtual, HideBySig
+    Content(IWorkerContext, Tag, String, ProcessObject): PrivateScope, Public, Virtual, HideBySig
+    Close(IWorkerContext, Tag, ProcessObject): PrivateScope, Public, Virtual, HideBySig
+Class iTextSharp.tool.xml.pipeline.end.PdfWriterPipeline: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :iTextSharp.tool.xml.pipeline.AbstractPipeline
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(iTextSharp.tool.xml.IPipeline): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(iTextSharp.text.Document, iTextSharp.text.pdf.PdfWriter): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String DOCUMENT = DOCUMENT : Public, Static, Literal, HasDefault
+    System.String WRITER = WRITER : Public, Static, Literal, HasDefault
+    System.String CONTINUOUS = CONTINUOUS : Public, Static, Literal, HasDefault
+  Methods:
+    Init(IWorkerContext): PrivateScope, Public, Virtual, HideBySig
+    Open(IWorkerContext, Tag, ProcessObject): PrivateScope, Public, Virtual, HideBySig
+    Content(IWorkerContext, Tag, String, ProcessObject): PrivateScope, Public, Virtual, HideBySig
+    Close(IWorkerContext, Tag, ProcessObject): PrivateScope, Public, Virtual, HideBySig
+    SetDocument(Document): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SetWriter(PdfWriter): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Interface iTextSharp.tool.xml.pipeline.html.IImageProvider: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    Retrieve(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetImageRootPath(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Store(String, Image): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Reset(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class iTextSharp.tool.xml.pipeline.html.AbstractImageProvider: AutoLayout, AnsiClass, Class, Public, Abstract, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.pipeline.html.IImageProvider
+  Methods:
+    Retrieve(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Store(String, Image): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Reset(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetImageRootPath(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class iTextSharp.tool.xml.pipeline.html.AutoDocPipeline: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :iTextSharp.tool.xml.pipeline.AbstractPipeline
+    Void .ctor(iTextSharp.tool.xml.pipeline.html.IFileMaker, System.String, System.String, iTextSharp.text.Rectangle): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Open(IWorkerContext, Tag, ProcessObject): PrivateScope, Public, Virtual, HideBySig
+    Close(IWorkerContext, Tag, ProcessObject): PrivateScope, Public, Virtual, HideBySig
+Class iTextSharp.tool.xml.pipeline.html.HtmlPipeline: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :iTextSharp.tool.xml.pipeline.AbstractPipeline
+    Void .ctor(iTextSharp.tool.xml.pipeline.html.HtmlPipelineContext, iTextSharp.tool.xml.IPipeline): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Init(IWorkerContext): PrivateScope, Public, Virtual, HideBySig
+    Open(IWorkerContext, Tag, ProcessObject): PrivateScope, Public, Virtual, HideBySig
+    Content(IWorkerContext, Tag, String, ProcessObject): PrivateScope, Public, Virtual, HideBySig
+    GetContextKey(): PrivateScope, Public, Virtual, HideBySig
+    Close(IWorkerContext, Tag, ProcessObject): PrivateScope, Public, Virtual, HideBySig
+Class iTextSharp.tool.xml.pipeline.html.HtmlPipelineContext: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(iTextSharp.tool.xml.html.CssAppliers): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.ICustomContext
+    System.ICloneable
+    iTextSharp.tool.xml.css.apply.IMarginMemory
+    iTextSharp.tool.xml.css.apply.IPageSizeContainable
+    iTextSharp.tool.xml.html.CssAppliersAware
+  Fields:
+    System.String BOOKMARK_TREE = header.autobookmark.RootNode : Public, Static, Literal, HasDefault
+    System.String LAST_MARGIN_BOTTOM = lastMarginBottom : Public, Static, Literal, HasDefault
+  Properties:
+    Single LastMarginBottom 'get set' : 
+    iTextSharp.text.Rectangle PageSize 'get ' : 
+    System.String ResourcePath 'get set' : 
+  Methods:
+    AcceptUnknown(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    AutoBookmark(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetMemory(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetImageProvider(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    CharSet(Encoding): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    CharSet(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetRootTags(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetLinkProvider(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SetPageSize(Rectangle): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Clone(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SetAcceptUnknown(Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SetTagFactory(ITagProcessorFactory): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    AutoBookmark(Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SetRootTags(IList`1): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SetImageProvider(IImageProvider): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SetLinkProvider(ILinkProvider): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_LastMarginBottom(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_LastMarginBottom(Single): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_PageSize(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    GetCssAppliers(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SetCssAppliers(CssAppliers): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_ResourcePath(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_ResourcePath(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+Interface iTextSharp.tool.xml.pipeline.html.IFileMaker: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    GetStream(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface iTextSharp.tool.xml.pipeline.html.ILinkProvider: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    GetLinkRoot(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class iTextSharp.tool.xml.pipeline.html.NoImageProviderException: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :System.Exception
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class iTextSharp.tool.xml.pipeline.html.NoStackException: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :System.Exception
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Exception): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, System.Exception): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class iTextSharp.tool.xml.pipeline.html.StackKeeper: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(iTextSharp.tool.xml.Tag): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Add(IElement): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetElements(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Add(ICollection`1): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetTag(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class iTextSharp.tool.xml.pipeline.html.UrlLinkResolver: AutoLayout, AnsiClass, Class, BeforeFieldInit
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    ResolveUrl(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ResolveLocalUrl(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SetLocalRootPath(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class iTextSharp.tool.xml.pipeline.WritableElement: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(iTextSharp.text.IElement): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.IWritable
+  Methods:
+    Add(IElement): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    AddAll(IList`1): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Elements(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class iTextSharp.tool.xml.ProcessObject: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    ContainsWritable(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Poll(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Add(IWritable): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    AddAll(IList`1): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class iTextSharp.tool.xml.Tag: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String, System.Collections.Generic.IDictionary`2[System.String,System.String]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, System.Collections.Generic.IDictionary`2[System.String,System.String], System.Collections.Generic.IDictionary`2[System.String,System.String], System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, System.Collections.Generic.IDictionary`2[System.String,System.String], System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.Collections.Generic.IEnumerable`1[iTextSharp.tool.xml.Tag]
+    System.Collections.IEnumerable
+  Properties:
+    iTextSharp.tool.xml.Tag Parent 'get set' : 
+    System.String Name 'get ' : 
+    System.Collections.Generic.IDictionary`2[System.String,System.String] CSS 'get set' : 
+    System.Collections.Generic.IDictionary`2[System.String,System.String] Attributes 'get ' : 
+    System.Object LastMarginBottom 'get set' : 
+    System.Collections.Generic.IList`1[iTextSharp.tool.xml.Tag] Children 'get ' : 
+    System.String NameSpace 'get ' : 
+  Methods:
+    set_Parent(Tag): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Parent(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Name(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_CSS(IDictionary`2): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_CSS(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Attributes(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_LastMarginBottom(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_LastMarginBottom(Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    AddChild(Tag): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_Children(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    GetChildren(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_NameSpace(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    CompareTag(Tag): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetEnumerator(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetChild(String, String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetChild(String, String, Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    HasChildren(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    HasParent(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    HasChild(String, String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    HasChild(String, String, Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class iTextSharp.tool.xml.TagUtils: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    GetSibling(Tag, Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetInstance(): PrivateScope, Public, Static, HideBySig
+Class iTextSharp.tool.xml.util.ParentTreeUtil: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    GetParentTree(Tag): PrivateScope, Public, HideBySig
+    GetParentTagTree(Tag, IList`1): PrivateScope, Public, HideBySig
+Class iTextSharp.tool.xml.util.SortUtil: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    InsertionSort(IList`1, Comparison`1): PrivateScope, Public, Static, HideBySig
+    InsertionSort(IList`1): PrivateScope, Public, Static, HideBySig
+    MergeSort(List`1, Comparison`1): PrivateScope, Public, Static, HideBySig
+    MergeSort(List`1): PrivateScope, Public, Static, HideBySig
+Class iTextSharp.tool.xml.XMLWorker: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(iTextSharp.tool.xml.IPipeline, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    iTextSharp.tool.xml.parser.IXMLParserListener
+  Methods:
+    Init(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    StartElement(String, IDictionary`2, String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndElement(String, String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Text(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    UnknownText(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Comment(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Close(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class iTextSharp.tool.xml.XMLWorkerFontProvider: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :iTextSharp.text.FontFactoryImp
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, System.Collections.Generic.Dictionary`2[System.String,System.String]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String DONTLOOKFORFONTS = ￼ : Public, Static, Literal, HasDefault
+  Properties:
+    Boolean UseUnicode 'set' : 
+  Methods:
+    AddFontSubstitute(String, String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    set_UseUnicode(Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    GetFont(String, String, Boolean, Single, Int32, BaseColor): PrivateScope, Public, Virtual, HideBySig
+    GetFont(String, String, Single, Int32): PrivateScope, Public, Virtual, HideBySig
+Class iTextSharp.tool.xml.XMLWorkerHelper: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Methods:
+    GetInstance(): PrivateScope, Public, Static, HideBySig
+    GetCSS(Stream): PrivateScope, Public, Static, HideBySig
+    GetDefaultCSS(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ParseXHtml(IElementHandler, TextReader): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ParseXHtml(PdfWriter, Document, TextReader): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ParseXHtml(PdfWriter, Document, Stream, Stream, Encoding, IFontProvider): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ParseXHtml(PdfWriter, Document, Stream, Stream, Encoding, IFontProvider, String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ParseXHtml(PdfWriter, Document, Stream, Stream): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ParseXHtml(PdfWriter, Document, Stream, Stream, Encoding): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ParseXHtml(PdfWriter, Document, Stream, Encoding): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ParseXHtml(PdfWriter, Document, Stream, Stream, IFontProvider): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ParseXHtml(IElementHandler, Stream, Encoding): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetDefaultCssResolver(Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ParseToElementList(String, String): PrivateScope, Public, Static, HideBySig
