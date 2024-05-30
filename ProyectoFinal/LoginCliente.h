@@ -22,6 +22,8 @@ namespace ProyectoFinal {
 		MySqlConnection^ connection; 
 	private: System::Windows::Forms::Panel^ panel1;
 	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::Button^ btt_ver;
+
 	public:
 		TickeClass^ ticketClass;
 		LoginCliente(void)
@@ -76,6 +78,7 @@ namespace ProyectoFinal {
 			this->btt_enter = (gcnew System::Windows::Forms::Button());
 			this->btt_registrarse = (gcnew System::Windows::Forms::Button());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->btt_ver = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->panel1->SuspendLayout();
 			this->SuspendLayout();
@@ -83,55 +86,61 @@ namespace ProyectoFinal {
 			// lbl_encabezado
 			// 
 			this->lbl_encabezado->AutoSize = true;
+			this->lbl_encabezado->Cursor = System::Windows::Forms::Cursors::IBeam;
 			this->lbl_encabezado->Font = (gcnew System::Drawing::Font(L"Segoe UI", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->lbl_encabezado->ForeColor = System::Drawing::Color::White;
-			this->lbl_encabezado->Location = System::Drawing::Point(41, 17);
+			this->lbl_encabezado->Location = System::Drawing::Point(31, 14);
+			this->lbl_encabezado->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_encabezado->Name = L"lbl_encabezado";
-			this->lbl_encabezado->Size = System::Drawing::Size(270, 46);
+			this->lbl_encabezado->Size = System::Drawing::Size(217, 37);
 			this->lbl_encabezado->TabIndex = 0;
 			this->lbl_encabezado->Text = L"Inicio de Sesión";
 			// 
 			// lbl_usuario
 			// 
 			this->lbl_usuario->AutoSize = true;
+			this->lbl_usuario->Cursor = System::Windows::Forms::Cursors::IBeam;
 			this->lbl_usuario->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->lbl_usuario->ForeColor = System::Drawing::Color::WhiteSmoke;
-			this->lbl_usuario->Location = System::Drawing::Point(45, 81);
+			this->lbl_usuario->Location = System::Drawing::Point(34, 66);
+			this->lbl_usuario->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_usuario->Name = L"lbl_usuario";
-			this->lbl_usuario->Size = System::Drawing::Size(79, 28);
+			this->lbl_usuario->Size = System::Drawing::Size(64, 21);
 			this->lbl_usuario->TabIndex = 1;
 			this->lbl_usuario->Text = L"Usuario";
 			// 
 			// lbl_contraseña
 			// 
 			this->lbl_contraseña->AutoSize = true;
+			this->lbl_contraseña->Cursor = System::Windows::Forms::Cursors::IBeam;
 			this->lbl_contraseña->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->lbl_contraseña->ForeColor = System::Drawing::Color::White;
-			this->lbl_contraseña->Location = System::Drawing::Point(45, 165);
+			this->lbl_contraseña->Location = System::Drawing::Point(34, 134);
+			this->lbl_contraseña->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_contraseña->Name = L"lbl_contraseña";
-			this->lbl_contraseña->Size = System::Drawing::Size(110, 28);
+			this->lbl_contraseña->Size = System::Drawing::Size(89, 21);
 			this->lbl_contraseña->TabIndex = 2;
 			this->lbl_contraseña->Text = L"Contraseña";
 			// 
 			// txb_contraseña
 			// 
-			this->txb_contraseña->Location = System::Drawing::Point(51, 193);
-			this->txb_contraseña->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->txb_contraseña->Location = System::Drawing::Point(38, 157);
+			this->txb_contraseña->Margin = System::Windows::Forms::Padding(2);
 			this->txb_contraseña->Name = L"txb_contraseña";
-			this->txb_contraseña->Size = System::Drawing::Size(252, 22);
+			this->txb_contraseña->Size = System::Drawing::Size(190, 20);
 			this->txb_contraseña->TabIndex = 3;
 			this->txb_contraseña->UseSystemPasswordChar = true;
 			// 
 			// txb_usuario
 			// 
 			this->txb_usuario->BackColor = System::Drawing::Color::White;
-			this->txb_usuario->Location = System::Drawing::Point(51, 110);
-			this->txb_usuario->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->txb_usuario->Location = System::Drawing::Point(38, 89);
+			this->txb_usuario->Margin = System::Windows::Forms::Padding(2);
 			this->txb_usuario->Name = L"txb_usuario";
-			this->txb_usuario->Size = System::Drawing::Size(252, 22);
+			this->txb_usuario->Size = System::Drawing::Size(190, 20);
 			this->txb_usuario->TabIndex = 4;
 			// 
 			// btt_enter
@@ -144,10 +153,10 @@ namespace ProyectoFinal {
 			this->btt_enter->Font = (gcnew System::Drawing::Font(L"Segoe UI", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btt_enter->ForeColor = System::Drawing::Color::White;
-			this->btt_enter->Location = System::Drawing::Point(85, 249);
-			this->btt_enter->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->btt_enter->Location = System::Drawing::Point(64, 202);
+			this->btt_enter->Margin = System::Windows::Forms::Padding(2);
 			this->btt_enter->Name = L"btt_enter";
-			this->btt_enter->Size = System::Drawing::Size(184, 42);
+			this->btt_enter->Size = System::Drawing::Size(138, 34);
 			this->btt_enter->TabIndex = 5;
 			this->btt_enter->Text = L"Iniciar Sesión";
 			this->btt_enter->UseVisualStyleBackColor = false;
@@ -168,10 +177,10 @@ namespace ProyectoFinal {
 			this->btt_registrarse->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btt_registrarse->ForeColor = System::Drawing::Color::White;
-			this->btt_registrarse->Location = System::Drawing::Point(185, 305);
-			this->btt_registrarse->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->btt_registrarse->Location = System::Drawing::Point(139, 248);
+			this->btt_registrarse->Margin = System::Windows::Forms::Padding(2);
 			this->btt_registrarse->Name = L"btt_registrarse";
-			this->btt_registrarse->Size = System::Drawing::Size(113, 37);
+			this->btt_registrarse->Size = System::Drawing::Size(85, 30);
 			this->btt_registrarse->TabIndex = 6;
 			this->btt_registrarse->Text = L"Crear Cuenta";
 			this->btt_registrarse->UseVisualStyleBackColor = false;
@@ -181,6 +190,7 @@ namespace ProyectoFinal {
 			// 
 			this->panel1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(46)), static_cast<System::Int32>(static_cast<System::Byte>(137)),
 				static_cast<System::Int32>(static_cast<System::Byte>(159)));
+			this->panel1->Controls->Add(this->btt_ver);
 			this->panel1->Controls->Add(this->label1);
 			this->panel1->Controls->Add(this->lbl_encabezado);
 			this->panel1->Controls->Add(this->btt_registrarse);
@@ -189,34 +199,49 @@ namespace ProyectoFinal {
 			this->panel1->Controls->Add(this->txb_usuario);
 			this->panel1->Controls->Add(this->txb_contraseña);
 			this->panel1->Controls->Add(this->lbl_contraseña);
-			this->panel1->Location = System::Drawing::Point(116, 42);
-			this->panel1->Margin = System::Windows::Forms::Padding(4);
+			this->panel1->Location = System::Drawing::Point(87, 34);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(367, 379);
+			this->panel1->Size = System::Drawing::Size(275, 308);
 			this->panel1->TabIndex = 7;
+			// 
+			// btt_ver
+			// 
+			this->btt_ver->BackColor = System::Drawing::Color::White;
+			this->btt_ver->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btt_ver->FlatAppearance->BorderSize = 0;
+			this->btt_ver->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btt_ver->Font = (gcnew System::Drawing::Font(L"Segoe UI", 6.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->btt_ver->Location = System::Drawing::Point(233, 157);
+			this->btt_ver->Name = L"btt_ver";
+			this->btt_ver->Size = System::Drawing::Size(28, 20);
+			this->btt_ver->TabIndex = 8;
+			this->btt_ver->Text = L"ver";
+			this->btt_ver->UseVisualStyleBackColor = false;
+			this->btt_ver->Click += gcnew System::EventHandler(this, &LoginCliente::button1_Click);
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
+			this->label1->Cursor = System::Windows::Forms::Cursors::IBeam;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label1->ForeColor = System::Drawing::Color::White;
-			this->label1->Location = System::Drawing::Point(47, 316);
-			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label1->Location = System::Drawing::Point(35, 257);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(118, 19);
+			this->label1->Size = System::Drawing::Size(99, 13);
 			this->label1->TabIndex = 7;
 			this->label1->Text = L"No tienes cuenta\?";
 			// 
 			// LoginCliente
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(40)), static_cast<System::Int32>(static_cast<System::Byte>(120)),
 				static_cast<System::Int32>(static_cast<System::Byte>(140)));
-			this->ClientSize = System::Drawing::Size(605, 454);
+			this->ClientSize = System::Drawing::Size(454, 369);
 			this->Controls->Add(this->panel1);
-			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"LoginCliente";
 			this->Text = L"LoginCliente";
 			this->Load += gcnew System::EventHandler(this, &LoginCliente::LoginCliente_Load);
@@ -295,5 +320,16 @@ private: System::Void btt_enter_Click(System::Object^ sender, System::EventArgs^
 private: System::Void LoginCliente_Load(System::Object^ sender, System::EventArgs^ e) {
 }
 
+private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	bool viendo = txb_contraseña->UseSystemPasswordChar;
+	if (viendo)
+	{
+		txb_contraseña->UseSystemPasswordChar = false;
+	}
+	else
+	{
+		txb_contraseña->UseSystemPasswordChar = true;
+	}
+}
 };
 }

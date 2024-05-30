@@ -66,23 +66,26 @@ namespace ProyectoFinal {
 			// 
 			this->brd_registro->BackgroundColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(122)),
 				static_cast<System::Int32>(static_cast<System::Byte>(178)), static_cast<System::Int32>(static_cast<System::Byte>(178)));
-			this->brd_registro->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->brd_registro->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
 			dataGridViewCellStyle1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(122)),
 				static_cast<System::Int32>(static_cast<System::Byte>(178)), static_cast<System::Int32>(static_cast<System::Byte>(178)));
-			dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			dataGridViewCellStyle1->ForeColor = System::Drawing::SystemColors::ControlText;
+			dataGridViewCellStyle1->ForeColor = System::Drawing::Color::White;
 			dataGridViewCellStyle1->SelectionBackColor = System::Drawing::SystemColors::Highlight;
 			dataGridViewCellStyle1->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
 			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
 			this->brd_registro->DefaultCellStyle = dataGridViewCellStyle1;
-			this->brd_registro->Location = System::Drawing::Point(12, 51);
+			this->brd_registro->GridColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(40)), static_cast<System::Int32>(static_cast<System::Byte>(120)),
+				static_cast<System::Int32>(static_cast<System::Byte>(140)));
+			this->brd_registro->Location = System::Drawing::Point(9, 41);
+			this->brd_registro->Margin = System::Windows::Forms::Padding(2);
 			this->brd_registro->Name = L"brd_registro";
+			this->brd_registro->RowHeadersVisible = false;
 			this->brd_registro->RowHeadersWidth = 51;
 			this->brd_registro->RowTemplate->Height = 24;
-			this->brd_registro->Size = System::Drawing::Size(866, 470);
+			this->brd_registro->Size = System::Drawing::Size(650, 382);
 			this->brd_registro->TabIndex = 0;
 			// 
 			// lbl_encabezado
@@ -91,22 +94,27 @@ namespace ProyectoFinal {
 			this->lbl_encabezado->Font = (gcnew System::Drawing::Font(L"Segoe UI", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->lbl_encabezado->ForeColor = System::Drawing::Color::WhiteSmoke;
-			this->lbl_encabezado->Location = System::Drawing::Point(282, 2);
+			this->lbl_encabezado->Location = System::Drawing::Point(212, 2);
+			this->lbl_encabezado->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_encabezado->Name = L"lbl_encabezado";
-			this->lbl_encabezado->Size = System::Drawing::Size(299, 46);
+			this->lbl_encabezado->Size = System::Drawing::Size(243, 37);
 			this->lbl_encabezado->TabIndex = 1;
 			this->lbl_encabezado->Text = L"Registro de Rutas";
 			// 
 			// MostrarRutas
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(40)), static_cast<System::Int32>(static_cast<System::Byte>(120)),
 				static_cast<System::Int32>(static_cast<System::Byte>(140)));
-			this->ClientSize = System::Drawing::Size(890, 533);
+			this->ClientSize = System::Drawing::Size(668, 433);
 			this->Controls->Add(this->lbl_encabezado);
 			this->Controls->Add(this->brd_registro);
+			this->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->ForeColor = System::Drawing::Color::White;
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"MostrarRutas";
 			this->Text = L"MostrarRutas";
 			this->Load += gcnew System::EventHandler(this, &MostrarRutas::MostrarRutas_Load);
