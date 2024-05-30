@@ -174,26 +174,26 @@ namespace ProyectoFinal {
 
 		}
 #pragma endregion
+
+	//-----------------------REGRESA AL MENU DE EMPLEADOS------------------------------
 	private: System::Void btt_regreso_Click(System::Object^ sender, System::EventArgs^ e) {
 		Close();
 		menuempleados->Show();
-
 	}
 
+	//----------------------CREA LA LISTA DE REGISTROS DE COMPRAS---------------------------
 	private: System::Void RegistroCompras_Load(System::Object^ sender, System::EventArgs^ e) {
 		dgv_registro->DataSource = ObtenerUsuarios();
 	}
-		   DataTable^ ObtenerUsuarios() {
-
-			   try
-			   {
-				   //se agregó una función en la clase MYSQLConnector  para ejecutar consultas 
-				   //y estas se guardan en una estructura de datos  (dataTable)  
-				   return connector->ExecuteQuery("Select * from compras");
-			   }
-			   catch (Exception^ ex) {
-				   MessageBox::Show("Error: " + ex->Message);
-			   }
+		DataTable^ ObtenerUsuarios() {
+			try
+			{
+				//FUNCION EN MYSQLCONECTOR PARA CREAR TABLAS
+				return connector->ExecuteQuery("Select * from compras");
+			}
+			catch (Exception^ ex) {
+				MessageBox::Show("Error: " + ex->Message);
+			}
 	}
 };
 }

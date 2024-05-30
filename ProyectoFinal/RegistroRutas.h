@@ -194,12 +194,16 @@ namespace ProyectoFinal {
 
 		}
 #pragma endregion
+	//---------------------------------REGRESA AL MENU DE EMPLEADOS------------------------------
 	private: System::Void btt_regresar_Click(System::Object^ sender, System::EventArgs^ e) {
 		Close();
 		menuempleados->Show();
 	}
+
 	private: System::Void RegistroRutas_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
+
+		   //METODO PARA ABRIR DIFERENTES FORMS
 		   template<class T>
 		   void AbrirPanel(T FormHijo)
 		   {
@@ -211,12 +215,16 @@ namespace ProyectoFinal {
 			   this->pnl_contenedor->Tag = FormHijo;
 			   FormHijo->Show();
 		   }
+
+//-------------ABRE EL FORM DE INSERTAR RUTAS-------------------------------
 private: System::Void btt_insertar_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->AbrirPanel(gcnew ProyectoFinal::InsertarRutas);
 }
+//-------------ABRE EL FORM DE ELIMINAR RUTAS-------------------------------
 private: System::Void btt_eliminar_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->AbrirPanel(gcnew ProyectoFinal::EliminarRutas);
 }
+//-------------ABRE EL FORM DE MOSTRAR RUTAS-------------------------------
 private: System::Void btt_mostrar_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->AbrirPanel(gcnew ProyectoFinal::MostrarRutas);
 }

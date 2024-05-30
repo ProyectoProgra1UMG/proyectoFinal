@@ -131,7 +131,6 @@ public:
     void registroCompras(Label^ lbl_dedos, Label^ lbl_adedos, Label^ lbl_preciodos, Label^ lbl_fechados, Label^ lbl_horados, NumericUpDown^ nud_cantidadT, Label^ lbl_totaldos) {
         try
         {
-            // Obtener el usuario y la contraseña ingresados por el usuario
             String^ _nombre = nombre;
             String^ salida = lbl_dedos->Text;
             String^ destino = lbl_adedos->Text;
@@ -141,10 +140,8 @@ public:
             String^ cantidad = nud_cantidadT->Text;
             String^ total = lbl_totaldos->Text;
 
-            // Consulta SQL para insertar los datos del usuario
             String^ query = "INSERT INTO compras (nombre, lugarSalida, lugarDestino, precio, fecha, hora, cantidad, total) VALUES (@nombre, @lugarSalida, @lugarDestino, @precio, @fecha, @hora, @cantidad, @total)";
 
-            // Abrir la conexión antes de ejecutar la consulta
             if (connector->OpenConnection()) {
                 MySqlCommand^ command = gcnew MySqlCommand(query, connector->getConnection());
                 command->Parameters->AddWithValue("@nombre", _nombre);
@@ -167,7 +164,6 @@ public:
                     MessageBox::Show("Error al comprar.");
                 }
 
-                // Cerrar la conexión después de ejecutar la consulta
                 connector->CloseConnection();
             }
             else {

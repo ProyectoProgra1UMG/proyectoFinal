@@ -257,11 +257,13 @@ namespace ProyectoFinal {
 	private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 
+	//-------------------------REGRESA AL INICIO DE SESION------------------------------
 	private: System::Void btt_iniciar_Click(System::Object^ sender, System::EventArgs^ e) {
 		Close();
 		login->Show();
 	}
-
+	
+	//-----------------------------CREA LA CUENTA, REGISTRANDO EN LA BD------------------
 	private: System::Void btt_crear_Click(System::Object^ sender, System::EventArgs^ e) {
 		try
 		{

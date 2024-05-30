@@ -33,30 +33,16 @@ namespace ProyectoFinal {
 	private: System::Windows::Forms::Label^ lbl_preciodos;
 	private: System::Windows::Forms::Label^ lbl_totaldos;
 	public:
-
 	public:
-
-
-
-
-
-
-
 	private: System::Windows::Forms::Label^ lbl_horados;
 	private: System::Windows::Forms::Label^ lbl_id;
-
-
-
 	public:
 		   MySqlConnection^ connection;
 	private: System::Windows::Forms::NumericUpDown^ nud_cantidadT;
 	private: System::Windows::Forms::Label^ lbl_usuario;
-
 	private: System::Windows::Forms::Button^ btt_rutas;
 	private: System::Windows::Forms::Panel^ panel1;
 	private: System::Windows::Forms::Panel^ panel2;
-
-
 	public:
 
 	public:
@@ -87,20 +73,13 @@ namespace ProyectoFinal {
 	private: System::Windows::Forms::Label^ lbl_de;
 	private: System::Windows::Forms::Label^ lbl_a;
 	private: System::Windows::Forms::Label^ lbl_fecha;
-
 	private: System::Windows::Forms::Label^ lbl_cantickets;
 	private: System::Windows::Forms::Label^ lbl_precio;
 	private: System::Windows::Forms::Label^ lbl_total;
 	private: System::Windows::Forms::Button^ btt_comprar;
 	private: System::Windows::Forms::ComboBox^ cbx_id;
-
-
-
 	protected:
-
 	protected:
-
-
 	private:
 		/// <summary>
 		/// Variable del diseñador necesaria.
@@ -471,27 +450,32 @@ namespace ProyectoFinal {
 	private: System::Void label5_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 
+	//------------------------AUTO RELLENA LOS LABELS Y TOTAL---------------------------------------
 	private: System::Void comboBox1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
 		String^ seleccion = cbx_id->SelectedItem->ToString();
 		ticketClass->autoRelleno(lbl_dedos, lbl_adedos, lbl_fechados, lbl_horados, lbl_preciodos, seleccion);
 		ticketClass->totalString(lbl_totaldos);
 	}
 
+	//------------------------OPCIONES EN COMBOX----------------------------------------------------
 	private: System::Void CompraTicket_Load(System::Object^ sender, System::EventArgs^ e) {
 		ticketClass->comboxID(cbx_id);
 		nud_cantidadT->Text = "1";
 		lbl_usuario->Text = ticketClass->nombreUsuario();
 	}
 
+	//------------------------RECIBE LA CANTIDAD Y CALCULA EL TOTAL---------------------------------
 	private: System::Void numericUpDown1_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
 		int cantidad = Decimal::ToInt32(nud_cantidadT->Value);
 		ticketClass->darCantidad(cantidad);
 		ticketClass->totalString(lbl_totaldos);
 	}
 
-	private: System::Void btt_comprar_Click(System::Object^ sender, System::EventArgs^ e) {
-		//---------------------------------------------------------------------------
 
+	//------------------------BOTON DE COMPRAR TICKET---------------------------------------------
+	private: System::Void btt_comprar_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		//..........................CREACION DEL BOLETO EN PDF................................
 		MessageBox::Show("Imprimir Boleto");
 		SaveFileDialog^ guardar = gcnew SaveFileDialog();
 		guardar->FileName = "ticket" + DateTime::Now.ToString("ddMMyyyyHHmmss") + ".pdf";
@@ -509,17 +493,15 @@ namespace ProyectoFinal {
 		textHtml = textHtml->Replace("@CANTIDAD", nud_cantidadT->Text);
 		textHtml = textHtml->Replace("@TOTAL", lbl_totaldos->Text);
 
-
-
 		if (guardar->ShowDialog() == System::Windows::Forms::DialogResult::OK)
 		{
 			String^ filePath = guardar->FileName;
 			FileStream^ stream = gcnew FileStream(filePath, FileMode::Create);
 
 			try {
-				// Definir un tamaño de página personalizado para el ticket
 				float altura = 3 * 72; // 3 pulgadas en puntos 
 				float ancho = 8 * 72; // 8 pulgadas en puntos 
+
 				iTextSharp::text::Rectangle^ ticketSize = gcnew iTextSharp::text::Rectangle(ancho, altura);
 
 				// Crear el documento PDF con el tamaño de página personalizado
@@ -528,7 +510,6 @@ namespace ProyectoFinal {
 				PdfWriter^ whiter = PdfWriter::GetInstance(pdf, stream);
 				pdf->Open();
 				
-				//iTextSharp::text::Image^ img = iTextSharp::text::Image::GetInstance("logo.png", System::Drawing::Imaging::ImageFormat::Png);
 				// Cargar la imagen desde el archivo
 				System::Drawing::Image^ imgFromFile = System::Drawing::Image::FromFile("logo.png"); 
 
@@ -560,7 +541,6 @@ namespace ProyectoFinal {
 				stream->Close();
 			}
 			finally {
-				// Asegurarse de que el stream se cierre al salir del bloque try
 				if (stream != nullptr) {
 					stream->Close();
 				}
@@ -568,7 +548,8 @@ namespace ProyectoFinal {
 		}
 
 
-		//---------------------------------------------------------------------------
+		//................................REGISTRA LA COMPRA A LA BD..................................
+
 		String^ datos = lbl_totaldos->Text;
 
 		if (datos == "Q0") {
@@ -586,7 +567,8 @@ namespace ProyectoFinal {
 			MessageBox::Show("Cantidad de tickets invalida");
 		}
 	}
-	
+
+	//-----------------------------ABRE EL FORM DE RUTAS---------------------------------------------
 	private: System::Void btt_rutas_Click(System::Object^ sender, System::EventArgs^ e) { 
 		ProyectoFinal::RutasParaClientes^ rclientes = gcnew ProyectoFinal::RutasParaClientes();
 		rclientes->Show();

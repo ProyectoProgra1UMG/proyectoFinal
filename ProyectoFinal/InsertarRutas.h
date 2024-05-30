@@ -290,10 +290,10 @@ namespace ProyectoFinal {
 
 		}
 #pragma endregion
+	//----------------INSERTA NUEVAS RUTAS------------------------------------------
 	private: System::Void btt_insertar_Click(System::Object^ sender, System::EventArgs^ e) {
 		try
 		{
-			// Obtener el usuario y la contraseña ingresados por el usuario
 			String^ salida = this->txb_salida->Text;
 			String^ destino = this->txb_destino->Text;
 			String^ precio = this->txb_precio->Text;
@@ -306,10 +306,8 @@ namespace ProyectoFinal {
 				return;
 			}
 
-			// Consulta SQL para insertar los datos del usuario
 			String^ query = "INSERT INTO lugares (lugarSalida, lugarDestino, precio, fecha, hora) VALUES (@lugarSalida, @lugarDestino, @precio, @fecha, @hora)";
 
-			// Abrir la conexión antes de ejecutar la consulta
 			if (connector->OpenConnection()) {
 				MySqlCommand^ command = gcnew MySqlCommand(query, connector->getConnection());
 				command->Parameters->AddWithValue("@lugarSalida", salida);
@@ -328,7 +326,6 @@ namespace ProyectoFinal {
 					MessageBox::Show("Error al Guardar!");
 				}
 
-				// Cerrar la conexión después de ejecutar la consulta
 				connector->CloseConnection();
 			}
 			else {

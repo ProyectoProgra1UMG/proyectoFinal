@@ -251,38 +251,34 @@ namespace ProyectoFinal {
 
 		}
 #pragma endregion
+
+	//--------------------------DIRIGE AL FORM DE REGISTRARSE----------------------------------
 	private: System::Void btt_registrarse_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Hide();
 		ProyectoFinal::RegistroClientes^ registroclientes = gcnew ProyectoFinal::RegistroClientes(this, connection);
 		registroclientes->Show();
-
-		
-		
 	}
-		   System::Void RegistroClientesClosed(System::Object^ sender, System::Windows::Forms::FormClosedEventArgs^ e) {
-			   this->Show();
-		   }
+
+	//--------------------------DIRIGE AL FORM DE REGISTRARSE----------------------------------
+	System::Void RegistroClientesClosed(System::Object^ sender, System::Windows::Forms::FormClosedEventArgs^ e) {
+		this->Show();
+	}
 		  
+//----------------------------------INICIA SESION----------------------------------
 private: System::Void btt_enter_Click(System::Object^ sender, System::EventArgs^ e) {
 	try
 	{
-
-
-		// Obtener el usuario y la contraseña ingresados por el usuario
 		String^ usuario = txb_usuario->Text;
 		String^ contraseña = txb_contraseña->Text;
-		// Consulta SQL para verificar si el usuario y la contraseña son válidos
+
 		String^ query = "SELECT COUNT(*) FROM clientes WHERE nombre = '" + usuario + "' AND contraseña = '" + contraseña + "'";
 
-		// Abrir la conexión antes de ejecutar la consulta
 		if (connector->OpenConnection()) {
 			MySqlCommand^ command = gcnew MySqlCommand(query, connector->getConnection());
 			int count = Convert::ToInt32(command->ExecuteScalar());
 
-			// Cerrar la conexión después de ejecutar la consulta
 			connector->CloseConnection();
 
-			// Verificar si se encontró una coincidencia en la base de datos
 			if (count > 0) {
 				ticketClass->nombreCliente(txb_usuario->Text);
 				ProyectoFinal::CompraTicket^ compraticket = gcnew ProyectoFinal::CompraTicket(ticketClass);
@@ -297,11 +293,6 @@ private: System::Void btt_enter_Click(System::Object^ sender, System::EventArgs^
 		else {
 			MessageBox::Show("Conector no ejecutado.");
 		}
-
-
-
-
-
 	}
 	catch (Exception^ ex) {
 		MessageBox::Show(" error: " + ex->Message);
@@ -312,24 +303,25 @@ private: System::Void btt_enter_Click(System::Object^ sender, System::EventArgs^
 			connector->CloseConnection();
 		}
 	}
-
-
 	this->txb_usuario->Text = "";
 	this->txb_contraseña->Text = "";
 }
-private: System::Void LoginCliente_Load(System::Object^ sender, System::EventArgs^ e) {
-}
 
-private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-	bool viendo = txb_contraseña->UseSystemPasswordChar;
-	if (viendo)
-	{
-		txb_contraseña->UseSystemPasswordChar = false;
+	private: System::Void LoginCliente_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
-	else
-	{
-		txb_contraseña->UseSystemPasswordChar = true;
+
+
+	//-------------------------BOTON DE VER CONTRASEÑA------------------------------
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		bool viendo = txb_contraseña->UseSystemPasswordChar;
+		if (viendo)
+		{
+			txb_contraseña->UseSystemPasswordChar = false;
+		}
+		else
+		{
+			txb_contraseña->UseSystemPasswordChar = true;
+		}
 	}
-}
 };
 }

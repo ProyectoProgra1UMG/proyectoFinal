@@ -124,22 +124,21 @@ namespace ProyectoFinal {
 
 		}
 #pragma endregion
+	//--------------MUESTRA EL REGISTRO DE RUTAS DISPONIBLES---------------------
 	private: System::Void MostrarRutas_Load(System::Object^ sender, System::EventArgs^ e) {
 		brd_registro->DataSource = ObtenerUsuarios();
 	}
-		   DataTable^ ObtenerUsuarios() {
+		DataTable^ ObtenerUsuarios() {
+			try
+			{ 
+				//------------CREA LA TABLA CON LA FUNCION----------------
+				return connector->ExecuteQuery("Select * from lugares");
+			}
+			catch (Exception^ ex) {
+				MessageBox::Show("Error: " + ex->Message);
+			}
 
-			   try
-			   {
-				   //se agregó una función en la clase MYSQLConnector  para ejecutar consultas 
-				   //y estas se guardan en una estructura de datos  (dataTable)  
-				   return connector->ExecuteQuery("Select * from lugares");
-			   }
-			   catch (Exception^ ex) {
-				   MessageBox::Show("Error: " + ex->Message);
-			   }
-
-		   }
+		}
 
 	};
 }

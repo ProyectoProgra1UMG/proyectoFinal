@@ -148,21 +148,20 @@ namespace ProyectoFinal {
 
 		}
 #pragma endregion
+	//---------------REGISTRO DE RUTAS-----------------------------
 	private: System::Void RutasParaClientes_Load(System::Object^ sender, System::EventArgs^ e) {
 		dgv_registros->DataSource = ObtenerUsuarios();
 	}
-		   DataTable^ ObtenerUsuarios() {
+		DataTable^ ObtenerUsuarios() {
+			try
+			{
+				//--------------CREA LA TABAL CON EL METODO CREADO EN EL CONECTOR------------------
+				return connector->ExecuteQuery("Select * from lugares");
+			}
+			catch (Exception^ ex) {
+				MessageBox::Show("Error: " + ex->Message);
+			}
 
-			   try
-			   {
-				   //se agregó una función en la clase MYSQLConnector  para ejecutar consultas 
-				   //y estas se guardan en una estructura de datos  (dataTable)  
-				   return connector->ExecuteQuery("Select * from lugares");
-			   }
-			   catch (Exception^ ex) {
-				   MessageBox::Show("Error: " + ex->Message);
-			   }
-
-		   }
+		}
 	};
 }

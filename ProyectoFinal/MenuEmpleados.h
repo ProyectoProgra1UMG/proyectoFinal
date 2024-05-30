@@ -179,6 +179,7 @@ namespace ProyectoFinal {
 
 		}
 #pragma endregion
+	//----------------------DIRIGE AL REGISTRO DE RUTAS PARA INSERTAR, ELIMINAR Y MOSTRAR---------------------------
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Hide();
 		ProyectoFinal::RegistroRutas^ registrorutas = gcnew ProyectoFinal::RegistroRutas(this);
@@ -188,6 +189,8 @@ namespace ProyectoFinal {
 	System::Void RegistroRutasClosed(System::Object^ sender, System::Windows::Forms::FormClosedEventArgs^ e) {
 		this->Show();
 	}
+
+	//----------------------DIRIGE AL REGISTRO DE COMPRAS---------------------------
 	private: System::Void btt_compras_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Hide();
 		ProyectoFinal::RegistroCompras^ registrocompras = gcnew ProyectoFinal::RegistroCompras(this);

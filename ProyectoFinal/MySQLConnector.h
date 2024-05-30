@@ -47,6 +47,8 @@ public:
     ~MySQLConnector() {
         CloseConnection();
     }
+
+    //------------PARA CREAR LAS TABLAS----------------------
     DataTable^ ExecuteQuery(String^ query) {
         DataTable^ dataTable = gcnew DataTable();
 

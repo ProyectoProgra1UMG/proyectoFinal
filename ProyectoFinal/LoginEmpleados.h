@@ -211,25 +211,21 @@ namespace ProyectoFinal {
 
 		}
 #pragma endregion
+	//----------------------------------INICIA SESION----------------------------------
 	private: System::Void btt_login_Click(System::Object^ sender, System::EventArgs^ e) {
 		try
 		{
-			// Obtener el usuario y la contraseña ingresados por el usuario
 			String^ usuario = txb_usuario->Text;
 			String^ contraseña = txb_contraseña->Text;
 
-			// Consulta SQL para verificar si el usuario y la contraseña son válidos
 			String^ query = "SELECT COUNT(*) FROM empleados WHERE nombre = '" + usuario + "' AND contraseña = '" + contraseña + "'";
 
-			// Abrir la conexión antes de ejecutar la consulta
 			if (connector->OpenConnection()) {
 				MySqlCommand^ command = gcnew MySqlCommand(query, connector->getConnection());
 				int count = Convert::ToInt32(command->ExecuteScalar());
 
-				// Cerrar la conexión después de ejecutar la consulta
 				connector->CloseConnection();
 
-				// Verificar si se encontró una coincidencia en la base de datos
 				if (count > 0) {
 					ProyectoFinal::MenuEmpleados^ menuempleados = gcnew ProyectoFinal::MenuEmpleados();
 					menuempleados->Show();
@@ -258,12 +254,17 @@ namespace ProyectoFinal {
 		this->txb_usuario->Text = "";
 		this->txb_contraseña->Text = "";
 	}
+
+
 private: System::Void lbl_encabezado_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void lbl_usuario_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void txb_usuario_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
+
+
+//-------------------------BOTON DE VER CONTRASEÑA------------------------------
 private: System::Void btt_ver_Click(System::Object^ sender, System::EventArgs^ e) {
 	bool viendo = txb_contraseña->UseSystemPasswordChar;
 	if (viendo)

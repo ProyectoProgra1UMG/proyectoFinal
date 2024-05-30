@@ -136,6 +136,7 @@ namespace ProyectoFinal {
 
 		}
 #pragma endregion
+	//---------------------BOTON PARA ELIMINAR---------------------------
 	private: System::Void btt_eliminar_Click(System::Object^ sender, System::EventArgs^ e) {
 		try {
 			String^ id = this->txb_id->Text;
@@ -154,7 +155,6 @@ namespace ProyectoFinal {
 				{
 					MessageBox::Show("Error al Eliminar!");
 				}
-				// Cerrar la conexión después de ejecutar la consulta
 				connector->CloseConnection();
 			}
 			else {
