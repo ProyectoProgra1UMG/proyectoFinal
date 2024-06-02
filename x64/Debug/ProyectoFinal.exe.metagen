@@ -5,6 +5,7 @@
   ProyectoFinal.LoginCliente.resources - Embedded, ContainedInManifestFile, 
   ProyectoFinal.LoginEmpleados.resources - Embedded, ContainedInManifestFile, 
   ProyectoFinal.MenuEmpleados.resources - Embedded, ContainedInManifestFile, 
+  ProyectoFinal.ModificarRutas.resources - Embedded, ContainedInManifestFile, 
   ProyectoFinal.MostrarRutas.resources - Embedded, ContainedInManifestFile, 
   ProyectoFinal.RegistroClientes.resources - Embedded, ContainedInManifestFile, 
   ProyectoFinal.RegistroCompras.resources - Embedded, ContainedInManifestFile, 
@@ -68,7 +69,7 @@ Class ProyectoFinal.RutasParaClientes: AutoLayout, AnsiClass, Class, Public, Bef
     MySql.Data.MySqlClient.MySqlConnection connection : Public
 Class ProyectoFinal.CompraTicket: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
-    Void .ctor(TickeClass): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(TickeClass, System.Windows.Forms.Form): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
     MySQLConnector connector : Public
     MySql.Data.MySqlClient.MySqlConnection connection : Public
@@ -79,13 +80,6 @@ Class ProyectoFinal.RegistroClientes: AutoLayout, AnsiClass, Class, Public, Befo
   Fields:
     MySQLConnector connector : Public
     MySql.Data.MySqlClient.MySqlConnection connection : Public
-Class ProyectoFinal.LoginCliente: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
-  :System.Windows.Forms.Form
-    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
-  Fields:
-    MySQLConnector connector : Public
-    MySql.Data.MySqlClient.MySqlConnection connection : Public
-    TickeClass ticketClass : Public
 Class ProyectoFinal.RegistroCompras: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(System.Windows.Forms.Form): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
@@ -104,6 +98,9 @@ Class ProyectoFinal.EliminarRutas: AutoLayout, AnsiClass, Class, Public, BeforeF
   Fields:
     MySQLConnector connector : Public
     MySql.Data.MySqlClient.MySqlConnection connection : Public
+Class ProyectoFinal.ModificarRutas: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(System.String, System.String, System.String, System.String, System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class ProyectoFinal.MostrarRutas: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
@@ -115,7 +112,20 @@ Class ProyectoFinal.RegistroRutas: AutoLayout, AnsiClass, Class, Public, BeforeF
     Void .ctor(System.Windows.Forms.Form): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class ProyectoFinal.MenuEmpleados: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
+    Void .ctor(System.Windows.Forms.Form): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class LoginClass: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(MySQLConnector): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    getLoginClientes(TextBox, TextBox, TickeClass, Form): PrivateScope, Public, HideBySig
+    getLoginEmpleado(TextBox, TextBox, TickeClass, Form): PrivateScope, Public, HideBySig
+Class ProyectoFinal.LoginCliente: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    MySQLConnector connector : Public
+    MySql.Data.MySqlClient.MySqlConnection connection : Public
+    TickeClass ticketClass : Public
+    LoginClass loginClass : Public
 Class ProyectoFinal.LoginEmpleados: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

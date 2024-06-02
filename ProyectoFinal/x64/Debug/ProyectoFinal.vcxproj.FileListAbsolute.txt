@@ -42,3 +42,4 @@ C:\Users\josel\OneDrive\Escritorio\proyecto pogra1\proyectoFinal\ProyectoFinal\x
 C:\Users\josel\OneDrive\Escritorio\proyecto pogra1\proyectoFinal\ProyectoFinal\x64\Debug\ProyectoFinal.RutasParaClientes.resources
 C:\Users\josel\OneDrive\Escritorio\proyecto pogra1\proyectoFinal\ProyectoFinal\x64\Debug\ProyectoFinal.vcxproj.GenerateResource.cache
 C:\Users\josel\OneDrive\Escritorio\proyecto pogra1\proyectoFinal\ProyectoFinal\x64\Debug\ProyectoFinal.vcxproj.CopyComplete
+C:\Users\joaqu\OneDrive\Escritorio\ProyectoFinal\ProyectoFinal\x64\Debug\ProyectoFinal.ModificarRutas.resources

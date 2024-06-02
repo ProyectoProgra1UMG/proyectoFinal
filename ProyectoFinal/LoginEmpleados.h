@@ -227,8 +227,8 @@ namespace ProyectoFinal {
 				connector->CloseConnection();
 
 				if (count > 0) {
-					ProyectoFinal::MenuEmpleados^ menuempleados = gcnew ProyectoFinal::MenuEmpleados();
-					menuempleados->Show();
+					//ProyectoFinal::MenuEmpleados^ menuempleados = gcnew ProyectoFinal::MenuEmpleados();
+					//menuempleados->Show();
 					Close();
 				}
 				else {

@@ -71,6 +71,12 @@
     <ClInclude Include="RutasParaClientes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="loginClass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ModificarRutas.h">
+      <Filter>Header Files\Rutas</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppCLR_WinFormsProject.cpp">
@@ -117,6 +123,9 @@
     </ClCompile>
     <ClCompile Include="CompraTicket.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ModificarRutas.cpp">
+      <Filter>Header Files\Rutas</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

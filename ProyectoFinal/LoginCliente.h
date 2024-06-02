@@ -3,6 +3,8 @@
 #include "RegistroClientes.h"
 #include "CompraTicket.h"
 #include "CompraTicketClass.h"
+#include "MenuEmpleados.h"
+#include "loginClass.h"
 namespace ProyectoFinal {
 
 	using namespace System;
@@ -23,14 +25,18 @@ namespace ProyectoFinal {
 	private: System::Windows::Forms::Panel^ panel1;
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Button^ btt_ver;
+	private: System::Windows::Forms::ComboBox^ cbx_Usuario;
+
 
 	public:
 		TickeClass^ ticketClass;
+		LoginClass^ loginClass;
 		LoginCliente(void)
 		{
 			InitializeComponent();
 			connection = gcnew MySqlConnection(connector->connectionString);
 			ticketClass = gcnew TickeClass(connector);
+			loginClass = gcnew LoginClass(connector);
 		}
 
 	protected:
@@ -80,6 +86,7 @@ namespace ProyectoFinal {
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->btt_ver = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->cbx_Usuario = (gcnew System::Windows::Forms::ComboBox());
 			this->panel1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -199,7 +206,7 @@ namespace ProyectoFinal {
 			this->panel1->Controls->Add(this->txb_usuario);
 			this->panel1->Controls->Add(this->txb_contraseña);
 			this->panel1->Controls->Add(this->lbl_contraseña);
-			this->panel1->Location = System::Drawing::Point(87, 34);
+			this->panel1->Location = System::Drawing::Point(148, 35);
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(275, 308);
 			this->panel1->TabIndex = 7;
@@ -233,16 +240,32 @@ namespace ProyectoFinal {
 			this->label1->TabIndex = 7;
 			this->label1->Text = L"No tienes cuenta\?";
 			// 
+			// cbx_Usuario
+			// 
+			this->cbx_Usuario->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(46)), static_cast<System::Int32>(static_cast<System::Byte>(137)),
+				static_cast<System::Int32>(static_cast<System::Byte>(159)));
+			this->cbx_Usuario->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->cbx_Usuario->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->cbx_Usuario->ForeColor = System::Drawing::Color::White;
+			this->cbx_Usuario->FormattingEnabled = true;
+			this->cbx_Usuario->Location = System::Drawing::Point(12, 12);
+			this->cbx_Usuario->Name = L"cbx_Usuario";
+			this->cbx_Usuario->Size = System::Drawing::Size(105, 25);
+			this->cbx_Usuario->TabIndex = 8;
+			// 
 			// LoginCliente
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(40)), static_cast<System::Int32>(static_cast<System::Byte>(120)),
 				static_cast<System::Int32>(static_cast<System::Byte>(140)));
-			this->ClientSize = System::Drawing::Size(454, 369);
+			this->ClientSize = System::Drawing::Size(519, 369);
+			this->Controls->Add(this->cbx_Usuario);
 			this->Controls->Add(this->panel1);
 			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"LoginCliente";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"LoginCliente";
 			this->Load += gcnew System::EventHandler(this, &LoginCliente::LoginCliente_Load);
 			this->panel1->ResumeLayout(false);
@@ -266,48 +289,23 @@ namespace ProyectoFinal {
 		  
 //----------------------------------INICIA SESION----------------------------------
 private: System::Void btt_enter_Click(System::Object^ sender, System::EventArgs^ e) {
-	try
+	String^ opcion = cbx_Usuario->Text;
+	if (opcion == "Cliente") {
+		loginClass->getLoginClientes(txb_usuario, txb_contraseña, ticketClass, this);
+	}
+	else if (opcion == "Empleado") {
+		loginClass->getLoginEmpleado(txb_usuario, txb_contraseña, ticketClass, this);
+	}
+	else
 	{
-		String^ usuario = txb_usuario->Text;
-		String^ contraseña = txb_contraseña->Text;
-
-		String^ query = "SELECT COUNT(*) FROM clientes WHERE nombre = '" + usuario + "' AND contraseña = '" + contraseña + "'";
-
-		if (connector->OpenConnection()) {
-			MySqlCommand^ command = gcnew MySqlCommand(query, connector->getConnection());
-			int count = Convert::ToInt32(command->ExecuteScalar());
-
-			connector->CloseConnection();
-
-			if (count > 0) {
-				ticketClass->nombreCliente(txb_usuario->Text);
-				ProyectoFinal::CompraTicket^ compraticket = gcnew ProyectoFinal::CompraTicket(ticketClass);
-				compraticket->Show(); 
-				Close(); 
-			}
-			else {
-				MessageBox::Show("Usuario o contraseña incorrectos. Por favor, inténtelo de nuevo.");
-				connector->CloseConnection();
-			}
-		}
-		else {
-			MessageBox::Show("Conector no ejecutado.");
-		}
+		MessageBox::Show("OPCION INCORRECTA!");
 	}
-	catch (Exception^ ex) {
-		MessageBox::Show(" error: " + ex->Message);
-		connector->CloseConnection();
-	}
-	finally {
-		if (connection->State == ConnectionState::Open) {
-			connector->CloseConnection();
-		}
-	}
-	this->txb_usuario->Text = "";
-	this->txb_contraseña->Text = "";
 }
-
+	//--------------------RELLENA EL COMBOX--------------------------------
 	private: System::Void LoginCliente_Load(System::Object^ sender, System::EventArgs^ e) {
+		cbx_Usuario->Items->Add("Cliente");
+		cbx_Usuario->Items->Add("Empleado");
+		cbx_Usuario->Text = "Cliente";
 	}
 
 

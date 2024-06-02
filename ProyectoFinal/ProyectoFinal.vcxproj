@@ -143,6 +143,7 @@
     <ClInclude Include="InsertarRutas.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="loginClass.h" />
     <ClInclude Include="LoginCliente.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -150,6 +151,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MenuEmpleados.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="ModificarRutas.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MostrarRutas.h">
@@ -181,6 +185,7 @@
     <ClCompile Include="LoginCliente.cpp" />
     <ClCompile Include="LoginEmpleados.cpp" />
     <ClCompile Include="MenuEmpleados.cpp" />
+    <ClCompile Include="ModificarRutas.cpp" />
     <ClCompile Include="MostrarRutas.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -233,6 +238,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MenuEmpleados.resx">
       <DependentUpon>MenuEmpleados.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarRutas.resx">
+      <DependentUpon>ModificarRutas.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MostrarRutas.resx">
       <DependentUpon>MostrarRutas.h</DependentUpon>
