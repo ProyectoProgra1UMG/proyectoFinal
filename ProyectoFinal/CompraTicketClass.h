@@ -140,7 +140,7 @@ public:
             String^ cantidad = nud_cantidadT->Text;
             String^ total = lbl_totaldos->Text;
 
-            String^ query = "INSERT INTO compras (nombre, lugarSalida, lugarDestino, precio, fecha, hora, cantidad, total) VALUES (@nombre, @lugarSalida, @lugarDestino, @precio, @fecha, @hora, @cantidad, @total)";
+            String^ query = "INSERT INTO compras (nombreCliente, lugarSalida, lugarDestino, precio, fecha, hora, cantidad, total) VALUES (@nombre, @lugarSalida, @lugarDestino, @precio, @fecha, @hora, @cantidad, @total)";
 
             if (connector->OpenConnection()) {
                 MySqlCommand^ command = gcnew MySqlCommand(query, connector->getConnection());

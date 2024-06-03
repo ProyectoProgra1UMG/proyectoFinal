@@ -72,10 +72,9 @@ namespace ProyectoFinal {
 			this->lbl_encavezado->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->lbl_encavezado->ForeColor = System::Drawing::Color::WhiteSmoke;
-			this->lbl_encavezado->Location = System::Drawing::Point(371, 25);
-			this->lbl_encavezado->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lbl_encavezado->Location = System::Drawing::Point(278, 20);
 			this->lbl_encavezado->Name = L"lbl_encavezado";
-			this->lbl_encavezado->Size = System::Drawing::Size(181, 28);
+			this->lbl_encavezado->Size = System::Drawing::Size(146, 21);
 			this->lbl_encavezado->TabIndex = 0;
 			this->lbl_encavezado->Text = L"Rutas Disponibles";
 			// 
@@ -106,8 +105,7 @@ namespace ProyectoFinal {
 			this->dgv_registros->DefaultCellStyle = dataGridViewCellStyle2;
 			this->dgv_registros->EnableHeadersVisualStyles = false;
 			this->dgv_registros->GridColor = System::Drawing::SystemColors::ActiveBorder;
-			this->dgv_registros->Location = System::Drawing::Point(30, 85);
-			this->dgv_registros->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->dgv_registros->Location = System::Drawing::Point(22, 69);
 			this->dgv_registros->Name = L"dgv_registros";
 			dataGridViewCellStyle3->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
 			dataGridViewCellStyle3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(3)), static_cast<System::Int32>(static_cast<System::Byte>(174)),
@@ -125,21 +123,21 @@ namespace ProyectoFinal {
 			dataGridViewCellStyle4->Font = (gcnew System::Drawing::Font(L"Segoe UI", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->dgv_registros->RowsDefaultCellStyle = dataGridViewCellStyle4;
-			this->dgv_registros->Size = System::Drawing::Size(876, 303);
+			this->dgv_registros->Size = System::Drawing::Size(657, 246);
 			this->dgv_registros->TabIndex = 1;
 			// 
 			// RutasParaClientes
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(40)), static_cast<System::Int32>(static_cast<System::Byte>(120)),
 				static_cast<System::Int32>(static_cast<System::Byte>(140)));
-			this->ClientSize = System::Drawing::Size(941, 439);
+			this->ClientSize = System::Drawing::Size(706, 357);
 			this->Controls->Add(this->dgv_registros);
 			this->Controls->Add(this->lbl_encavezado);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
-			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->Name = L"RutasParaClientes";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"RutasParaClientes";
 			this->Load += gcnew System::EventHandler(this, &RutasParaClientes::RutasParaClientes_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_registros))->EndInit();
